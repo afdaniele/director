@@ -9,6 +9,8 @@ endif()
 
 include(${VTK_CMAKE_DIR}/vtkWrapPython.cmake)
 function(wrap_python library_name sources)
+  add_custom_target(${library_name}Hierarchy)
+
   vtk_wrap_python3(${library_name}Python generated_python_sources "${sources}")
   add_library(${library_name}PythonD ${generated_python_sources})
   add_library(${library_name}Python MODULE ${library_name}PythonInit.cxx)

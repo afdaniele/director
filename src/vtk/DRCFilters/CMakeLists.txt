@@ -21,42 +21,6 @@ set(sources
 set(EXTRA_SRCS
   )
 
-#####
-
-set(GLSL_RESOURCES_DIR
-    edl_resources/Shaders
-    )
-
-set(GLSL_SRCS
-  edl_compose
-  edl_shade
-  bilateral_filter
-  depth_compose
-  )
-
-# -----------------------------------------------------------------------------
-# Create custom commands to encode each glsl file into a C string literal
-# in a header file
-# -----------------------------------------------------------------------------
-if(NOT TARGET vtkEncodeString)
-  message(SEND_ERROR "The required vtkEncodeString executable was not found.\nThis may indicate an error in your VTK install or configuration.")
-endif()
-
-foreach(file ${GLSL_SRCS})
-  set(src ${CMAKE_CURRENT_SOURCE_DIR}/${GLSL_RESOURCES_DIR}/${file}.glsl)
-  set(res ${CMAKE_CURRENT_BINARY_DIR}/${file}.cxx)
-  add_custom_command(
-    OUTPUT ${res}
-    DEPENDS ${src}
-    COMMAND vtkEncodeString
-    ARGS ${res} ${src} ${file}
-    )
-  set(EXTRA_SRCS ${EXTRA_SRCS} ${res})
-endforeach(file)
-
-
-#####
-
 set(VTK_LIBRARIES
   vtkInteractionWidgets
   vtkInteractionStyle
@@ -191,3 +155,7 @@ set_target_properties(${library_name}Python
   PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/${DD_INSTALL_PYTHON_DIR}/director")
 target_link_libraries(${library_name}Python ${PYTHON_LIBRARIES})
 target_link_libraries(${library_name}PythonD ${PYTHON_LIBRARIES})
+
+
+add_executable(TestOpenVR TestOpenVR.cxx)
+target_link_libraries(TestOpenVR vtkRenderingOpenVR ${deps} vtkRenderingGL2PSOpenGL2 vtkIOPLY)
