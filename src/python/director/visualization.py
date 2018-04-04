@@ -879,7 +879,7 @@ def updateFrame(frame, name, **kwargs):
     return obj
 
 
-def showFrame(frame, name, view=None, parent='segmentation', scale=0.35, visible=True):
+def showFrame(frame, name, view=None, parent='data', scale=0.35, visible=True):
 
     view = view or app.getCurrentRenderView()
     assert view
@@ -896,7 +896,7 @@ def showFrame(frame, name, view=None, parent='segmentation', scale=0.35, visible
     return item
 
 
-def showPolyData(polyData, name, color=None, colorByName=None, colorByRange=None, alpha=1.0, visible=True, view=None, parent='segmentation', cls=None):
+def showPolyData(polyData, name, color=None, colorByName=None, colorByRange=None, alpha=1.0, visible=True, view=None, parent='data', cls=None):
 
     view = view or app.getCurrentRenderView()
     assert view
