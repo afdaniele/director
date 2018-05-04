@@ -107,9 +107,9 @@ ddQVTKWidgetView::ddQVTKWidgetView(QWidget* parent) : ddViewBase(parent)
 #else
   this->Internal->VTKWidget->SetUseTDx(true);
   this->Internal->RenderWindow = vtkSmartPointer<vtkRenderWindow>::New();
-  this->Internal->VTKWidget->SetRenderWindow(this->Internal->RenderWindow);
+
 #endif
-  this->Internal->VTKWidget->SetRenderWindow(this->Internal->RenderWindow);
+
   this->Internal->RenderWindow->SetMultiSamples(8);
   this->Internal->RenderWindow->StereoCapableWindowOn();
   this->Internal->RenderWindow->SetStereoTypeToRedBlue();
@@ -117,14 +117,13 @@ ddQVTKWidgetView::ddQVTKWidgetView(QWidget* parent) : ddViewBase(parent)
   this->Internal->RenderWindow->StereoUpdate();
   this->Internal->RenderWindow->SetSize(width(), height());
 
+  this->Internal->RenderWindow->StereoCapableWindowOff();
+  this->Internal->RenderWindow->SetMultiSamples(0);
+  this->Internal->RenderWindow->SetAlphaBitPlanes(1);
+
   this->Internal->LightKit = vtkSmartPointer<vtkLightKit>::New();
   this->Internal->LightKit->SetKeyLightWarmth(0.5);
   this->Internal->LightKit->SetFillLightWarmth(0.5);
-
-  this->Internal->TDxInteractor =
-    vtkSmartPointer<vtkTDxInteractorStyleCallback>::New();
-  vtkInteractorStyle::SafeDownCast(this->Internal->RenderWindow->GetInteractor(
-    )->GetInteractorStyle())->SetTDxStyle(this->Internal->TDxInteractor);
 
   //this->Internal->RenderWindow->SetNumberOfLayers(2);
 
@@ -132,11 +131,20 @@ ddQVTKWidgetView::ddQVTKWidgetView(QWidget* parent) : ddViewBase(parent)
   //this->Internal->RenderWindow->AddRenderer(this->Internal->RendererBase);
 
   this->Internal->Renderer = vtkSmartPointer<vtkRenderer>::New();
+
+  this->Internal->Renderer->SetUseDepthPeeling(true);
+  this->Internal->Renderer->SetMaximumNumberOfPeels(50);
+  this->Internal->Renderer->SetOcclusionRatio(0.1);
+
   //this->Internal->Renderer->SetLayer(1);
   this->Internal->RenderWindow->AddRenderer(this->Internal->Renderer);
 
+  this->Internal->VTKWidget->SetRenderWindow(this->Internal->RenderWindow);
 
-
+  this->Internal->TDxInteractor =
+    vtkSmartPointer<vtkTDxInteractorStyleCallback>::New();
+  vtkInteractorStyle::SafeDownCast(this->Internal->RenderWindow->GetInteractor(
+    )->GetInteractorStyle())->SetTDxStyle(this->Internal->TDxInteractor);
 
   vtkMapper::SetResolveCoincidentTopologyToPolygonOffset();
 
