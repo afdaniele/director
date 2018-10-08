@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 WORKDIR /root
-ARG config=vtk7-qt4-python2-ubuntu16
+ARG config=vtk8-qt5-python37-ubuntu16
 COPY configurations/${config} commands
 
 RUN bash commands/install_deps
