@@ -43,4 +43,6 @@ make -j $nproc
 cd $TRAVIS_BUILD_DIR/build/src/director-build
 cmake_command=$(grep CMAKE_COMMAND CMakeCache.txt | cut -d = -f 2)
 $cmake_command -DSITE:STRING=${site_name} -DBUILDNAME:STRING=${build_name} .
+
+export LD_LIBRARY_PATH=$TRAVIS_BUILD_DIR/build/install/lib
 ctest -j 1 --dashboard Experimental --track travis --output-on-failure

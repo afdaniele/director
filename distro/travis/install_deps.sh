@@ -9,7 +9,13 @@ install_ubuntu_deps_common()
     cmake \
     git \
     libglib2.0-dev \
-    libqt4-dev \
+    freeglut3-dev \
+    python2.7-dev \
+    qtbase5-dev \
+    qtbase5-private-dev \
+    qttools5-dev \
+    libqt5x11extras5-dev \
+    qtmultimedia5-dev \
     libx11-dev \
     libxext-dev \
     libxt-dev \

@@ -375,6 +375,14 @@ elseif(USE_PRECOMPILED_VTK)
       set(vtk_package_url ${url_base}/vtk7.1-qt5.5-python2.7-ubuntu16.04.tar.gz)
       set(vtk_package_md5 5ac930a7b1c083f975115d5970fb1a34)
     endif()
+  elseif(ubuntu_version EQUAL 18.04)
+    if(DD_QT_VERSION EQUAL 4)
+      message(FATAL_ERROR "Compiling director with Qt4 is not supported on Ubuntu 18.04. "
+               "Please set DD_QT_VERSION to 5.")
+    else()
+      set(vtk_package_url ${url_base}/vtk8.1-qt5.9-python2.7-ubuntu18.04.tar.gz)
+      set(vtk_package_md5 184f9cbb7d95756b4bdae74043611f17)
+    endif()
   else()
     message(FATAL_ERROR "USE_PRECOMPILED_VTK requires Ubuntu 14.04 or 16.04 "
             "but the detected system version does not match. "
