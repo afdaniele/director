@@ -592,6 +592,7 @@ if(USE_SIGNAL_SCOPE)
       ${default_cmake_args}
       ${python_args}
       ${qt_args}
+      -DUSED_QTVERSION:STRING=${DD_QT_VERSION}
     DEPENDS
       ctkPythonConsole 
       PythonQt
