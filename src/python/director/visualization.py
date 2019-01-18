@@ -1098,6 +1098,12 @@ def pickProp(displayPoint, view):
 
     for tolerance in (0.0, 0.005, 0.01):
         pickType = 'render' if tolerance == 0.0 else 'cells'
+
+        # workaround for bug in vtk8 with qt5
+        # the hardware render picker doesn't work
+        if vtk.VTK_MAJOR_VERSION == 8 and QtCore.qVersion()[0] == '5':
+            pickType = 'cells'
+
         pickData = pickPoint(displayPoint, view, pickType=pickType, tolerance=tolerance)
         pickedPoint = pickData.pickedPoint
         pickedProp = pickData.pickedProp
