@@ -160,7 +160,7 @@ DataRep MakeAxis(double length, double handleRadius, int axis, bool useTubeFilte
 
   vtkSmartPointer<vtkSphereSource> sphere = vtkSmartPointer<vtkSphereSource>::New();
   sphere->SetCenter(length + length*0.5, 0, 0);
-  sphere->SetRadius(0.02);
+  sphere->SetRadius(0.02 * length/0.35);
   sphere->SetThetaResolution(32);
   sphere->SetPhiResolution(32);
   sphere->Update();
@@ -253,7 +253,7 @@ public:
     this->Actors.clear();
 
     useTubeFilter = true;
-    double handleRadius = 0.0025;
+    double handleRadius = 0.005 * scale / 0.35;
     bool useDisk = false;
 
     if (useDisk)
@@ -755,11 +755,45 @@ void vtkFrameWidgetRepresentation::HighlightActor(vtkDataSet* dataset)
     }
 }
 
+namespace {
+
+vtkDataSet* PickDataSet(vtkCellPicker* picker, int x, int y, vtkRenderer* renderer)
+{
+  vtkDataSet* dataset = 0;
+  /*
+  picker->SetTolerance(0.0001);
+  picker->Pick(x, y, 0.0, renderer);
+  dataset = picker->GetDataSet();
+  if (dataset)
+  {
+    return dataset;
+  }
+
+  picker->SetTolerance(0.001);
+  picker->Pick(x, y, 0.0, renderer);
+  dataset = picker->GetDataSet();
+  if (dataset)
+  {
+    return dataset;
+  }
+  */
+  picker->SetTolerance(0.01 * 0.25);
+  picker->Pick(x, y, 0.0, renderer);
+  dataset = picker->GetDataSet();
+  if (dataset)
+  {
+    return dataset;
+  }
+
+  return dataset;
+}
+
+}
+
 //----------------------------------------------------------------------------
 void vtkFrameWidgetRepresentation::OnMouseHover(double e[2])
 {
-  this->Internal->AxesPicker->Pick(e[0], e[1], 0.0, this->Renderer);
-  vtkDataSet* dataset = this->Internal->AxesPicker->GetDataSet();
+  vtkDataSet* dataset = PickDataSet(this->Internal->AxesPicker, e[0], e[1], this->Renderer);
   this->HighlightActor(dataset);
 }
 
@@ -778,8 +812,8 @@ int vtkFrameWidgetRepresentation::ComputeInteractionState(int X, int Y, int vtkN
   this->Internal->Transform->GetPosition(this->InteractionStartWorldPoint);
 
   // Check if the axes actor was picked
-  this->Internal->AxesPicker->Pick(X,Y,0.0,this->Renderer);
-  vtkDataSet* dataset = this->Internal->AxesPicker->GetDataSet();
+  vtkDataSet* dataset = PickDataSet(this->Internal->AxesPicker, X, Y, this->Renderer);
+
   if (dataset)
     {
 
