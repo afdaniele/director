@@ -107,26 +107,26 @@ set(python_args
 
 if (NOT USE_SYSTEM_EIGEN)
 
-ExternalProject_Add(
-  eigen
-  URL https://bitbucket.org/eigen/eigen/get/3.3.3.tar.gz
-  URL_MD5 f21cee193e15e55cfd15ebbc16fc00a7
-  CMAKE_CACHE_ARGS
-    ${default_cmake_args}
-    ${qt_args}
-)
-
-ExternalProject_Add_Step(eigen make_pkgconfig_dir
-  COMMAND ${CMAKE_COMMAND} -E make_directory ${install_prefix}/lib/pkgconfig
-  DEPENDERS configure)
-
-set(eigen_args
-  -DEIGEN_INCLUDE_DIR:PATH=${install_prefix}/include/eigen3
-  -DEIGEN_INCLUDE_DIRS:PATH=${install_prefix}/include/eigen3
-  -DEIGEN3_INCLUDE_DIR:PATH=${install_prefix}/include/eigen3
+  ExternalProject_Add(
+    eigen
+    URL https://bitbucket.org/eigen/eigen/get/3.3.3.tar.gz
+    URL_MD5 f21cee193e15e55cfd15ebbc16fc00a7
+    CMAKE_CACHE_ARGS
+      ${default_cmake_args}
+      ${qt_args}
   )
 
-set(eigen_depends eigen)
+  ExternalProject_Add_Step(eigen make_pkgconfig_dir
+    COMMAND ${CMAKE_COMMAND} -E make_directory ${install_prefix}/lib/pkgconfig
+    DEPENDERS configure)
+
+  set(eigen_args
+    -DEIGEN_INCLUDE_DIR:PATH=${install_prefix}/include/eigen3
+    -DEIGEN_INCLUDE_DIRS:PATH=${install_prefix}/include/eigen3
+    -DEIGEN3_INCLUDE_DIR:PATH=${install_prefix}/include/eigen3
+    )
+
+  set(eigen_depends eigen)
 
 endif()
 
@@ -135,7 +135,6 @@ endif()
 # lcm
 
 if (USE_LCM AND NOT USE_SYSTEM_LCM)
-
 
   if(CMAKE_VERSION VERSION_LESS 3.1)
     ExternalProject_Add(
@@ -593,7 +592,7 @@ if(USE_SIGNAL_SCOPE)
       ${python_args}
       ${qt_args}
     DEPENDS
-      ctkPythonConsole 
+      ctkPythonConsole
       PythonQt
   )
 
