@@ -5,7 +5,7 @@ ENV WORKDIR "/code"
 WORKDIR /code
 
 # define arguments
-ARG NCORES=4
+ARG NCORES=2
 ARG VERBOSE=0
 ARG DIRECTOR_SOURCE_DIR="$WORKDIR/director"
 ARG DIRECTOR_BUILD_DIR="$WORKDIR/director-build"
