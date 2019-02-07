@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [ -z ${ENV_ID} ]; then
+  echo "\$ENV_ID is not set. Are you in Docker?";
+  exit 1
+fi
+
+echo "Environment: ${ENV_ID}"
+
+DIRECTOR_SRC="/code/src/python/director/"
+ANALYSIS_OUT_DIR="/code/dependencies_analysis/data"
+
+echo "  Creating list of import errors..."
+sfood $DIRECTOR_SRC | grep '^WARNING' > ${ANALYSIS_OUT_DIR}/${ENV_ID}/import_errors.list
+
+echo "  Creating dependency graph..."
+sfood $DIRECTOR_SRC | grep -v '^WARNING' > ${ANALYSIS_OUT_DIR}/${ENV_ID}/dependencies.list
+
+echo "  Creating list of imports..."
+sfood-imports $DIRECTOR_SRC > ${ANALYSIS_OUT_DIR}/${ENV_ID}/all_imports.list
+
+echo "Done!"

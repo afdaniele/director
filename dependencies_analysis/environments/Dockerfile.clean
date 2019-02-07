@@ -1,0 +1,17 @@
+FROM ripl/libbot2:latest
+
+COPY snakefood /tmp/snakefood
+
+RUN cd /tmp/snakefood \
+  && python setup.py install \
+  && rm -rf /tmp/snakefood
+
+# install dependencies
+RUN apt update \
+  && apt install -y \
+    python-six \
+    sudo \
+  && rm -rf /var/lib/apt/lists/*
+
+# set analysis env ID
+ENV ENV_ID="clean"

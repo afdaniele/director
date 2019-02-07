@@ -1,0 +1,7 @@
+#!/bin/bash
+
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+docker build -t afdaniele/snakefood:clean -f $DIR/Dockerfile.clean $DIR
+
+docker build -t afdaniele/snakefood:director -f $DIR/Dockerfile.director $DIR

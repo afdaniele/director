@@ -1,0 +1,11 @@
+#!/bin/bash
+
+DIRECTOR_SRC=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../
+
+echo ""
+
+x-docker run -it --rm -v $DIRECTOR_SRC:/code afdaniele/snakefood:clean /code/dependencies_analysis/docker_assets/run_analysis
+
+echo ""
+
+x-docker run -it --rm -v $DIRECTOR_SRC:/code afdaniele/snakefood:director /code/dependencies_analysis/docker_assets/run_analysis
