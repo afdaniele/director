@@ -2,10 +2,24 @@
 
 DIRECTOR_SRC=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../
 
+DIRECTOR_ENTRYPOINT="/fig/home/andreadaniele/code/myapp/main.py"
+
+DIRECTOR_PLUGINS_DIR="/fig/home/andreadaniele/code/myapp/_plugins"
+
 echo ""
 
-x-docker run -it --rm -v $DIRECTOR_SRC:/code afdaniele/snakefood:clean /code/dependencies_analysis/docker_assets/run_analysis
+x-docker run -it --rm \
+  -v $DIRECTOR_SRC:/code/director \
+  -v $DIRECTOR_ENTRYPOINT:/code/director_entrypoint/entrypoint.py \
+  -v $DIRECTOR_PLUGINS_DIR:/code/director_plugins \
+  afdaniele/snakefood:clean \
+  /code/director/dependencies_analysis/docker_assets/run_analysis
 
 echo ""
 
-x-docker run -it --rm -v $DIRECTOR_SRC:/code afdaniele/snakefood:director /code/dependencies_analysis/docker_assets/run_analysis
+x-docker run -it --rm \
+  -v $DIRECTOR_SRC:/code/director \
+  -v $DIRECTOR_ENTRYPOINT:/code/director_entrypoint/entrypoint.py \
+  -v $DIRECTOR_PLUGINS_DIR:/code/director_plugins \
+  afdaniele/snakefood:director \
+  /code/director/dependencies_analysis/docker_assets/run_analysis

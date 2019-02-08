@@ -1,0 +1,8 @@
+WARNING     :     Line 12: Could not import module 'PythonQt'
+WARNING     :     Line 13: Could not import module 'PythonQt'
+WARNING     :     Line 13: Could not import module 'PythonQt'
+WARNING     :     Line 189: Could not import module 'core'
+WARNING     : 
+WARNING     : Modules that could not be imported:
+WARNING     :   PythonQt
+WARNING     :   core

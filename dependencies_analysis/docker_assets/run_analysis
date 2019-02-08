@@ -7,16 +7,31 @@ fi
 
 echo "Environment: ${ENV_ID}"
 
-DIRECTOR_SRC="/code/src/python/director/"
-ANALYSIS_OUT_DIR="/code/dependencies_analysis/data"
+DIRECTOR_SRC="/code/director/src/python/director/"
+DIRECTOR_ENTRYPOINT="/code/director_entrypoint/entrypoint.py"
+DIRECTOR_PLUGINS_DIR="/code/director_plugins/"
+ANALYSIS_OUT_DIR="/code/director/dependencies_analysis/data"
+
+export PYTHONPATH="${DIRECTOR_SRC}../:$PYTHONPATH"
+export PYTHON_PATH=$PYTHONPATH
 
 echo "  Creating list of import errors..."
-sfood $DIRECTOR_SRC | grep '^WARNING' > ${ANALYSIS_OUT_DIR}/${ENV_ID}/import_errors.list
+sfood $DIRECTOR_SRC 2>&1 | grep '^WARNING' > ${ANALYSIS_OUT_DIR}/${ENV_ID}/director_import_errors.list
 
 echo "  Creating dependency graph..."
-sfood $DIRECTOR_SRC | grep -v '^WARNING' > ${ANALYSIS_OUT_DIR}/${ENV_ID}/dependencies.list
+sfood $DIRECTOR_SRC 2>&1 | grep -v '^WARNING' > ${ANALYSIS_OUT_DIR}/${ENV_ID}/director_dependencies.list
 
 echo "  Creating list of imports..."
-sfood-imports $DIRECTOR_SRC > ${ANALYSIS_OUT_DIR}/${ENV_ID}/all_imports.list
+sfood-imports $DIRECTOR_SRC > ${ANALYSIS_OUT_DIR}/${ENV_ID}/director_all_imports.list
+
+echo "  Analyzing entrypoint..."
+sfood $DIRECTOR_ENTRYPOINT 2>&1 | grep '^WARNING' > ${ANALYSIS_OUT_DIR}/${ENV_ID}/entrypoint_import_errors.list
+sfood $DIRECTOR_ENTRYPOINT 2>&1 | grep -v '^WARNING' > ${ANALYSIS_OUT_DIR}/${ENV_ID}/entrypoint_dependencies.list
+sfood-imports $DIRECTOR_ENTRYPOINT > ${ANALYSIS_OUT_DIR}/${ENV_ID}/entrypoint_all_imports.list
+
+echo "  Analyzing plugins..."
+sfood $DIRECTOR_PLUGINS_DIR 2>&1 | grep '^WARNING' > ${ANALYSIS_OUT_DIR}/${ENV_ID}/plugins_import_errors.list
+sfood $DIRECTOR_PLUGINS_DIR 2>&1 | grep -v '^WARNING' > ${ANALYSIS_OUT_DIR}/${ENV_ID}/plugins_dependencies.list
+sfood-imports $DIRECTOR_PLUGINS_DIR > ${ANALYSIS_OUT_DIR}/${ENV_ID}/plugins_all_imports.list
 
 echo "Done!"

@@ -1,0 +1,8 @@
+WARNING     :     Line 1: Could not import module 'director_devel.plugin'
+WARNING     :     Line 1: Could not import module 'director_devel.plugin'
+WARNING     :     Line 1: Could not import module 'director_devel.plugin'
+WARNING     :     Line 7: Could not import module 'director_plugin_geometry'
+WARNING     : 
+WARNING     : Modules that could not be imported:
+WARNING     :   director_devel.plugin
+WARNING     :   director_plugin_geometry

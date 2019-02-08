@@ -1,0 +1,7231 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: 
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 7671 656
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 7635 620 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% P2/director/timercallback.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+6715 90 111.58 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6637 86.3 moveto 156 (P2/director/timercallback.py) alignedtext
+grestore
+% P3/traceback.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+6905 18 67.69 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6861 14.3 moveto 88 (P3/traceback.py) alignedtext
+grestore
+% P2/director/timercallback.py->P3/traceback.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6757.64 73.29 moveto
+6787.26 62.38 6826.75 47.83 6857.4 36.54 curveto
+stroke
+0 0 0 edgecolor
+newpath 6858.84 39.74 moveto
+6867.01 33 lineto
+6856.42 33.17 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6858.84 39.74 moveto
+6867.01 33 lineto
+6856.42 33.17 lineto
+closepath stroke
+grestore
+% P3/time
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4651 18 38.19 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4629.5 14.3 moveto 43 (P3/time) alignedtext
+grestore
+% P2/director/timercallback.py->P3/time
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6620.53 80.31 moveto
+6583.31 77.2 6540.18 73.97 6501 72 curveto
+5752 34.29 5562.48 82.94 4814 36 curveto
+4774.67 33.53 4730.18 28.76 4697.63 24.9 curveto
+stroke
+0 0 0 edgecolor
+newpath 4697.85 21.4 moveto
+4687.5 23.68 lineto
+4697.01 28.35 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4697.85 21.4 moveto
+4687.5 23.68 lineto
+4697.01 28.35 lineto
+closepath stroke
+grestore
+% P2/director/measurementpanel.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3377 522 129.98 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3285 518.3 moveto 184 (P2/director/measurementpanel.py) alignedtext
+grestore
+% P2/director/debugVis.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+849 306 96.68 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+782.5 302.3 moveto 133 (P2/director/debugVis.py) alignedtext
+grestore
+% P2/director/measurementpanel.py->P2/director/debugVis.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3275.97 510.61 moveto
+3251.14 508.25 3224.62 505.88 3200 504 curveto
+2356.21 439.53 2138.54 502.35 1299 396 curveto
+1161.11 378.53 1002.09 343.52 914.83 323 curveto
+stroke
+0 0 0 edgecolor
+newpath 915.6 319.59 moveto
+905.07 320.69 lineto
+913.99 326.4 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 915.6 319.59 moveto
+905.07 320.69 lineto
+913.99 326.4 lineto
+closepath stroke
+grestore
+% P2/director/pointpicker.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3438 450 103.18 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3366.5 446.3 moveto 143 (P2/director/pointpicker.py) alignedtext
+grestore
+% P2/director/measurementpanel.py->P2/director/pointpicker.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3391.77 504.05 moveto
+3399.15 495.58 3408.23 485.17 3416.38 475.82 curveto
+stroke
+0 0 0 edgecolor
+newpath 3419.01 478.11 moveto
+3422.95 468.28 lineto
+3413.74 473.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3419.01 478.11 moveto
+3422.95 468.28 lineto
+3413.74 473.51 lineto
+closepath stroke
+grestore
+% P4/numpy
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1112 18 47.39 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1083.5 14.3 moveto 57 (P4/numpy) alignedtext
+grestore
+% P2/director/measurementpanel.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3278.33 510.24 moveto
+3252.84 507.81 3225.42 505.51 3200 504 curveto
+2499.27 462.42 2321.55 512.52 1621 468 curveto
+1006.46 428.95 787.47 611.64 243 324 curveto
+130.09 264.35 17.11 164.64 105 72 curveto
+137.85 37.38 845.43 23.28 1054.39 19.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 1054.6 23.36 moveto
+1064.54 19.7 lineto
+1054.49 16.36 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1054.6 23.36 moveto
+1064.54 19.7 lineto
+1054.49 16.36 lineto
+closepath stroke
+grestore
+% P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+6320 90 85.59 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6262 86.3 moveto 116 (P2/director/vtkAll.py) alignedtext
+grestore
+% P2/director/measurementpanel.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3466.24 508.9 moveto
+3482.76 507 3499.88 505.25 3516 504 curveto
+3994.38 466.84 4115.64 489.11 4595 468 curveto
+4887.6 455.12 5618.83 416.46 5911 396 curveto
+5957.89 392.72 6715.87 351.49 6754 324 curveto
+6818.89 277.21 6817.67 191.09 6753 144 curveto
+6691.94 99.54 6489.78 118.66 6415 108 curveto
+6407.3 106.9 6399.27 105.64 6391.29 104.32 curveto
+stroke
+0 0 0 edgecolor
+newpath 6391.67 100.83 moveto
+6381.22 102.61 lineto
+6390.5 107.74 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6391.67 100.83 moveto
+6381.22 102.61 lineto
+6390.5 107.74 lineto
+closepath stroke
+grestore
+% P2/director/applogic.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+5473 234 93.68 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5409 230.3 moveto 128 (P2/director/applogic.py) alignedtext
+grestore
+% P2/director/measurementpanel.py->P2/director/applogic.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3466.99 508.95 moveto
+3483.28 507.07 3500.13 505.31 3516 504 curveto
+3883.98 473.56 3977.43 490.13 4346 468 curveto
+4554.68 455.47 4606.35 445.11 4815 432 curveto
+4855.8 429.44 5521.81 425.61 5550 396 curveto
+5588.24 355.84 5535.38 293.15 5500.11 259.05 curveto
+stroke
+0 0 0 edgecolor
+newpath 5502.13 256.15 moveto
+5492.45 251.83 lineto
+5497.33 261.24 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5502.13 256.15 moveto
+5492.45 251.83 lineto
+5497.33 261.24 lineto
+closepath stroke
+grestore
+% P2/director/visualization.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4374 306 108.58 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4298.5 302.3 moveto 151 (P2/director/visualization.py) alignedtext
+grestore
+% P2/director/measurementpanel.py->P2/director/visualization.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3428.7 505.46 moveto
+3495.92 485.78 3617.26 452.01 3723 432 curveto
+3851.91 407.61 3886.99 419.87 4016 396 curveto
+4071.86 385.66 4222.24 346.91 4309.3 324.09 curveto
+stroke
+0 0 0 edgecolor
+newpath 4310.29 327.45 moveto
+4319.07 321.53 lineto
+4308.51 320.68 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4310.29 327.45 moveto
+4319.07 321.53 lineto
+4308.51 320.68 lineto
+closepath stroke
+grestore
+% P2/director/vieweventfilter.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4295 378 116.18 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4213.5 374.3 moveto 163 (P2/director/vieweventfilter.py) alignedtext
+grestore
+% P2/director/measurementpanel.py->P2/director/vieweventfilter.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3460.09 508.15 moveto
+3632.51 481.48 4027.89 420.32 4205.61 392.83 curveto
+stroke
+0 0 0 edgecolor
+newpath 4206.36 396.25 moveto
+4215.71 391.27 lineto
+4205.29 389.34 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4206.36 396.25 moveto
+4215.71 391.27 lineto
+4205.29 389.34 lineto
+closepath stroke
+grestore
+% P2/director/uipanel.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3114 450 89.08 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3053.5 446.3 moveto 121 (P2/director/uipanel.py) alignedtext
+grestore
+% P2/director/measurementpanel.py->P2/director/uipanel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3319.93 505.81 moveto
+3277.33 494.47 3219.17 478.99 3175.53 467.38 curveto
+stroke
+0 0 0 edgecolor
+newpath 3176.17 463.93 moveto
+3165.61 464.74 lineto
+3174.37 470.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3176.17 463.93 moveto
+3165.61 464.74 lineto
+3174.37 470.69 lineto
+closepath stroke
+grestore
+% P2/director/objectmodel.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3360 234 107.48 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3285.5 230.3 moveto 149 (P2/director/objectmodel.py) alignedtext
+grestore
+% P2/director/measurementpanel.py->P2/director/objectmodel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3353.96 504.05 moveto
+3343.29 494.75 3331.73 482.21 3326 468 curveto
+3297.45 397.15 3328.69 305.58 3347.65 261.3 curveto
+stroke
+0 0 0 edgecolor
+newpath 3350.88 262.65 moveto
+3351.71 252.09 lineto
+3344.48 259.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3350.88 262.65 moveto
+3351.71 252.09 lineto
+3344.48 259.83 lineto
+closepath stroke
+grestore
+% P3/os.path
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3759 162 48.19 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3730 158.3 moveto 58 (P3/os.path) alignedtext
+grestore
+% P2/director/affordanceitems.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2811 378 120.48 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2726.5 374.3 moveto 169 (P2/director/affordanceitems.py) alignedtext
+grestore
+% P2/director/affordanceitems.py->P2/director/debugVis.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2728.55 364.85 moveto
+2713.11 362.94 2697.09 361.2 2682 360 curveto
+2109.81 314.44 1964.75 341 1391 324 curveto
+1238.83 319.49 1062.65 313.9 953.5 310.39 curveto
+stroke
+0 0 0 edgecolor
+newpath 953.59 306.89 moveto
+943.48 310.06 lineto
+953.36 313.88 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 953.59 306.89 moveto
+943.48 310.06 lineto
+953.36 313.88 lineto
+closepath stroke
+grestore
+% P2/director/affordanceitems.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2726.78 365.12 moveto
+2711.88 363.24 2696.5 361.44 2682 360 curveto
+2445.3 336.45 2384.88 345.75 2148 324 curveto
+2113.52 320.83 1553.75 276.21 1529 252 curveto
+1471.26 195.53 1561.21 129.01 1504 72 curveto
+1458.18 26.34 1267.52 19.18 1170 18.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 1169.74 15.08 moveto
+1159.72 18.54 lineto
+1169.71 22.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1169.74 15.08 moveto
+1159.72 18.54 lineto
+1169.71 22.08 lineto
+closepath stroke
+grestore
+% P3/collections.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3329 90 71.49 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3282 86.3 moveto 94 (P3/collections.py) alignedtext
+grestore
+% P2/director/affordanceitems.py->P3/collections.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2858.58 361.34 moveto
+2885.87 351.76 2920.46 338.55 2950 324 curveto
+3085 257.5 3234.04 157.26 3297.55 113.16 curveto
+stroke
+0 0 0 edgecolor
+newpath 3299.73 115.9 moveto
+3305.94 107.32 lineto
+3295.73 110.16 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3299.73 115.9 moveto
+3305.94 107.32 lineto
+3295.73 110.16 lineto
+closepath stroke
+grestore
+% P2/director/affordanceitems.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2929.13 374.55 moveto
+3102.22 371.02 3434.94 364.43 3718 360 curveto
+3757.71 359.38 6548.61 351.77 6577 324 curveto
+6634.21 268.04 6632.67 205.95 6582 144 curveto
+6578.93 140.25 6468.37 118.84 6391.87 104.4 curveto
+stroke
+0 0 0 edgecolor
+newpath 6392.26 100.92 moveto
+6381.78 102.5 lineto
+6390.96 107.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6392.26 100.92 moveto
+6381.78 102.5 lineto
+6390.96 107.79 lineto
+closepath stroke
+grestore
+% P3/uuid.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2775 90 49.29 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2745 86.3 moveto 60 (P3/uuid.py) alignedtext
+grestore
+% P2/director/affordanceitems.py->P3/uuid.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2724.64 365.38 moveto
+2710.4 363.53 2695.79 361.68 2682 360 curveto
+2539.05 342.59 2496.07 371.13 2360 324 curveto
+2266.01 291.45 2159.3 216.87 2227 144 curveto
+2264.08 104.09 2662.37 117.59 2716 108 curveto
+2720.43 107.21 2725 106.21 2729.55 105.11 curveto
+stroke
+0 0 0 edgecolor
+newpath 2730.61 108.45 moveto
+2739.4 102.54 lineto
+2728.84 101.68 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2730.61 108.45 moveto
+2739.4 102.54 lineto
+2728.84 101.68 lineto
+closepath stroke
+grestore
+% P2/director/affordanceitems.py->P2/director/visualization.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2930.24 375.2 moveto
+3172.31 370.95 3738.63 357.97 4213 324 curveto
+4234.18 322.48 4256.87 320.38 4278.35 318.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 4278.87 321.64 moveto
+4288.45 317.12 lineto
+4278.14 314.68 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4278.87 321.64 moveto
+4288.45 317.12 lineto
+4278.14 314.68 lineto
+closepath stroke
+grestore
+% P2/director/ioUtils.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3610 234 87.18 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3551 230.3 moveto 118 (P2/director/ioUtils.py) alignedtext
+grestore
+% P2/director/affordanceitems.py->P2/director/ioUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2928.29 373.93 moveto
+3040.14 369.06 3212.74 356.49 3359 324 curveto
+3433.26 307.5 3515.75 275.45 3565.21 254.65 curveto
+stroke
+0 0 0 edgecolor
+newpath 3566.81 257.77 moveto
+3574.65 250.65 lineto
+3564.08 251.33 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3566.81 257.77 moveto
+3574.65 250.65 lineto
+3564.08 251.33 lineto
+closepath stroke
+grestore
+% P3/os.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4344 90 41.69 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4320 86.3 moveto 48 (P3/os.py) alignedtext
+grestore
+% P2/director/affordanceitems.py->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2930.04 375.33 moveto
+3076.6 371.69 3332.67 360.21 3549 324 curveto
+3641.08 308.59 3863.29 233.46 3955 216 curveto
+4090.39 190.22 4140.4 242.96 4263 180 curveto
+4291.13 165.55 4314.32 137.07 4328.57 116.21 curveto
+stroke
+0 0 0 edgecolor
+newpath 4331.53 118.07 moveto
+4334.12 107.79 lineto
+4325.69 114.21 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4331.53 118.07 moveto
+4334.12 107.79 lineto
+4325.69 114.21 lineto
+closepath stroke
+grestore
+% P2/director/uuidutil.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1987 162 90.98 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1925 158.3 moveto 124 (P2/director/uuidutil.py) alignedtext
+grestore
+% P2/director/affordanceitems.py->P2/director/uuidutil.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2726.07 365.17 moveto
+2711.39 363.31 2696.27 361.5 2682 360 curveto
+2480.71 338.77 2419.22 390.36 2228 324 curveto
+2140.43 293.61 2054.09 223.59 2012.56 186.71 curveto
+stroke
+0 0 0 edgecolor
+newpath 2014.65 183.87 moveto
+2004.87 179.8 lineto
+2009.97 189.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2014.65 183.87 moveto
+2004.87 179.8 lineto
+2009.97 189.08 lineto
+closepath stroke
+grestore
+% P2/director/affordanceitems.py->P2/director/objectmodel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2894.08 364.94 moveto
+2933.98 356.96 2981.57 344.14 3021 324 curveto
+3043.2 312.66 3041.42 298.55 3064 288 curveto
+3082.82 279.2 3192.7 260.85 3273.1 248.23 curveto
+stroke
+0 0 0 edgecolor
+newpath 3273.91 251.65 moveto
+3283.25 246.65 lineto
+3272.83 244.73 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3273.91 251.65 moveto
+3283.25 246.65 lineto
+3272.83 244.73 lineto
+closepath stroke
+grestore
+% P2/director/filterUtils.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+887 234 97.48 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+820 230.3 moveto 134 (P2/director/filterUtils.py) alignedtext
+grestore
+% P2/director/affordanceitems.py->P2/director/filterUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2728.2 364.89 moveto
+2712.87 362.98 2696.97 361.24 2682 360 curveto
+2217.98 321.54 2099.25 359.54 1635 324 curveto
+1392.98 305.47 1108.71 267.03 970.67 247.29 curveto
+stroke
+0 0 0 edgecolor
+newpath 970.98 243.79 moveto
+960.59 245.84 lineto
+969.99 250.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 970.98 243.79 moveto
+960.59 245.84 lineto
+969.99 250.72 lineto
+closepath stroke
+grestore
+% P2/director/transformUtils.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1291 234 115.08 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1210.5 230.3 moveto 161 (P2/director/transformUtils.py) alignedtext
+grestore
+% P2/director/affordanceitems.py->P2/director/transformUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2727.85 364.92 moveto
+2712.62 363.03 2696.85 361.28 2682 360 curveto
+2292.01 326.39 2190.18 374.41 1802 324 curveto
+1728.43 314.45 1711.93 301.59 1639 288 curveto
+1553.68 272.1 1455.93 257.53 1385.79 247.71 curveto
+stroke
+0 0 0 edgecolor
+newpath 1386.04 244.21 moveto
+1375.65 246.29 lineto
+1385.07 251.14 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1386.04 244.21 moveto
+1375.65 246.29 lineto
+1385.07 251.14 lineto
+closepath stroke
+grestore
+% P2/director
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+5201 162 50.09 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5170.5 158.3 moveto 61 (P2/director) alignedtext
+grestore
+% P2/director/affordanceitems.py->P2/director
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2929.89 375.1 moveto
+3101.02 371.19 3426.39 359.37 3701 324 curveto
+3944.61 292.63 3999.32 246.86 4243 216 curveto
+4331.78 204.76 4946.62 175.04 5141.73 165.79 curveto
+stroke
+0 0 0 edgecolor
+newpath 5141.97 169.28 moveto
+5151.79 165.31 lineto
+5141.64 162.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5141.97 169.28 moveto
+5151.79 165.31 lineto
+5141.64 162.29 lineto
+closepath stroke
+grestore
+% P2/director/meshmanager.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2482 306 113.18 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2403 302.3 moveto 158 (P2/director/meshmanager.py) alignedtext
+grestore
+% P2/director/affordanceitems.py->P2/director/meshmanager.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2744.82 362.92 moveto
+2690.47 351.36 2613.52 334.98 2556.92 322.94 curveto
+stroke
+0 0 0 edgecolor
+newpath 2557.46 319.48 moveto
+2546.95 320.82 lineto
+2556.01 326.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2557.46 319.48 moveto
+2546.95 320.82 lineto
+2556.01 326.32 lineto
+closepath stroke
+grestore
+% P1/geometry/line_renderer.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+5163 378 116.18 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5081.5 374.3 moveto 163 (P1/geometry/line_renderer.py) alignedtext
+grestore
+% P1/geometry/line_renderer.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5242.88 364.83 moveto
+5257.84 362.92 5273.37 361.19 5288 360 curveto
+5361.51 354.02 6563.56 376.85 6615 324 curveto
+6670.8 266.67 6666.32 205.37 6615 144 curveto
+6614.89 143.87 6480.08 119.69 6392.77 104.04 curveto
+stroke
+0 0 0 edgecolor
+newpath 6393.35 100.59 moveto
+6382.89 102.27 lineto
+6392.12 107.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6393.35 100.59 moveto
+6382.89 102.27 lineto
+6392.12 107.48 lineto
+closepath stroke
+grestore
+% P1/geometry/line_renderer.py->P2/director/applogic.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5246.46 365.35 moveto
+5322.83 354 5426.17 336.67 5441 324 curveto
+5458.99 308.63 5466.87 282.36 5470.31 262.34 curveto
+stroke
+0 0 0 edgecolor
+newpath 5473.81 262.64 moveto
+5471.78 252.24 lineto
+5466.88 261.64 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5473.81 262.64 moveto
+5471.78 252.24 lineto
+5466.88 261.64 lineto
+closepath stroke
+grestore
+% P1/geometry/line_renderer.py->P2/director/visualization.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5069.28 367.25 moveto
+5045.09 364.81 5019.08 362.25 4995 360 curveto
+4813.97 343.12 4603.06 325.56 4479.47 315.49 curveto
+stroke
+0 0 0 edgecolor
+newpath 4479.51 311.99 moveto
+4469.26 314.66 lineto
+4478.94 318.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4479.51 311.99 moveto
+4469.26 314.66 lineto
+4478.94 318.96 lineto
+closepath stroke
+grestore
+% P2/director/fieldcontainer.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4857 90 112.38 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4778.5 86.3 moveto 157 (P2/director/fieldcontainer.py) alignedtext
+grestore
+% P1/geometry/line_renderer.py->P2/director/fieldcontainer.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5145.13 360.07 moveto
+5120.43 336.45 5074.74 292.01 5038 252 curveto
+4995.55 205.77 4994.95 184.5 4947 144 curveto
+4932.76 131.97 4915.44 121.05 4899.81 112.3 curveto
+stroke
+0 0 0 edgecolor
+newpath 4901.29 109.12 moveto
+4890.84 107.4 lineto
+4897.94 115.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4901.29 109.12 moveto
+4890.84 107.4 lineto
+4897.94 115.26 lineto
+closepath stroke
+grestore
+% P2/director/debugVis.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 816.82 288.97 moveto
+800.52 279.74 781.23 267 767 252 curveto
+728.91 211.85 739.23 187.49 705 144 curveto
+690.61 125.72 676.19 129.37 667 108 curveto
+660.68 93.3 656.38 83.96 667 72 curveto
+692.36 43.44 940.65 27.51 1054.94 21.64 curveto
+stroke
+0 0 0 edgecolor
+newpath 1055.43 25.12 moveto
+1065.24 21.12 lineto
+1055.08 18.13 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1055.43 25.12 moveto
+1065.24 21.12 lineto
+1055.08 18.13 lineto
+closepath stroke
+grestore
+% P2/director/debugVis.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 945.59 304.31 moveto
+1231.09 301.86 2095.87 291.48 2812 252 curveto
+3004.37 241.4 3051.7 227.81 3244 216 curveto
+3446 203.59 3955.3 218.41 4154 180 curveto
+4200.79 170.95 4208.15 152.72 4255 144 curveto
+4304.01 134.88 5826.32 101.61 6225.13 93.03 curveto
+stroke
+0 0 0 edgecolor
+newpath 6225.27 96.53 moveto
+6235.19 92.81 lineto
+6225.12 89.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6225.27 96.53 moveto
+6235.19 92.81 lineto
+6225.12 89.53 lineto
+closepath stroke
+grestore
+% P2/director/shallowCopy.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+786 90 109.68 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+709.5 86.3 moveto 153 (P2/director/shallowCopy.py) alignedtext
+grestore
+% P2/director/debugVis.py->P2/director/shallowCopy.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 817.07 288.78 moveto
+803.3 279.95 788.62 267.6 781 252 curveto
+759.96 208.92 769.34 151.33 777.84 117.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 781.29 118.63 moveto
+780.52 108.07 lineto
+774.53 116.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 781.29 118.63 moveto
+780.52 108.07 lineto
+774.53 116.8 lineto
+closepath stroke
+grestore
+% P2/director/vtkNumpy.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+595 162 101.28 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+525 158.3 moveto 140 (P2/director/vtkNumpy.py) alignedtext
+grestore
+% P2/director/debugVis.py->P2/director/vtkNumpy.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 800.47 290.42 moveto
+773.04 281.22 738.6 268.05 710 252 curveto
+692.17 241.99 650.85 209.01 622.91 186.13 curveto
+stroke
+0 0 0 edgecolor
+newpath 625.01 183.33 moveto
+615.07 179.69 lineto
+620.57 188.74 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 625.01 183.33 moveto
+615.07 179.69 lineto
+620.57 188.74 lineto
+closepath stroke
+grestore
+% P2/director/openscope.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+5562 162 100.98 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5492.5 158.3 moveto 139 (P2/director/openscope.py) alignedtext
+grestore
+% P3/subprocess.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+5356 90 72.29 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5308.5 86.3 moveto 95 (P3/subprocess.py) alignedtext
+grestore
+% P2/director/openscope.py->P3/subprocess.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5517.3 145.81 moveto
+5484.67 134.72 5440.39 119.68 5406.48 108.15 curveto
+stroke
+0 0 0 edgecolor
+newpath 5407.36 104.76 moveto
+5396.77 104.85 lineto
+5405.11 111.38 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5407.36 104.76 moveto
+5396.77 104.85 lineto
+5405.11 111.38 lineto
+closepath stroke
+grestore
+% P2/director/packagepath.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2834 306 107.48 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2759.5 302.3 moveto 149 (P2/director/packagepath.py) alignedtext
+grestore
+% P2/director/packagepath.py->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2910.2 293.33 moveto
+2922.18 291.52 2934.42 289.7 2946 288 curveto
+3059.25 271.41 3096.43 298.53 3201 252 curveto
+3223.77 241.87 3221.9 227.52 3244 216 curveto
+3298.3 187.68 3318.92 199.4 3377 180 curveto
+3417.86 166.35 3424.96 153.42 3467 144 curveto
+3487.27 139.46 4108.39 104.25 4292.84 93.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 4293.29 97.35 moveto
+4303.08 93.3 lineto
+4292.9 90.36 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4293.29 97.35 moveto
+4303.08 93.3 lineto
+4292.9 90.36 lineto
+closepath stroke
+grestore
+% P4/pygments
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+7390 450 57.39 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+7354 446.3 moveto 72 (P4/pygments) alignedtext
+grestore
+% P2/director/utime.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2947 162 83.69 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2890.5 158.3 moveto 113 (P2/director/utime.py) alignedtext
+grestore
+% P2/director/utime.py->P3/time
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3010.47 150.08 moveto
+3048.15 141.93 3096.02 128.59 3135 108 curveto
+3157.04 96.36 3154.71 80.88 3178 72 curveto
+3294.95 27.38 4178.93 41.06 4304 36 curveto
+4410.69 31.68 4535.76 25.21 4602.77 21.62 curveto
+stroke
+0 0 0 edgecolor
+newpath 4603.21 25.1 moveto
+4613.01 21.07 lineto
+4602.84 18.11 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4603.21 25.1 moveto
+4613.01 21.07 lineto
+4602.84 18.11 lineto
+closepath stroke
+grestore
+% P3/new.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3920 18 48.19 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3891 14.3 moveto 58 (P3/new.py) alignedtext
+grestore
+% P2/director/pointpicker.py->P2/director/affordanceitems.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3353.44 439.56 moveto
+3239.56 426.85 3037.08 404.24 2914.31 390.53 curveto
+stroke
+0 0 0 edgecolor
+newpath 2914.48 387.03 moveto
+2904.15 389.4 lineto
+2913.7 393.99 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2914.48 387.03 moveto
+2904.15 389.4 lineto
+2913.7 393.99 lineto
+closepath stroke
+grestore
+% P2/director/pointpicker.py->P2/director/debugVis.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3347.61 441.22 moveto
+3306.29 437.92 3256.7 434.3 3212 432 curveto
+2638.32 402.45 2493.7 425.29 1920 396 curveto
+1488.71 373.98 1379.77 375.55 951 324 curveto
+942.95 323.03 934.57 321.88 926.23 320.63 curveto
+stroke
+0 0 0 edgecolor
+newpath 926.5 317.13 moveto
+916.09 319.07 lineto
+925.44 324.05 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 926.5 317.13 moveto
+916.09 319.07 lineto
+925.44 324.05 lineto
+closepath stroke
+grestore
+% P2/director/pointpicker.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3348.16 441.08 moveto
+3306.74 437.72 3256.9 434.11 3212 432 curveto
+2362.56 392.09 2148.52 434.07 1299 396 curveto
+1242.47 393.47 332.52 351.38 283 324 curveto
+230.95 295.23 246.6 257.5 204 216 curveto
+183.87 196.38 169.55 201.96 152 180 curveto
+120.98 141.17 88.81 108.07 123 72 curveto
+155.21 38.02 848.62 23.49 1054.72 19.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 1054.8 23.42 moveto
+1064.74 19.75 lineto
+1054.68 16.42 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1054.8 23.42 moveto
+1064.74 19.75 lineto
+1054.68 16.42 lineto
+closepath stroke
+grestore
+% P2/director/pointpicker.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3539.22 446.25 moveto
+3669.08 442.76 3901.3 436.64 4100 432 curveto
+4480.87 423.11 5435.67 440.82 5814 396 curveto
+5888.54 387.17 5904.59 369.85 5979 360 curveto
+6061.05 349.14 6654.71 370.76 6723 324 curveto
+6789.01 278.8 6786.7 191.06 6722 144 curveto
+6666.45 103.59 6482.95 118.05 6415 108 curveto
+6407.37 106.87 6399.41 105.6 6391.48 104.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 6391.94 100.8 moveto
+6381.49 102.56 lineto
+6390.76 107.7 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6391.94 100.8 moveto
+6381.49 102.56 lineto
+6390.76 107.7 lineto
+closepath stroke
+grestore
+% P2/director/pointpicker.py->P2/director/visualization.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3512.5 437.49 moveto
+3526.6 435.51 3541.24 433.58 3555 432 curveto
+3649.16 421.18 3892.36 432.1 3980 396 curveto
+4003.05 386.51 4000.28 370.24 4023 360 curveto
+4046.03 349.62 4183.52 330.8 4279.42 318.6 curveto
+stroke
+0 0 0 edgecolor
+newpath 4279.96 322.06 moveto
+4289.44 317.33 lineto
+4279.08 315.12 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4279.96 322.06 moveto
+4289.44 317.33 lineto
+4279.08 315.12 lineto
+closepath stroke
+grestore
+% P2/director/pointpicker.py->P2/director/objectmodel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3431.75 431.85 moveto
+3418.2 394.68 3386.04 306.44 3369.78 261.82 curveto
+stroke
+0 0 0 edgecolor
+newpath 3372.99 260.43 moveto
+3366.28 252.23 lineto
+3366.42 262.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3372.99 260.43 moveto
+3366.28 252.23 lineto
+3366.42 262.83 lineto
+closepath stroke
+grestore
+% P2/director/callbacks.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3920 90 96.38 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3854 86.3 moveto 132 (P2/director/callbacks.py) alignedtext
+grestore
+% P2/director/pointpicker.py->P2/director/callbacks.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3439 431.66 moveto
+3443.26 376.58 3464.96 205.56 3572 144 curveto
+3613.38 120.2 3733.86 105.71 3821.48 98.03 curveto
+stroke
+0 0 0 edgecolor
+newpath 3821.8 101.52 moveto
+3831.46 97.17 lineto
+3821.2 94.54 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3821.8 101.52 moveto
+3831.46 97.17 lineto
+3821.2 94.54 lineto
+closepath stroke
+grestore
+% P2/director/treeviewer.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2030 378 100.98 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1960.5 374.3 moveto 139 (P2/director/treeviewer.py) alignedtext
+grestore
+% P2/director/treeviewer.py->P2/director/debugVis.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1930.17 375.47 moveto
+1740.63 371.8 1315.76 359.96 960 324 curveto
+949.64 322.95 938.77 321.6 928.05 320.12 curveto
+stroke
+0 0 0 edgecolor
+newpath 928.24 316.61 moveto
+917.84 318.67 lineto
+927.25 323.54 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 928.24 316.61 moveto
+917.84 318.67 lineto
+927.25 323.54 lineto
+closepath stroke
+grestore
+% P2/director/treeviewer.py->P2/director/packagepath.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2124.08 371.56 moveto
+2255.94 363.5 2503.14 346.86 2713 324 curveto
+2724.01 322.8 2735.56 321.38 2746.98 319.89 curveto
+stroke
+0 0 0 edgecolor
+newpath 2747.5 323.35 moveto
+2756.95 318.56 lineto
+2746.58 316.41 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2747.5 323.35 moveto
+2756.95 318.56 lineto
+2746.58 316.41 lineto
+closepath stroke
+grestore
+% P2/director/treeviewer.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1929.75 376.2 moveto
+1575.47 373.06 399.77 359.98 328 324 curveto
+273.15 296.5 282.98 261.67 242 216 curveto
+196.46 165.24 159.24 170.95 133 108 curveto
+126.84 93.23 122 83.62 133 72 curveto
+164.82 38.41 849.05 23.64 1054.3 19.96 curveto
+stroke
+0 0 0 edgecolor
+newpath 1054.63 23.45 moveto
+1064.57 19.78 lineto
+1054.51 16.45 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1054.63 23.45 moveto
+1064.57 19.78 lineto
+1054.51 16.45 lineto
+closepath stroke
+grestore
+% P2/director/treeviewer.py->P3/collections.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2077.87 362.09 moveto
+2177.77 330.68 2415.41 254.46 2611 180 curveto
+2649.34 165.4 2656.16 153.8 2696 144 curveto
+2886.1 97.23 2939.93 124.54 3135 108 curveto
+3173.63 104.72 3216.59 100.97 3252.23 97.83 curveto
+stroke
+0 0 0 edgecolor
+newpath 3252.91 101.28 moveto
+3262.57 96.91 lineto
+3252.3 94.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3252.91 101.28 moveto
+3262.57 96.91 lineto
+3252.3 94.31 lineto
+closepath stroke
+grestore
+% P2/director/treeviewer.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2125.34 372.06 moveto
+2206.36 368.07 2325.77 362.69 2430 360 curveto
+2538.36 357.2 6231.23 363.94 6332 324 curveto
+6387.04 302.19 6430.61 271.51 6410 216 curveto
+6402.65 196.21 6391.75 196.83 6379 180 curveto
+6363.47 159.49 6347.43 135.05 6336.01 116.98 curveto
+stroke
+0 0 0 edgecolor
+newpath 6338.76 114.78 moveto
+6330.48 108.17 lineto
+6332.83 118.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6338.76 114.78 moveto
+6330.48 108.17 lineto
+6332.83 118.5 lineto
+closepath stroke
+grestore
+% P2/director/lcmUtils.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1784 162 94.48 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1719.5 158.3 moveto 129 (P2/director/lcmUtils.py) alignedtext
+grestore
+% P2/director/treeviewer.py->P2/director/lcmUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1933.45 372.73 moveto
+1774.55 365.15 1464.87 347.85 1358 324 curveto
+1269.46 304.24 1218.61 326.61 1167 252 curveto
+1157.9 238.84 1156.18 227.79 1167 216 curveto
+1184.21 197.25 1513.62 177.24 1683.89 168.09 curveto
+stroke
+0 0 0 edgecolor
+newpath 1684.33 171.57 moveto
+1694.13 167.54 lineto
+1683.95 164.58 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1684.33 171.57 moveto
+1694.13 167.54 lineto
+1683.95 164.58 lineto
+closepath stroke
+grestore
+% P2/director/treeviewer.py->P2/director/applogic.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2125.75 372.34 moveto
+2206.77 368.54 2325.96 363.28 2430 360 curveto
+2624.39 353.87 3990.7 368.62 4180 324 curveto
+4216.38 315.43 4219.68 296.81 4256 288 curveto
+4488.51 231.62 5093.46 270.34 5332 252 curveto
+5350.55 250.57 5370.41 248.51 5389.2 246.31 curveto
+stroke
+0 0 0 edgecolor
+newpath 5389.69 249.78 moveto
+5399.21 245.12 lineto
+5388.86 242.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5389.69 249.78 moveto
+5399.21 245.12 lineto
+5388.86 242.83 lineto
+closepath stroke
+grestore
+% P2/director/treeviewer.py->P2/director/visualization.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2125.75 372.33 moveto
+2206.77 368.52 2325.96 363.26 2430 360 curveto
+3222.22 335.17 3421.95 373.66 4213 324 curveto
+4234.43 322.65 4257.41 320.6 4279.1 318.37 curveto
+stroke
+0 0 0 edgecolor
+newpath 4279.72 321.83 moveto
+4289.3 317.31 lineto
+4278.99 314.87 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4279.72 321.83 moveto
+4289.3 317.31 lineto
+4278.99 314.87 lineto
+closepath stroke
+grestore
+% P2/director/treeviewer.py->P2/director/ioUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2125.67 372.34 moveto
+2292.94 363.72 2625.53 344.31 2675 324 curveto
+2698.06 314.54 2694.78 297.07 2718 288 curveto
+2875.09 226.67 3308 266.62 3476 252 curveto
+3493.58 250.47 3512.4 248.37 3530.21 246.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 3531.08 249.59 moveto
+3540.56 244.87 lineto
+3530.2 242.64 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3531.08 249.59 moveto
+3540.56 244.87 lineto
+3530.2 242.64 lineto
+closepath stroke
+grestore
+% P2/director/treeviewer.py->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2125.01 371.97 moveto
+2277.04 363.36 2562.23 344.72 2604 324 curveto
+2623.44 314.36 2617.58 297.7 2637 288 curveto
+2710.11 251.47 2922.53 266.29 3003 252 curveto
+3128.67 229.69 3159.3 218.46 3281 180 curveto
+3324.45 166.27 3332.4 153.35 3377 144 curveto
+3382.66 142.81 4093.94 104.46 4292.85 93.75 curveto
+stroke
+0 0 0 edgecolor
+newpath 4293.23 97.24 moveto
+4303.03 93.2 lineto
+4292.85 90.25 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4293.23 97.24 moveto
+4303.03 93.2 lineto
+4292.85 90.25 lineto
+closepath stroke
+grestore
+% P3/json
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3089 90 37.09 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3068.5 86.3 moveto 41 (P3/json) alignedtext
+grestore
+% P2/director/treeviewer.py->P3/json
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2056.49 360.53 moveto
+2087.68 341.55 2141.4 310.13 2190 288 curveto
+2275.6 249.01 2298.33 241.01 2389 216 curveto
+2470.17 193.61 2498.97 216.18 2575 180 curveto
+2597.51 169.29 2594.95 153.49 2618 144 curveto
+2793.28 71.8 2857.97 149.23 3043 108 curveto
+3045.98 107.34 3049.03 106.53 3052.06 105.62 curveto
+stroke
+0 0 0 edgecolor
+newpath 3053.22 108.92 moveto
+3061.63 102.48 lineto
+3051.04 102.27 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3053.22 108.92 moveto
+3061.63 102.48 lineto
+3051.04 102.27 lineto
+closepath stroke
+grestore
+% P2/director/treeviewer.py->P3/time
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2098.17 364.72 moveto
+2146.15 355.37 2211.62 341.2 2268 324 curveto
+2310 311.19 2317.21 297.85 2360 288 curveto
+2556.39 242.8 2613.56 287.15 2812 252 curveto
+2929.64 231.16 2959.94 224.04 3071 180 curveto
+3134.94 154.65 3151.31 146.96 3208 108 curveto
+3227.98 94.26 3226.46 80.93 3249 72 curveto
+3358.04 28.79 4186.81 40.87 4304 36 curveto
+4410.68 31.57 4535.76 25.14 4602.77 21.59 curveto
+stroke
+0 0 0 edgecolor
+newpath 4603.21 25.07 moveto
+4613.01 21.05 lineto
+4602.84 18.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4603.21 25.07 moveto
+4613.01 21.05 lineto
+4602.84 18.08 lineto
+closepath stroke
+grestore
+% P2/director/treeviewer.py->P2/director/objectmodel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2129.38 374.92 moveto
+2277.11 370.72 2546.9 358.46 2637 324 curveto
+2661.91 314.47 2660.01 297.31 2685 288 curveto
+2792.71 247.88 3086.5 262.11 3201 252 curveto
+3221.32 250.21 3243.07 248.04 3263.76 245.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 3264.25 249.33 moveto
+3273.82 244.8 lineto
+3263.51 242.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3264.25 249.33 moveto
+3273.82 244.8 lineto
+3263.51 242.37 lineto
+closepath stroke
+grestore
+% P2/director/treeviewer.py->P2/director/filterUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1930.1 375.47 moveto
+1687.93 371.24 1083.17 357.44 998 324 curveto
+974.8 314.89 974.39 303.66 955 288 curveto
+942.61 277.99 928.77 267.14 916.82 257.88 curveto
+stroke
+0 0 0 edgecolor
+newpath 918.95 255.1 moveto
+908.9 251.75 lineto
+914.67 260.64 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 918.95 255.1 moveto
+908.9 251.75 lineto
+914.67 260.64 lineto
+closepath stroke
+grestore
+% P2/director/treeviewer.py->P2/director/transformUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1931.58 374.05 moveto
+1785.62 368.7 1519.29 354.96 1429 324 curveto
+1386.9 309.56 1344.83 279.64 1318.41 258.48 curveto
+stroke
+0 0 0 edgecolor
+newpath 1320.36 255.56 moveto
+1310.4 251.95 lineto
+1315.94 260.99 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1320.36 255.56 moveto
+1310.4 251.95 lineto
+1315.94 260.99 lineto
+closepath stroke
+grestore
+% P3/warnings.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1018 90 65.79 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+975.5 86.3 moveto 85 (P3/warnings.py) alignedtext
+grestore
+% P2/director/treeviewer.py->P3/warnings.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1930.1 375.56 moveto
+1615.14 370.74 660.24 353.71 601 324 curveto
+515.93 281.33 420.64 214.11 485 144 curveto
+516.67 109.5 858.48 113.49 905 108 curveto
+920.6 106.16 937.35 103.83 953.06 101.5 curveto
+stroke
+0 0 0 edgecolor
+newpath 953.84 104.92 moveto
+963.21 99.96 lineto
+952.8 98 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 953.84 104.92 moveto
+963.21 99.96 lineto
+952.8 98 lineto
+closepath stroke
+grestore
+% P2/director/treeviewer.py->P2/director/shallowCopy.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1932.75 373.08 moveto
+1728.49 364.51 1267.99 343.34 1199 324 curveto
+1099.46 296.1 1089.17 253.91 993 216 curveto
+936.83 193.85 912.96 212.39 862 180 curveto
+848.41 171.36 822.5 139.29 804.75 116.12 curveto
+stroke
+0 0 0 edgecolor
+newpath 807.45 113.9 moveto
+798.62 108.05 lineto
+801.88 118.13 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 807.45 113.9 moveto
+798.62 108.05 lineto
+801.88 118.13 lineto
+closepath stroke
+grestore
+% P3/re.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2542 90 40.09 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2519 86.3 moveto 46 (P3/re.py) alignedtext
+grestore
+% P2/director/treeviewer.py->P3/re.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2008.79 360.38 moveto
+1978.5 336.59 1921.17 291.33 1873 252 curveto
+1853.69 236.24 1852.26 227.22 1830 216 curveto
+1769.17 185.33 1723.14 233.53 1681 180 curveto
+1671.1 167.43 1669.94 155.56 1681 144 curveto
+1712.18 111.41 2447.68 116.34 2492 108 curveto
+2495.64 107.32 2499.37 106.42 2503.08 105.41 curveto
+stroke
+0 0 0 edgecolor
+newpath 2504.2 108.73 moveto
+2512.76 102.48 lineto
+2502.18 102.03 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2504.2 108.73 moveto
+2512.76 102.48 lineto
+2502.18 102.03 lineto
+closepath stroke
+grestore
+% P2/director/treeviewer.py->P2/director/vtkNumpy.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1929.52 376.54 moveto
+1616.96 374.67 679.67 365.61 630 324 curveto
+591.18 291.48 589.31 226.95 591.85 190.23 curveto
+stroke
+0 0 0 edgecolor
+newpath 595.35 190.49 moveto
+592.71 180.23 lineto
+588.37 189.89 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 595.35 190.49 moveto
+592.71 180.23 lineto
+588.37 189.89 lineto
+closepath stroke
+grestore
+% P3/math
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1455 90 40.09 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1432 86.3 moveto 46 (P3/math) alignedtext
+grestore
+% P2/director/treeviewer.py->P3/math
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1938.11 370.55 moveto
+1792.06 358.17 1517.34 325.51 1458 252 curveto
+1427.29 213.95 1437.14 152.74 1446.47 117.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 1449.93 118.4 moveto
+1449.3 107.82 lineto
+1443.2 116.49 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1449.93 118.4 moveto
+1449.3 107.82 lineto
+1443.2 116.49 lineto
+closepath stroke
+grestore
+% P4/vtk/util/numpy_support.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+503 90 116.98 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+421 86.3 moveto 164 (P4/vtk/util/numpy_support.py) alignedtext
+grestore
+% P1/geometry/point_renderer.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+5419 378 121.58 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5333.5 374.3 moveto 171 (P1/geometry/point_renderer.py) alignedtext
+grestore
+% P1/geometry/point_renderer.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5524.17 368.94 moveto
+5567.46 365.82 5618.12 362.43 5664 360 curveto
+5718.9 357.1 6606.44 353.24 6653 324 curveto
+6720.75 281.45 6718.22 190.33 6653 144 curveto
+6565.78 82.05 6520.55 125.42 6415 108 curveto
+6407.64 106.79 6399.97 105.48 6392.32 104.15 curveto
+stroke
+0 0 0 edgecolor
+newpath 6392.76 100.67 moveto
+6382.3 102.4 lineto
+6391.55 107.57 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6392.76 100.67 moveto
+6382.3 102.4 lineto
+6391.55 107.57 lineto
+closepath stroke
+grestore
+% P1/geometry/point_renderer.py->P2/director/applogic.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5446.63 360.43 moveto
+5458.98 351.38 5472.26 338.95 5479 324 curveto
+5487.77 304.56 5485.36 280.27 5481.27 261.98 curveto
+stroke
+0 0 0 edgecolor
+newpath 5484.66 261.09 moveto
+5478.81 252.25 lineto
+5477.87 262.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5484.66 261.09 moveto
+5478.81 252.25 lineto
+5477.87 262.8 lineto
+closepath stroke
+grestore
+% P1/geometry/point_renderer.py->P2/director/visualization.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5334.19 365.09 moveto
+5318.84 363.19 5302.96 361.4 5288 360 curveto
+5009.64 333.99 4939.09 340.29 4660 324 curveto
+4602.04 320.62 4537.47 316.78 4484.38 313.62 curveto
+stroke
+0 0 0 edgecolor
+newpath 4484.45 310.11 moveto
+4474.26 313.01 lineto
+4484.03 317.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4484.45 310.11 moveto
+4474.26 313.01 lineto
+4484.03 317.1 lineto
+closepath stroke
+grestore
+% P1/geometry/point_renderer.py->P2/director/fieldcontainer.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5415.09 359.76 moveto
+5406.48 326.05 5382.5 251.62 5332 216 curveto
+5246.37 155.6 5200.45 206.21 5099 180 curveto
+5029.05 161.93 4951.12 131.27 4903.07 111.08 curveto
+stroke
+0 0 0 edgecolor
+newpath 4904.15 107.74 moveto
+4893.58 107.06 lineto
+4901.43 114.18 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4904.15 107.74 moveto
+4893.58 107.06 lineto
+4901.43 114.18 lineto
+closepath stroke
+grestore
+% P2/director/appsettings.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+574 522 102.88 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+503 518.3 moveto 142 (P2/director/appsettings.py) alignedtext
+grestore
+% P2/director/viewbehaviors.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4223 450 114.28 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4143 446.3 moveto 160 (P2/director/viewbehaviors.py) alignedtext
+grestore
+% P2/director/propertyset.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4042 162 102.88 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3971 158.3 moveto 142 (P2/director/propertyset.py) alignedtext
+grestore
+% P2/director/viewbehaviors.py->P2/director/propertyset.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4199.08 432.23 moveto
+4187.99 422.97 4175.98 410.43 4170 396 curveto
+4151.55 351.46 4199.54 332.07 4180 288 curveto
+4159.73 242.29 4113.58 206.18 4080.22 184.76 curveto
+stroke
+0 0 0 edgecolor
+newpath 4081.94 181.71 moveto
+4071.61 179.38 lineto
+4078.23 187.65 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4081.94 181.71 moveto
+4071.61 179.38 lineto
+4078.23 187.65 lineto
+closepath stroke
+grestore
+% P2/director/viewbehaviors.py->P2/director/visualization.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4304.21 437.29 moveto
+4351.87 428.57 4405.51 414.9 4420 396 curveto
+4435.37 375.95 4418.49 350 4401.01 331.3 curveto
+stroke
+0 0 0 edgecolor
+newpath 4403.09 328.43 moveto
+4393.57 323.77 lineto
+4398.11 333.34 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4403.09 328.43 moveto
+4393.57 323.77 lineto
+4398.11 333.34 lineto
+closepath stroke
+grestore
+% P2/director/viewbehaviors.py->P2/director/vieweventfilter.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4240.43 432.05 moveto
+4249.38 423.35 4260.45 412.59 4270.27 403.04 curveto
+stroke
+0 0 0 edgecolor
+newpath 4272.75 405.51 moveto
+4277.48 396.03 lineto
+4267.87 400.49 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4272.75 405.51 moveto
+4277.48 396.03 lineto
+4267.87 400.49 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrol.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4057 306 114.28 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3977 302.3 moveto 160 (P2/director/cameracontrol.py) alignedtext
+grestore
+% P2/director/viewbehaviors.py->P2/director/cameracontrol.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4191.71 432.6 moveto
+4174.73 423.01 4153.83 410.05 4137 396 curveto
+4113.93 376.75 4091.4 350.85 4076.16 331.96 curveto
+stroke
+0 0 0 edgecolor
+newpath 4078.85 329.72 moveto
+4069.89 324.07 lineto
+4073.37 334.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4078.85 329.72 moveto
+4069.89 324.07 lineto
+4073.37 334.08 lineto
+closepath stroke
+grestore
+% P2/director/viewbehaviors.py->P2/director/objectmodel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4109.81 447.35 moveto
+4006.21 443.44 3849.5 431.49 3718 396 curveto
+3685.62 387.26 3491.4 296.79 3403.35 255.43 curveto
+stroke
+0 0 0 edgecolor
+newpath 3404.7 252.19 moveto
+3394.16 251.11 lineto
+3401.72 258.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3404.7 252.19 moveto
+3394.16 251.11 lineto
+3401.72 258.53 lineto
+closepath stroke
+grestore
+% P2/director/frameupdater.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4691 234 110.48 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4614 230.3 moveto 154 (P2/director/frameupdater.py) alignedtext
+grestore
+% P2/director/viewbehaviors.py->P2/director/frameupdater.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4299.07 436.52 moveto
+4341.1 428.08 4393.64 414.98 4438 396 curveto
+4525.24 358.68 4616.49 292.9 4661.83 258.09 curveto
+stroke
+0 0 0 edgecolor
+newpath 4664.24 260.65 moveto
+4670.01 251.77 lineto
+4659.96 255.12 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4664.24 260.65 moveto
+4670.01 251.77 lineto
+4659.96 255.12 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2556 378 116.98 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2474 374.3 moveto 164 (P2/director/drakevisualizer.py) alignedtext
+grestore
+% P2/director/drakevisualizer.py->P2/director/debugVis.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2444.66 372.43 moveto
+2132.94 359.65 1254.63 323.63 952.57 311.25 curveto
+stroke
+0 0 0 edgecolor
+newpath 952.63 307.75 moveto
+942.5 310.83 lineto
+952.35 314.74 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 952.63 307.75 moveto
+942.5 310.83 lineto
+952.35 314.74 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py->P2/director/packagepath.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2614.28 362.33 moveto
+2659.02 351.06 2720.84 335.49 2767.51 323.74 curveto
+stroke
+0 0 0 edgecolor
+newpath 2768.38 327.13 moveto
+2777.23 321.3 lineto
+2766.67 320.34 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2768.38 327.13 moveto
+2777.23 321.3 lineto
+2766.67 320.34 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2445.66 372.01 moveto
+2361.83 368.33 2243.67 363.4 2140 360 curveto
+1978.15 354.69 838.02 370.83 683 324 curveto
+510.54 271.91 427.06 265.72 340 108 curveto
+332.27 93.99 329.08 83.69 340 72 curveto
+388.46 20.1 883.47 17.78 1054.36 18.54 curveto
+stroke
+0 0 0 edgecolor
+newpath 1054.4 22.04 moveto
+1064.42 18.59 lineto
+1054.43 15.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1054.4 22.04 moveto
+1064.42 18.59 lineto
+1054.43 15.04 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2635.49 364.74 moveto
+2650.89 362.81 2666.92 361.08 2682 360 curveto
+2734.91 356.2 6455.7 351.6 6501 324 curveto
+6544.45 297.52 6568.45 257.49 6539 216 curveto
+6510.93 176.46 6478.66 203.05 6436 180 curveto
+6402.39 161.84 6368.2 134.27 6345.73 114.63 curveto
+stroke
+0 0 0 edgecolor
+newpath 6347.81 111.8 moveto
+6338.01 107.79 lineto
+6343.17 117.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6347.81 111.8 moveto
+6338.01 107.79 lineto
+6343.17 117.04 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py->P2/director/lcmUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2439.67 375.47 moveto
+2344.34 371.45 2206.91 359.26 2092 324 curveto
+2036.38 306.94 1889.78 224.22 1820.83 184.45 curveto
+stroke
+0 0 0 edgecolor
+newpath 1822.44 181.33 moveto
+1812.03 179.36 lineto
+1818.94 187.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1822.44 181.33 moveto
+1812.03 179.36 lineto
+1818.94 187.39 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py->P2/director/applogic.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2635.84 364.78 moveto
+2651.13 362.85 2667.03 361.13 2682 360 curveto
+3675.77 285.24 3931.32 411.97 4924 324 curveto
+5097.13 308.66 5298.22 270.89 5402.36 249.82 curveto
+stroke
+0 0 0 edgecolor
+newpath 5403.33 253.19 moveto
+5412.43 247.77 lineto
+5401.93 246.33 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5403.33 253.19 moveto
+5412.43 247.77 lineto
+5401.93 246.33 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py->P2/director/visualization.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2636.18 364.83 moveto
+2651.37 362.91 2667.15 361.17 2682 360 curveto
+3360.52 306.41 3533.78 367.77 4213 324 curveto
+4234.31 322.63 4257.15 320.57 4278.73 318.36 curveto
+stroke
+0 0 0 edgecolor
+newpath 4279.3 321.82 moveto
+4288.88 317.3 lineto
+4278.57 314.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4279.3 321.82 moveto
+4288.88 317.3 lineto
+4278.57 314.86 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py->P2/director/ioUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2637.91 365.09 moveto
+2652.57 363.21 2667.72 361.41 2682 360 curveto
+2933.72 335.07 3001.66 372.06 3250 324 curveto
+3300.09 314.31 3309.74 301.29 3359 288 curveto
+3418.14 272.04 3486.17 257.94 3536.48 248.3 curveto
+stroke
+0 0 0 edgecolor
+newpath 3537.45 251.67 moveto
+3546.62 246.37 lineto
+3536.14 244.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3537.45 251.67 moveto
+3546.62 246.37 lineto
+3536.14 244.8 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2637.57 365.05 moveto
+2652.33 363.16 2667.61 361.38 2682 360 curveto
+2964.28 333.02 3037.48 358 3319 324 curveto
+3492.69 303.02 3536.49 295.3 3706 252 curveto
+3755.84 239.27 3765.7 226.78 3816 216 curveto
+3963.72 184.33 4008.49 220.6 4154 180 curveto
+4212.38 163.71 4275.14 131 4311.92 110.09 curveto
+stroke
+0 0 0 edgecolor
+newpath 4313.77 113.07 moveto
+4320.69 105.05 lineto
+4310.28 107 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4313.77 113.07 moveto
+4320.69 105.05 lineto
+4310.28 107 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py->P2/director/objectmodel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2640.72 365.56 moveto
+2654.52 363.7 2668.66 361.8 2682 360 curveto
+2801.11 343.97 2835.67 361.04 2950 324 curveto
+2982.16 313.58 2984.95 298.74 3017 288 curveto
+3029.05 283.96 3174.3 262.21 3271.88 247.86 curveto
+stroke
+0 0 0 edgecolor
+newpath 3272.67 251.28 moveto
+3282.05 246.36 lineto
+3271.65 244.36 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3272.67 251.28 moveto
+3282.05 246.36 lineto
+3271.65 244.36 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py->P2/director/filterUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2444.93 372.32 moveto
+2152.16 359.95 1379.9 327.15 1353 324 curveto
+1209.49 307.22 1043.84 271.65 953.78 250.91 curveto
+stroke
+0 0 0 edgecolor
+newpath 954.51 247.49 moveto
+943.98 248.65 lineto
+952.93 254.31 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 954.51 247.49 moveto
+943.98 248.65 lineto
+952.93 254.31 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py->P2/director/transformUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2445.67 371.85 moveto
+2252.79 362.53 1861.87 342.15 1726 324 curveto
+1594.99 306.5 1444.34 272.52 1359.12 251.98 curveto
+stroke
+0 0 0 edgecolor
+newpath 1359.86 248.56 moveto
+1349.31 249.61 lineto
+1358.21 255.36 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1359.86 248.56 moveto
+1349.31 249.61 lineto
+1358.21 255.36 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py->P2/director/fieldcontainer.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2637.22 364.98 moveto
+2652.09 363.08 2667.49 361.32 2682 360 curveto
+3022.75 329.1 3111.07 362.94 3451 324 curveto
+3715.41 293.71 3777.54 260.13 4040 216 curveto
+4303.17 171.75 4615.15 125.82 4766.13 104.01 curveto
+stroke
+0 0 0 edgecolor
+newpath 4766.88 107.44 moveto
+4776.28 102.54 lineto
+4765.88 100.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4766.88 107.44 moveto
+4776.28 102.54 lineto
+4765.88 100.51 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py->P2/director/shallowCopy.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2444.95 372.27 moveto
+2196.16 361.55 1608.81 335.41 1519 324 curveto
+1360.59 303.87 1320.74 295.16 1167 252 curveto
+1076.04 226.47 1053.97 216.9 967 180 curveto
+917.44 158.97 862.11 131.1 825.83 112.18 curveto
+stroke
+0 0 0 edgecolor
+newpath 827.06 108.88 moveto
+816.58 107.34 lineto
+823.82 115.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 827.06 108.88 moveto
+816.58 107.34 lineto
+823.82 115.08 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py->P2/director/vtkNumpy.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2445.22 372.02 moveto
+2361.42 368.36 2243.49 363.45 2140 360 curveto
+2062.41 357.41 815.54 351.66 743 324 curveto
+678.41 299.37 630.83 228.34 608.74 189.36 curveto
+stroke
+0 0 0 edgecolor
+newpath 611.57 187.26 moveto
+603.68 180.19 lineto
+605.45 190.64 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 611.57 187.26 moveto
+603.68 180.19 lineto
+605.45 190.64 lineto
+closepath stroke
+grestore
+% P2/director/drakevisualizer.py->P3/math
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2440.72 374.65 moveto
+2292.26 370.31 2026.61 358.09 1802 324 curveto
+1793.37 322.69 1502.23 258.12 1496 252 curveto
+1459.91 216.56 1454.02 154.13 1453.9 118.31 curveto
+stroke
+0 0 0 edgecolor
+newpath 1457.4 118.15 moveto
+1454.02 108.11 lineto
+1450.4 118.07 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1457.4 118.15 moveto
+1454.02 108.11 lineto
+1450.4 118.07 lineto
+closepath stroke
+grestore
+% P4/pygments/lexers
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+7546 450 80.69 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+7492 446.3 moveto 108 (P4/pygments/lexers) alignedtext
+grestore
+% P3/importlib
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+198 90 55.79 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+163 86.3 moveto 70 (P3/importlib) alignedtext
+grestore
+% P2/director/propertyset.py->P2/director/timercallback.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4143.96 159.59 moveto
+4547.14 153.89 6030.95 131.72 6501 108 curveto
+6536.66 106.2 6575.59 103.37 6610.36 100.53 curveto
+stroke
+0 0 0 edgecolor
+newpath 6610.85 104 moveto
+6620.53 99.69 lineto
+6610.27 97.02 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6610.85 104 moveto
+6620.53 99.69 lineto
+6610.27 97.02 lineto
+closepath stroke
+grestore
+% P2/director/propertyset.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3972.98 148.58 moveto
+3856.97 128.31 3615.3 88.72 3409 72 curveto
+2954.45 35.17 1479.43 21.85 1169.47 19.42 curveto
+stroke
+0 0 0 edgecolor
+newpath 1169.39 15.92 moveto
+1159.37 19.35 lineto
+1169.34 22.92 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1169.39 15.92 moveto
+1159.37 19.35 lineto
+1169.34 22.92 lineto
+closepath stroke
+grestore
+% P2/director/propertyset.py->P3/collections.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3967.5 149.54 moveto
+3953.4 147.55 3938.76 145.61 3925 144 curveto
+3739.72 122.32 3521.1 104.97 3407.09 96.55 curveto
+stroke
+0 0 0 edgecolor
+newpath 3407.29 93.06 moveto
+3397.06 95.81 lineto
+3406.77 100.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3407.29 93.06 moveto
+3397.06 95.81 lineto
+3406.77 100.04 lineto
+closepath stroke
+grestore
+% P2/director/propertyset.py->P2/director/callbacks.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4013.4 144.59 moveto
+3996.72 135.02 3975.5 122.85 3957.5 112.52 curveto
+stroke
+0 0 0 edgecolor
+newpath 3958.84 109.25 moveto
+3948.42 107.31 lineto
+3955.36 115.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3958.84 109.25 moveto
+3948.42 107.31 lineto
+3955.36 115.32 lineto
+closepath stroke
+grestore
+% P2/director/propertyset.py->P2/director/fieldcontainer.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4115.86 149.48 moveto
+4130.15 147.48 4145.02 145.54 4159 144 curveto
+4363.9 121.36 4603.73 105.45 4742.23 97.3 curveto
+stroke
+0 0 0 edgecolor
+newpath 4742.66 100.78 moveto
+4752.43 96.7 lineto
+4742.25 93.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4742.66 100.78 moveto
+4752.43 96.7 lineto
+4742.25 93.79 lineto
+closepath stroke
+grestore
+% P2/director/propertyset.py->P3/re.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3951.88 153.27 moveto
+3910.51 149.97 3860.79 146.34 3816 144 curveto
+3544.25 129.79 2859.79 156.33 2592 108 curveto
+2588.36 107.34 2584.62 106.47 2580.91 105.47 curveto
+stroke
+0 0 0 edgecolor
+newpath 2581.81 102.08 moveto
+2571.23 102.56 lineto
+2579.8 108.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2581.81 102.08 moveto
+2571.23 102.56 lineto
+2579.8 108.79 lineto
+closepath stroke
+grestore
+% P3/functools.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+5823 162 66.09 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5780 158.3 moveto 86 (P3/functools.py) alignedtext
+grestore
+% P2/director/viewcolors.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3089 522 102.08 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3018.5 518.3 moveto 141 (P2/director/viewcolors.py) alignedtext
+grestore
+% P0/entrypoint.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3857 594 69.59 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3811.5 590.3 moveto 91 (P0/entrypoint.py) alignedtext
+grestore
+% P0/entrypoint.py->P2/director/timercallback.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3926.72 592.84 moveto
+4343.42 591.72 6496.4 583.83 6787 540 curveto
+6927.9 518.75 7095 593.49 7095 451 curveto
+7095 451 7095 451 7095 377 curveto
+7095 268.21 7102.09 215.38 7020 144 curveto
+6991.37 119.11 6901.58 105.55 6826.78 98.4 curveto
+stroke
+0 0 0 edgecolor
+newpath 6827.08 94.91 moveto
+6816.8 97.48 lineto
+6826.44 101.88 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6827.08 94.91 moveto
+6816.8 97.48 lineto
+6826.44 101.88 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/measurementpanel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3797.66 584.35 moveto
+3716.51 572.51 3569.93 551.14 3473.03 537 curveto
+stroke
+0 0 0 edgecolor
+newpath 3473.33 533.51 moveto
+3462.93 535.53 lineto
+3472.32 540.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3473.33 533.51 moveto
+3462.93 535.53 lineto
+3472.32 540.44 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/debugVis.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3787.73 591.52 moveto
+3512.81 585.14 2472.29 556.19 1621 468 curveto
+1381.04 443.14 1316.85 455.27 1083 396 curveto
+1014.76 378.7 939.19 347.66 892.89 327.2 curveto
+stroke
+0 0 0 edgecolor
+newpath 894.03 323.87 moveto
+883.47 323 lineto
+891.18 330.27 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 894.03 323.87 moveto
+883.47 323 lineto
+891.18 330.27 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/treeviewer.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3787.4 593 moveto
+3620.38 592.24 3183.9 585.63 2823 540 curveto
+2549.7 505.45 2229.81 429.36 2095.05 395.65 curveto
+stroke
+0 0 0 edgecolor
+newpath 2095.84 392.24 moveto
+2085.29 393.2 lineto
+2094.14 399.03 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2095.84 392.24 moveto
+2085.29 393.2 lineto
+2094.14 399.03 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/appsettings.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3787.49 593.04 moveto
+3382.38 593.12 1322.34 590.94 691 540 curveto
+679.69 539.09 667.8 537.78 656.12 536.28 curveto
+stroke
+0 0 0 edgecolor
+newpath 656.3 532.77 moveto
+645.92 534.92 lineto
+655.37 539.71 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 656.3 532.77 moveto
+645.92 534.92 lineto
+655.37 539.71 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3787.2 592.92 moveto
+3294.26 592.22 351.89 586.12 170 540 curveto
+87.33 519.04 0 536.28 0 451 curveto
+0 451 0 451 0 161 curveto
+0 108.7 30 94.96 77 72 curveto
+164.84 29.09 849.57 20.84 1054.34 19.33 curveto
+stroke
+0 0 0 edgecolor
+newpath 1054.61 22.82 moveto
+1064.58 19.25 lineto
+1054.56 15.82 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1054.61 22.82 moveto
+1064.58 19.25 lineto
+1054.56 15.82 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/viewbehaviors.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3894.11 578.6 moveto
+3960.11 552.99 4097.97 499.51 4172.53 470.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 4174.12 473.72 moveto
+4182.18 466.84 lineto
+4171.59 467.19 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4174.12 473.72 moveto
+4182.18 466.84 lineto
+4171.59 467.19 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/drakevisualizer.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3787.81 591.96 moveto
+3603.74 588.72 3105.2 576.7 2945 540 curveto
+2810.95 509.29 2663.82 436.75 2595.24 400.46 curveto
+stroke
+0 0 0 edgecolor
+newpath 2596.57 397.2 moveto
+2586.1 395.59 lineto
+2593.28 403.38 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2596.57 397.2 moveto
+2586.1 395.59 lineto
+2593.28 403.38 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P3/importlib
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3787.45 592.86 moveto
+3307.27 591.8 498.06 583.75 324 540 curveto
+240.52 519.02 152 537.07 152 451 curveto
+152 451 152 451 152 233 curveto
+152 190.81 170.6 144.85 184.15 116.98 curveto
+stroke
+0 0 0 edgecolor
+newpath 187.34 118.42 moveto
+188.69 107.91 lineto
+181.08 115.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 187.34 118.42 moveto
+188.69 107.91 lineto
+181.08 115.29 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P3/functools.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3926.6 592.98 moveto
+4254.74 592.62 5649.38 588.24 6082 540 curveto
+6281.59 517.75 6525 651.82 6525 451 curveto
+6525 451 6525 451 6525 377 curveto
+6525 284.19 6474.04 259.4 6392 216 curveto
+6308.56 171.86 6034.77 164.05 5899.72 162.96 curveto
+stroke
+0 0 0 edgecolor
+newpath 5899.48 159.46 moveto
+5889.46 162.89 lineto
+5899.43 166.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5899.48 159.46 moveto
+5889.46 162.89 lineto
+5899.43 166.46 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/viewcolors.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3789.75 588.97 moveto
+3671.34 581.55 3417.98 564.24 3205 540 curveto
+3194.47 538.8 3183.43 537.39 3172.51 535.9 curveto
+stroke
+0 0 0 edgecolor
+newpath 3172.93 532.42 moveto
+3162.54 534.51 lineto
+3171.97 539.35 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3172.93 532.42 moveto
+3162.54 534.51 lineto
+3171.97 539.35 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3926.41 592.62 moveto
+4274.32 590.53 5830.79 579.12 6313 540 curveto
+6453.93 528.57 6943 592.39 6943 451 curveto
+6943 451 6943 451 6943 305 curveto
+6943 226.43 6934.31 189.14 6870 144 curveto
+6786.98 85.73 6515.6 120.95 6415 108 curveto
+6407.08 106.98 6398.83 105.75 6390.63 104.43 curveto
+stroke
+0 0 0 edgecolor
+newpath 6391.12 100.96 moveto
+6380.68 102.77 lineto
+6389.97 107.87 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6391.12 100.96 moveto
+6380.68 102.77 lineto
+6389.97 107.87 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/applogic.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3925.87 591.08 moveto
+4249.9 581.63 5607 536.9 5607 451 curveto
+5607 451 5607 451 5607 377 curveto
+5607 322.01 5553.19 279.69 5513.76 256.06 curveto
+stroke
+0 0 0 edgecolor
+newpath 5515.5 253.03 moveto
+5505.1 251.03 lineto
+5511.98 259.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5515.5 253.03 moveto
+5505.1 251.03 lineto
+5511.98 259.08 lineto
+closepath stroke
+grestore
+% P2/director/camerabookmarks.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4748 378 128.88 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4657 374.3 moveto 182 (P2/director/camerabookmarks.py) alignedtext
+grestore
+% P0/entrypoint.py->P2/director/camerabookmarks.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3925.83 591.08 moveto
+4099.33 585.81 4545 569.55 4605 540 curveto
+4665.6 510.15 4711.89 442.23 4733.89 404.85 curveto
+stroke
+0 0 0 edgecolor
+newpath 4737 406.46 moveto
+4738.95 396.05 lineto
+4730.93 402.98 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4737 406.46 moveto
+4738.95 396.05 lineto
+4730.93 402.98 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/visualization.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3925.75 590.63 moveto
+4033.19 584.08 4244.1 559.56 4394 468 curveto
+4441.05 439.27 4481.22 408.49 4455 360 curveto
+4447.79 346.67 4435.61 336.15 4422.85 328.12 curveto
+stroke
+0 0 0 edgecolor
+newpath 4424.38 324.96 moveto
+4413.98 322.96 lineto
+4420.86 331.01 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4424.38 324.96 moveto
+4413.98 322.96 lineto
+4420.86 331.01 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/ioUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3846.68 576.01 moveto
+3835.55 557.9 3817.12 528.52 3800 504 curveto
+3765.5 454.58 3753.02 445.05 3718 396 curveto
+3684.53 349.13 3647.55 292.99 3626.71 260.91 curveto
+stroke
+0 0 0 edgecolor
+newpath 3629.41 258.63 moveto
+3621.03 252.14 lineto
+3623.53 262.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3629.41 258.63 moveto
+3621.03 252.14 lineto
+3623.53 262.44 lineto
+closepath stroke
+grestore
+% P2/director/componentgraph.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4792 306 122.68 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4705.5 302.3 moveto 173 (P2/director/componentgraph.py) alignedtext
+grestore
+% P0/entrypoint.py->P2/director/componentgraph.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3926.34 592.47 moveto
+4092.96 590.55 4511.92 581.59 4645 540 curveto
+4764.1 502.78 4824.42 504.52 4886 396 curveto
+4893.9 382.08 4894.07 373.82 4886 360 curveto
+4877.7 345.8 4864.05 335.11 4849.68 327.18 curveto
+stroke
+0 0 0 edgecolor
+newpath 4851.18 324.02 moveto
+4840.68 322.6 lineto
+4848 330.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4851.18 324.02 moveto
+4840.68 322.6 lineto
+4848 330.26 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3926.35 591.98 moveto
+4013.51 589.03 4166.86 578.26 4292 540 curveto
+4440.7 494.54 4553 462.5 4553 307 curveto
+4553 307 4553 307 4553 233 curveto
+4553 155.09 4452.4 116.93 4390.79 100.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 4391.43 97.43 moveto
+4380.88 98.39 lineto
+4389.73 104.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4391.43 97.43 moveto
+4380.88 98.39 lineto
+4389.73 104.22 lineto
+closepath stroke
+grestore
+% P2/director/screengrabberpanel.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+6191 306 131.88 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6097.5 302.3 moveto 187 (P2/director/screengrabberpanel.py) alignedtext
+grestore
+% P0/entrypoint.py->P2/director/screengrabberpanel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3926.72 593.16 moveto
+4289.78 593.76 5950.92 593.57 6045 540 curveto
+6125.14 494.37 6167.47 384.91 6183.42 333.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 6186.8 334.88 moveto
+6186.34 324.29 lineto
+6180.1 332.85 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6186.8 334.88 moveto
+6186.34 324.29 lineto
+6180.1 332.85 lineto
+closepath stroke
+grestore
+% P2/director/drcargs.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+5870 234 89.08 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5809.5 230.3 moveto 121 (P2/director/drcargs.py) alignedtext
+grestore
+% P0/entrypoint.py->P2/director/drcargs.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3926.51 592.91 moveto
+4256.91 592.26 5660.44 586.75 5850 540 curveto
+5937.04 518.54 6031 540.64 6031 451 curveto
+6031 451 6031 451 6031 377 curveto
+6031 316.9 5967.12 276.17 5919.84 254.26 curveto
+stroke
+0 0 0 edgecolor
+newpath 5921.18 251.03 moveto
+5910.63 250.13 lineto
+5918.32 257.41 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5921.18 251.03 moveto
+5910.63 250.13 lineto
+5918.32 257.41 lineto
+closepath stroke
+grestore
+% P2/director/consoleapp.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+5738 522 102.88 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5667 518.3 moveto 142 (P2/director/consoleapp.py) alignedtext
+grestore
+% P0/entrypoint.py->P2/director/consoleapp.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3926.54 591.97 moveto
+4210.52 587.62 5283.15 569.52 5621 540 curveto
+5632.23 539.02 5644.02 537.68 5655.63 536.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 5656.31 539.61 moveto
+5665.75 534.81 lineto
+5655.38 532.67 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5656.31 539.61 moveto
+5665.75 534.81 lineto
+5655.38 532.67 lineto
+closepath stroke
+grestore
+% P2/director/lcmgl.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3157 306 83.69 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3100.5 302.3 moveto 113 (P2/director/lcmgl.py) alignedtext
+grestore
+% P0/entrypoint.py->P2/director/lcmgl.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3787.99 591.39 moveto
+3585.54 586.35 3005.66 569.38 2978 540 curveto
+2967.08 528.4 2968.88 457.32 2983 432 curveto
+3011.12 381.56 3069.13 346.32 3110.43 326.4 curveto
+stroke
+0 0 0 edgecolor
+newpath 3111.94 329.57 moveto
+3119.5 322.15 lineto
+3108.96 323.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3111.94 329.57 moveto
+3119.5 322.15 lineto
+3108.96 323.23 lineto
+closepath stroke
+grestore
+% P2/director/opendatahandler.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3849 378 121.58 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3763.5 374.3 moveto 171 (P2/director/opendatahandler.py) alignedtext
+grestore
+% P0/entrypoint.py->P2/director/opendatahandler.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3856.36 575.85 moveto
+3854.98 538.83 3851.7 451.18 3850.02 406.39 curveto
+stroke
+0 0 0 edgecolor
+newpath 3853.52 406.09 moveto
+3849.64 396.23 lineto
+3846.52 406.36 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3853.52 406.09 moveto
+3849.64 396.23 lineto
+3846.52 406.36 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/objectmodel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3787.36 592.77 moveto
+3646.84 591.38 3334.56 583.34 3238 540 curveto
+3216.78 530.47 3220.68 514.66 3200 504 curveto
+3125.93 465.83 3068.96 532.33 3016 468 curveto
+2969.75 411.83 3082.2 428.35 3250 324 curveto
+3280.89 304.79 3312.85 278.02 3334.31 258.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 3336.91 261.23 moveto
+3341.99 251.94 lineto
+3332.22 256.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3336.91 261.23 moveto
+3341.99 251.94 lineto
+3332.22 256.04 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/filterUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3787.43 592.73 moveto
+3310.4 590.76 539.49 577.73 462 540 curveto
+416.26 517.73 390 501.88 390 451 curveto
+390 451 390 451 390 377 curveto
+390 294.84 644.26 257.57 789.06 243 curveto
+stroke
+0 0 0 edgecolor
+newpath 789.68 246.45 moveto
+799.29 241.99 lineto
+788.99 239.49 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 789.68 246.45 moveto
+799.29 241.99 lineto
+788.99 239.49 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/transformUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3787.86 591.75 moveto
+3325.88 583.16 705 530.92 705 451 curveto
+705 451 705 451 705 377 curveto
+705 333.99 708.29 313.4 743 288 curveto
+760.32 275.32 1023.29 254.33 1178.54 242.94 curveto
+stroke
+0 0 0 edgecolor
+newpath 1178.89 246.43 moveto
+1188.61 242.21 lineto
+1178.38 239.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1178.89 246.43 moveto
+1188.61 242.21 lineto
+1178.38 239.44 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/fieldcontainer.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3926.2 591.56 moveto
+4103.09 587.44 4568.47 573.63 4719 540 curveto
+4823.55 516.64 4943 558.13 4943 451 curveto
+4943 451 4943 451 4943 305 curveto
+4943 232.53 4900.01 155.57 4874.82 116.69 curveto
+stroke
+0 0 0 edgecolor
+newpath 4877.57 114.5 moveto
+4869.14 108.09 lineto
+4871.74 118.36 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4877.57 114.5 moveto
+4869.14 108.09 lineto
+4871.74 118.36 lineto
+closepath stroke
+grestore
+% P3/sys
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+6458 90 33.6 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6440 86.3 moveto 36 (P3/sys) alignedtext
+grestore
+% P0/entrypoint.py->P3/sys
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3926.39 592.48 moveto
+4328.37 589.37 6350.06 572.22 6625 540 curveto
+6774.53 522.48 6860.72 584.57 6956 468 curveto
+7048.13 355.29 7030.3 222.96 6908 144 curveto
+6848.99 105.9 6663.74 116.36 6594 108 curveto
+6562.71 104.25 6527.41 99.83 6500.61 96.44 curveto
+stroke
+0 0 0 edgecolor
+newpath 6500.77 92.93 moveto
+6490.41 95.15 lineto
+6499.89 99.88 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6500.77 92.93 moveto
+6490.41 95.15 lineto
+6499.89 99.88 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrolpanel.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3658 522 133.48 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3563.5 518.3 moveto 189 (P2/director/cameracontrolpanel.py) alignedtext
+grestore
+% P0/entrypoint.py->P2/director/cameracontrolpanel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3817.21 579 moveto
+3787.27 568.47 3745.89 553.92 3712.82 542.28 curveto
+stroke
+0 0 0 edgecolor
+newpath 3713.88 538.95 moveto
+3703.29 538.93 lineto
+3711.56 545.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3713.88 538.95 moveto
+3703.29 538.93 lineto
+3711.56 545.55 lineto
+closepath stroke
+grestore
+% P0/entrypoint.py->P2/director/vtkNumpy.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3787.46 592.6 moveto
+3306.07 589.77 485.75 571.83 404 540 curveto
+348.56 518.41 304 510.5 304 451 curveto
+304 451 304 451 304 305 curveto
+304 218.3 409.62 184.53 493.6 171.38 curveto
+stroke
+0 0 0 edgecolor
+newpath 494.35 174.8 moveto
+503.72 169.87 lineto
+493.32 167.88 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 494.35 174.8 moveto
+503.72 169.87 lineto
+493.32 167.88 lineto
+closepath stroke
+grestore
+% P2/director/outputconsole.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+7312 522 112.38 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+7233.5 518.3 moveto 157 (P2/director/outputconsole.py) alignedtext
+grestore
+% P0/entrypoint.py->P2/director/outputconsole.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3926.35 592.51 moveto
+4337.37 589.48 6458.16 572.52 7109 540 curveto
+7141.43 538.38 7176.71 535.73 7208.62 533.01 curveto
+stroke
+0 0 0 edgecolor
+newpath 7209.2 536.47 moveto
+7218.86 532.12 lineto
+7208.59 529.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 7209.2 536.47 moveto
+7218.86 532.12 lineto
+7208.59 529.5 lineto
+closepath stroke
+grestore
+% P3/datetime
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2654 90 53.09 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2621 86.3 moveto 66 (P3/datetime) alignedtext
+grestore
+% P4/vtk
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4857 18 33.6 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4839 14.3 moveto 36 (P4/vtk) alignedtext
+grestore
+% P2/director/vtkAll.py->P4/vtk
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6258.83 77.31 moveto
+6246.04 75.23 6232.61 73.31 6220 72 curveto
+5703.21 18.25 5071.07 17.7 4900.91 18.64 curveto
+stroke
+0 0 0 edgecolor
+newpath 4900.81 15.15 moveto
+4890.83 18.71 lineto
+4900.86 22.14 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4900.81 15.15 moveto
+4890.83 18.71 lineto
+4900.86 22.14 lineto
+closepath stroke
+grestore
+% P2/director/lcmUtils.py->P3/datetime
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1849.51 149.05 moveto
+1861.93 147.11 1874.84 145.31 1887 144 curveto
+2198.49 110.44 2281.57 157.09 2591 108 curveto
+2595.98 107.21 2601.13 106.18 2606.24 105.02 curveto
+stroke
+0 0 0 edgecolor
+newpath 2607.08 108.42 moveto
+2615.97 102.65 lineto
+2605.42 101.62 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2607.08 108.42 moveto
+2615.97 102.65 lineto
+2605.42 101.62 lineto
+closepath stroke
+grestore
+% P3/atexit.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1810 90 53.09 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1777 86.3 moveto 66 (P3/atexit.py) alignedtext
+grestore
+% P2/director/lcmUtils.py->P3/atexit.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1790.43 143.7 moveto
+1793.36 135.81 1796.89 126.3 1800.14 117.55 curveto
+stroke
+0 0 0 edgecolor
+newpath 1803.45 118.7 moveto
+1803.65 108.1 lineto
+1796.88 116.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1803.45 118.7 moveto
+1803.65 108.1 lineto
+1796.88 116.26 lineto
+closepath stroke
+grestore
+% P3/imp
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1918 90 36.29 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1898 86.3 moveto 40 (P3/imp) alignedtext
+grestore
+% P2/director/lcmUtils.py->P3/imp
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1814.74 144.94 moveto
+1835.61 134.04 1863.19 119.63 1884.59 108.45 curveto
+stroke
+0 0 0 edgecolor
+newpath 1886.41 111.45 moveto
+1893.65 103.72 lineto
+1883.17 105.25 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1886.41 111.45 moveto
+1893.65 103.72 lineto
+1883.17 105.25 lineto
+closepath stroke
+grestore
+% P2/director/lcmUtils.py->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1848.65 148.84 moveto
+1861.32 146.88 1874.55 145.13 1887 144 curveto
+2360.25 101.19 3550.11 124.65 4025 108 curveto
+4119.77 104.68 4230.25 98.21 4293.18 94.28 curveto
+stroke
+0 0 0 edgecolor
+newpath 4293.47 97.77 moveto
+4303.23 93.65 lineto
+4293.03 90.78 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4293.47 97.77 moveto
+4303.23 93.65 lineto
+4293.03 90.78 lineto
+closepath stroke
+grestore
+% P3/pickle.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2028 90 55.49 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1993.5 86.3 moveto 69 (P3/pickle.py) alignedtext
+grestore
+% P2/director/lcmUtils.py->P3/pickle.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1833.97 146.67 moveto
+1876.04 134.59 1935.94 117.41 1978.02 105.34 curveto
+stroke
+0 0 0 edgecolor
+newpath 1979.13 108.66 moveto
+1987.78 102.54 lineto
+1977.2 101.93 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1979.13 108.66 moveto
+1987.78 102.54 lineto
+1977.2 101.93 lineto
+closepath stroke
+grestore
+% P2/director/lcmUtils.py->P3/subprocess.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1848.37 148.83 moveto
+1861.13 146.86 1874.45 145.1 1887 144 curveto
+2571.3 83.89 4291.34 127.43 4978 108 curveto
+5081.06 105.08 5199.84 99.35 5276.32 95.36 curveto
+stroke
+0 0 0 edgecolor
+newpath 5276.55 98.85 moveto
+5286.36 94.83 lineto
+5276.19 91.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5276.55 98.85 moveto
+5286.36 94.83 lineto
+5276.19 91.86 lineto
+closepath stroke
+grestore
+% P3/tempfile.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2165 90 63.89 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2124 86.3 moveto 82 (P3/tempfile.py) alignedtext
+grestore
+% P2/director/lcmUtils.py->P3/tempfile.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1852.67 149.66 moveto
+1929 136.98 2047.39 117.02 2092 108 curveto
+2097.34 106.92 2102.89 105.74 2108.43 104.52 curveto
+stroke
+0 0 0 edgecolor
+newpath 2109.37 107.89 moveto
+2118.36 102.29 lineto
+2107.83 101.06 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2109.37 107.89 moveto
+2118.36 102.29 lineto
+2107.83 101.06 lineto
+closepath stroke
+grestore
+% P2/director/lcmUtils.py->P3/sys
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1848.37 148.8 moveto
+1861.12 146.83 1874.45 145.08 1887 144 curveto
+2137.64 122.45 6168.07 156.06 6415 108 curveto
+6417.88 107.44 6420.82 106.69 6423.73 105.82 curveto
+stroke
+0 0 0 edgecolor
+newpath 6425.13 109.04 moveto
+6433.46 102.49 lineto
+6422.86 102.42 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6425.13 109.04 moveto
+6433.46 102.49 lineto
+6422.86 102.42 lineto
+closepath stroke
+grestore
+% P2/director/lcmUtils.py->P3/re.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1849.79 149.09 moveto
+1862.13 147.16 1874.93 145.35 1887 144 curveto
+2154.69 114.03 2227.67 159.82 2492 108 curveto
+2495.63 107.29 2499.36 106.38 2503.07 105.35 curveto
+stroke
+0 0 0 edgecolor
+newpath 2504.2 108.66 moveto
+2512.75 102.41 lineto
+2502.16 101.97 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2504.2 108.66 moveto
+2512.75 102.41 lineto
+2502.16 101.97 lineto
+closepath stroke
+grestore
+% P3/socket.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1683 90 55.79 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1648 86.3 moveto 70 (P3/socket.py) alignedtext
+grestore
+% P2/director/lcmUtils.py->P3/socket.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1760.06 144.41 moveto
+1746.22 134.81 1728.64 122.63 1713.77 112.33 curveto
+stroke
+0 0 0 edgecolor
+newpath 1715.59 109.33 moveto
+1705.38 106.51 lineto
+1711.61 115.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1715.59 109.33 moveto
+1705.38 106.51 lineto
+1711.61 115.08 lineto
+closepath stroke
+grestore
+% P2/director/applogic.py->P2/director/openscope.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5494.09 216.41 moveto
+5505.65 207.32 5520.14 195.92 5532.77 185.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 5535.05 188.65 moveto
+5540.75 179.71 lineto
+5530.73 183.14 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5535.05 188.65 moveto
+5540.75 179.71 lineto
+5530.73 183.14 lineto
+closepath stroke
+grestore
+% P2/director/applogic.py->P3/functools.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5536.88 220.75 moveto
+5591.63 210.18 5672.56 194.4 5743 180 curveto
+5749.3 178.71 5755.87 177.35 5762.43 175.98 curveto
+stroke
+0 0 0 edgecolor
+newpath 5763.6 179.3 moveto
+5772.67 173.82 lineto
+5762.16 172.45 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5763.6 179.3 moveto
+5772.67 173.82 lineto
+5762.16 172.45 lineto
+closepath stroke
+grestore
+% P2/director/applogic.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5532.65 220.11 moveto
+5572.64 210.75 5626.18 196.8 5672 180 curveto
+5707.09 167.14 5711.95 153.87 5748 144 curveto
+5835.8 119.95 6089.25 103.25 6227.46 95.64 curveto
+stroke
+0 0 0 edgecolor
+newpath 6227.82 99.13 moveto
+6237.61 95.09 lineto
+6227.43 92.14 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6227.82 99.13 moveto
+6237.61 95.09 lineto
+6227.43 92.14 lineto
+closepath stroke
+grestore
+% P2/director/applogic.py->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5396.73 223.41 moveto
+5181.21 196.3 4571.79 119.65 4393.55 97.23 curveto
+stroke
+0 0 0 edgecolor
+newpath 4393.77 93.73 moveto
+4383.41 95.96 lineto
+4392.9 100.68 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4393.77 93.73 moveto
+4383.41 95.96 lineto
+4392.9 100.68 lineto
+closepath stroke
+grestore
+% P2/director/botspy.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+5356 162 87.18 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5297 158.3 moveto 118 (P2/director/botspy.py) alignedtext
+grestore
+% P2/director/applogic.py->P2/director/botspy.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5445.86 216.76 moveto
+5429.77 207.13 5409.17 194.81 5391.76 184.4 curveto
+stroke
+0 0 0 edgecolor
+newpath 5393.37 181.28 moveto
+5382.99 179.15 lineto
+5389.77 187.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5393.37 181.28 moveto
+5382.99 179.15 lineto
+5389.77 187.29 lineto
+closepath stroke
+grestore
+% P2/director/applogic.py->P3/time
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5403.2 221.94 moveto
+5306.53 206.61 5143.49 180.68 5142 180 curveto
+5119.32 169.66 5119.33 158.42 5099 144 curveto
+5047.96 107.8 5036.81 93.38 4978 72 curveto
+4927.31 53.57 4775.34 33.69 4697.73 24.38 curveto
+stroke
+0 0 0 edgecolor
+newpath 4698.08 20.9 moveto
+4687.74 23.2 lineto
+4697.26 27.85 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4698.08 20.9 moveto
+4687.74 23.2 lineto
+4697.26 27.85 lineto
+closepath stroke
+grestore
+% P2/director/applogic.py->P2/director
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5416.35 219.5 moveto
+5373.35 209.11 5312.81 194.17 5260 180 curveto
+5256.17 178.97 5252.21 177.88 5248.24 176.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 5248.97 173.35 moveto
+5238.4 174 lineto
+5247.07 180.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5248.97 173.35 moveto
+5238.4 174 lineto
+5247.07 180.08 lineto
+closepath stroke
+grestore
+% P2/director/applogic.py->P3/math
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5399.96 222.64 moveto
+5378.15 219.97 5354.14 217.44 5332 216 curveto
+5129.58 202.84 1880.1 218.81 1681 180 curveto
+1609.66 166.09 1531.94 130.57 1488.77 108.84 curveto
+stroke
+0 0 0 edgecolor
+newpath 1490.34 105.71 moveto
+1479.84 104.3 lineto
+1487.16 111.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1490.34 105.71 moveto
+1479.84 104.3 lineto
+1487.16 111.95 lineto
+closepath stroke
+grestore
+% P2/director/camerabookmarks.py->P2/director/applogic.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4863.63 370.05 moveto
+5045.35 358.78 5379.66 336.53 5403 324 curveto
+5416.75 316.62 5440.36 284.18 5456.31 260.59 curveto
+stroke
+0 0 0 edgecolor
+newpath 5459.37 262.31 moveto
+5462.02 252.05 lineto
+5453.55 258.42 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5459.37 262.31 moveto
+5462.02 252.05 lineto
+5453.55 258.42 lineto
+closepath stroke
+grestore
+% P2/director/camerabookmarks.py->P2/director/cameracontrol.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4647.15 366.78 moveto
+4517 353.6 4291.72 330.78 4160.36 317.47 curveto
+stroke
+0 0 0 edgecolor
+newpath 4160.59 313.98 moveto
+4150.29 316.45 lineto
+4159.88 320.94 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4160.59 313.98 moveto
+4150.29 316.45 lineto
+4159.88 320.94 lineto
+closepath stroke
+grestore
+% P3/pprint.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2791 162 54.69 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2757 158.3 moveto 68 (P3/pprint.py) alignedtext
+grestore
+% P3/weakref.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4233 18 61.99 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4193.5 14.3 moveto 79 (P3/weakref.py) alignedtext
+grestore
+% P3/shelve.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+3637 162 55.79 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+3602 158.3 moveto 70 (P3/shelve.py) alignedtext
+grestore
+% P2/director/visualization.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4363.36 287.93 moveto
+4353.05 268.96 4340.86 238.09 4355 216 curveto
+4375.58 183.84 4412.42 212.16 4433 180 curveto
+4460.42 137.14 4438.36 98.63 4395 72 curveto
+4323.45 28.07 1601.86 20.11 1169.59 19.12 curveto
+stroke
+0 0 0 edgecolor
+newpath 1169.52 15.62 moveto
+1159.51 19.1 lineto
+1169.5 22.62 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1169.52 15.62 moveto
+1159.51 19.1 lineto
+1169.5 22.62 lineto
+closepath stroke
+grestore
+% P2/director/visualization.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4472.75 298.47 moveto
+4561.73 291.3 4695.72 277.28 4810 252 curveto
+4961.5 218.48 4989.33 171.74 5142 144 curveto
+5348.89 106.41 5982.27 95.02 6224.46 91.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 6224.69 95.48 moveto
+6234.65 91.86 lineto
+6224.61 88.49 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6224.69 95.48 moveto
+6234.65 91.86 lineto
+6224.61 88.49 lineto
+closepath stroke
+grestore
+% P2/director/visualization.py->P2/director/applogic.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4473.92 298.92 moveto
+4528.84 295.61 4598.17 291.49 4660 288 curveto
+4958.62 271.13 5034.03 277.92 5332 252 curveto
+5350.24 250.41 5369.76 248.32 5388.28 246.14 curveto
+stroke
+0 0 0 edgecolor
+newpath 5388.94 249.59 moveto
+5398.46 244.93 lineto
+5388.11 242.64 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5388.94 249.59 moveto
+5398.46 244.93 lineto
+5388.11 242.64 lineto
+closepath stroke
+grestore
+% P2/director/visualization.py->P3/weakref.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4366.68 287.96 moveto
+4359.46 268.15 4351.75 235.66 4369 216 curveto
+4450 123.67 4562 272.33 4643 180 curveto
+4653.55 167.97 4651.19 157.75 4643 144 curveto
+4608.6 86.25 4573.31 94.58 4510 72 curveto
+4440.72 47.29 4357.36 33.33 4300.3 26.01 curveto
+stroke
+0 0 0 edgecolor
+newpath 4300.68 22.53 moveto
+4290.32 24.76 lineto
+4299.81 29.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4300.68 22.53 moveto
+4290.32 24.76 lineto
+4299.81 29.48 lineto
+closepath stroke
+grestore
+% P2/director/visualization.py->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4326.8 289.74 moveto
+4309.21 281.5 4291.08 269.35 4281 252 curveto
+4227.51 159.94 4402.94 195.72 4415 180 curveto
+4424.74 167.3 4422.17 158.3 4415 144 curveto
+4407.59 129.22 4393.89 117.51 4380.49 108.9 curveto
+stroke
+0 0 0 edgecolor
+newpath 4382.17 105.83 moveto
+4371.79 103.68 lineto
+4378.57 111.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4382.17 105.83 moveto
+4371.79 103.68 lineto
+4378.57 111.83 lineto
+closepath stroke
+grestore
+% P3/itertools
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+5636 234 51.19 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5604.5 230.3 moveto 63 (P3/itertools) alignedtext
+grestore
+% P2/director/visualization.py->P3/itertools
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4473.24 298.61 moveto
+4528.26 295.19 4597.9 291.07 4660 288 curveto
+5066.93 267.91 5173.63 315.98 5576 252 curveto
+5580.45 251.29 5585.04 250.37 5589.61 249.31 curveto
+stroke
+0 0 0 edgecolor
+newpath 5590.65 252.65 moveto
+5599.5 246.83 lineto
+5588.95 245.87 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5590.65 252.65 moveto
+5599.5 246.83 lineto
+5588.95 245.87 lineto
+closepath stroke
+grestore
+% P3/colorsys.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+4462 234 63.09 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+4421.5 230.3 moveto 81 (P3/colorsys.py) alignedtext
+grestore
+% P2/director/visualization.py->P3/colorsys.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4395.3 288.05 moveto
+4406.9 278.83 4421.4 267.29 4433.91 257.34 curveto
+stroke
+0 0 0 edgecolor
+newpath 4436.15 260.03 moveto
+4441.8 251.07 lineto
+4431.8 254.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4436.15 260.03 moveto
+4441.8 251.07 lineto
+4431.8 254.55 lineto
+closepath stroke
+grestore
+% P2/director/visualization.py->P2/director/objectmodel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4282.27 296.33 moveto
+4249.97 293.44 4213.39 290.36 4180 288 curveto
+3884.31 267.06 3809.44 276.27 3514 252 curveto
+3494.71 250.42 3474.1 248.38 3454.43 246.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 3454.56 242.76 moveto
+3444.24 245.16 lineto
+3453.8 249.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3454.56 242.76 moveto
+3444.24 245.16 lineto
+3453.8 249.72 lineto
+closepath stroke
+grestore
+% P2/director/visualization.py->P2/director/filterUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4284.27 295.72 moveto
+4251.5 292.7 4214.11 289.7 4180 288 curveto
+2842.45 221.5 2505.32 300.59 1167 252 curveto
+1106.88 249.82 1039.58 245.78 986.03 242.19 curveto
+stroke
+0 0 0 edgecolor
+newpath 986.06 238.69 moveto
+975.85 241.5 lineto
+985.59 245.67 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 986.06 238.69 moveto
+975.85 241.5 lineto
+985.59 245.67 lineto
+closepath stroke
+grestore
+% P2/director/visualization.py->P2/director/transformUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4284.27 295.75 moveto
+4251.5 292.73 4214.1 289.72 4180 288 curveto
+3003.17 228.53 2706.27 302 1529 252 curveto
+1486.74 250.21 1440.34 247.14 1399.81 244.1 curveto
+stroke
+0 0 0 edgecolor
+newpath 1399.88 240.59 moveto
+1389.64 243.33 lineto
+1399.35 247.57 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1399.88 240.59 moveto
+1389.64 243.33 lineto
+1399.35 247.57 lineto
+closepath stroke
+grestore
+% P2/director/visualization.py->P2/director/callbacks.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4335.04 289.14 moveto
+4314.02 279.75 4288.13 266.81 4267 252 curveto
+4210.11 212.13 4215.21 176.86 4154 144 curveto
+4111.01 120.92 4058.37 107.86 4013.91 100.49 curveto
+stroke
+0 0 0 edgecolor
+newpath 4014.39 97.02 moveto
+4003.97 98.91 lineto
+4013.3 103.94 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4014.39 97.02 moveto
+4003.97 98.91 lineto
+4013.3 103.94 lineto
+closepath stroke
+grestore
+% P2/director/visualization.py->P2/director/fieldcontainer.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4371.64 287.83 moveto
+4369.92 267.57 4370.62 234.35 4390 216 curveto
+4437.32 171.2 4618.67 198.98 4681 180 curveto
+4733.02 164.16 4788.23 133.72 4822.65 112.89 curveto
+stroke
+0 0 0 edgecolor
+newpath 4824.66 115.76 moveto
+4831.36 107.56 lineto
+4821.01 109.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4824.66 115.76 moveto
+4831.36 107.56 lineto
+4821.01 109.8 lineto
+closepath stroke
+grestore
+% P2/director/visualization.py->P2/director/frameupdater.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4436.25 291.25 moveto
+4488.53 279.71 4563.3 263.2 4618.32 251.05 curveto
+stroke
+0 0 0 edgecolor
+newpath 4619.34 254.41 moveto
+4628.35 248.83 lineto
+4617.83 247.57 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4619.34 254.41 moveto
+4628.35 248.83 lineto
+4617.83 247.57 lineto
+closepath stroke
+grestore
+% P2/director/visualization.py->P2/director/shallowCopy.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4283.78 295.86 moveto
+4251.12 292.87 4213.93 289.85 4180 288 curveto
+3446.7 247.92 3261.93 278.06 2528 252 curveto
+2202.92 240.46 2121.92 231.38 1797 216 curveto
+1620.79 207.66 1171.63 234.94 1004 180 curveto
+976.59 171.02 975.97 156.55 950 144 curveto
+919.37 129.19 883.6 117.08 853.3 108.2 curveto
+stroke
+0 0 0 edgecolor
+newpath 854.24 104.83 moveto
+843.66 105.43 lineto
+852.3 111.56 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 854.24 104.83 moveto
+843.66 105.43 lineto
+852.3 111.56 lineto
+closepath stroke
+grestore
+% P2/director/ioUtils.py->P3/os.path
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3643.44 217.29 moveto
+3666.47 206.47 3697.1 192.08 3721.05 180.83 curveto
+stroke
+0 0 0 edgecolor
+newpath 3722.63 183.95 moveto
+3730.19 176.53 lineto
+3719.65 177.62 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3722.63 183.95 moveto
+3730.19 176.53 lineto
+3719.65 177.62 lineto
+closepath stroke
+grestore
+% P2/director/ioUtils.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3687.79 225.86 moveto
+3874.01 209.03 4360.17 166.58 4767 144 curveto
+5318.67 113.38 5981.63 97.83 6224.72 92.84 curveto
+stroke
+0 0 0 edgecolor
+newpath 6225 96.33 moveto
+6234.93 92.63 lineto
+6224.86 89.33 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6225 96.33 moveto
+6234.93 92.63 lineto
+6224.86 89.33 lineto
+closepath stroke
+grestore
+% P2/director/ioUtils.py->P3/shelve.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3616.67 215.7 moveto
+3619.71 207.81 3623.38 198.3 3626.76 189.55 curveto
+stroke
+0 0 0 edgecolor
+newpath 3630.07 190.69 moveto
+3630.4 180.1 lineto
+3623.54 188.17 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3630.07 190.69 moveto
+3630.4 180.1 lineto
+3623.54 188.17 lineto
+closepath stroke
+grestore
+% P2/director/ioUtils.py->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3664.43 219.85 moveto
+3706.09 209.58 3764.88 194.64 3816 180 curveto
+3867.08 165.38 3878.11 155.42 3930 144 curveto
+4059.19 115.57 4214.65 100.74 4293.22 94.56 curveto
+stroke
+0 0 0 edgecolor
+newpath 4293.63 98.04 moveto
+4303.33 93.78 lineto
+4293.09 91.06 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4293.63 98.04 moveto
+4303.33 93.78 lineto
+4293.09 91.06 lineto
+closepath stroke
+grestore
+% P2/director/ioUtils.py->P2/director/shallowCopy.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3541.63 222.84 moveto
+3520.63 220.11 3497.4 217.51 3476 216 curveto
+3341.38 206.49 1173.5 227.03 1047 180 curveto
+1023.64 171.31 1026.25 155.24 1004 144 curveto
+965.14 124.37 918.65 111.78 878.61 103.82 curveto
+stroke
+0 0 0 edgecolor
+newpath 879.06 100.34 moveto
+868.58 101.9 lineto
+877.74 107.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 879.06 100.34 moveto
+868.58 101.9 lineto
+877.74 107.22 lineto
+closepath stroke
+grestore
+% P2/director/componentgraph.py->P3/collections.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4802.98 288.02 moveto
+4814.24 268.27 4827.78 235.84 4810 216 curveto
+4762.82 163.36 3711.08 109.24 3409.29 94.75 curveto
+stroke
+0 0 0 edgecolor
+newpath 3409.03 91.24 moveto
+3398.87 94.25 lineto
+3408.69 98.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3409.03 91.24 moveto
+3398.87 94.25 lineto
+3408.69 98.23 lineto
+closepath stroke
+grestore
+% P2/director/thirdparty/toposort.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+5176 234 129.18 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5084.5 230.3 moveto 183 (P2/director/thirdparty/toposort.py) alignedtext
+grestore
+% P2/director/componentgraph.py->P2/director/thirdparty/toposort.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4865.58 291.59 moveto
+4929.8 279.88 5023 262.89 5090.51 250.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 5091.49 253.96 moveto
+5100.7 248.73 lineto
+5090.23 247.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5091.49 253.96 moveto
+5100.7 248.73 lineto
+5090.23 247.08 lineto
+closepath stroke
+grestore
+% P2/director/componentgraph.py->P2/director/fieldcontainer.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4814.26 288.06 moveto
+4824.87 278.68 4836.61 266.07 4843 252 curveto
+4862.71 208.63 4862.43 151.96 4860.01 118.71 curveto
+stroke
+0 0 0 edgecolor
+newpath 4863.47 118.06 moveto
+4859.13 108.39 lineto
+4856.49 118.65 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4863.47 118.06 moveto
+4859.13 108.39 lineto
+4856.49 118.65 lineto
+closepath stroke
+grestore
+% P2/director/lcmobjectcollection.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2670 234 133.48 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2575.5 230.3 moveto 189 (P2/director/lcmobjectcollection.py) alignedtext
+grestore
+% P2/director/lcmobjectcollection.py->P2/director/utime.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2729.76 217.9 moveto
+2775.55 206.33 2838.52 190.41 2884.88 178.7 curveto
+stroke
+0 0 0 edgecolor
+newpath 2885.97 182.03 moveto
+2894.81 176.19 lineto
+2884.25 175.25 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2885.97 182.03 moveto
+2894.81 176.19 lineto
+2884.25 175.25 lineto
+closepath stroke
+grestore
+% P2/director/lcmobjectcollection.py->P3/collections.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2678.56 216 moveto
+2690.68 192.63 2712.95 152.51 2727 144 curveto
+2727.35 143.79 3090.05 111.96 3252.22 97.73 curveto
+stroke
+0 0 0 edgecolor
+newpath 3252.95 101.18 moveto
+3262.61 96.82 lineto
+3252.34 94.21 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3252.95 101.18 moveto
+3262.61 96.82 lineto
+3252.34 94.21 lineto
+closepath stroke
+grestore
+% P2/director/lcmobjectcollection.py->P2/director/lcmUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2543.88 228.19 moveto
+2388.85 221.43 2117.92 206.81 1887 180 curveto
+1878.3 178.99 1869.22 177.76 1860.2 176.42 curveto
+stroke
+0 0 0 edgecolor
+newpath 1860.49 172.92 moveto
+1850.08 174.87 lineto
+1859.44 179.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1860.49 172.92 moveto
+1850.08 174.87 lineto
+1859.44 179.84 lineto
+closepath stroke
+grestore
+% P2/director/lcmobjectcollection.py->P3/pprint.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2698.68 216.41 moveto
+2715.81 206.5 2737.72 193.82 2755.89 183.31 curveto
+stroke
+0 0 0 edgecolor
+newpath 2758.1 186.08 moveto
+2765.01 178.04 lineto
+2754.6 180.02 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2758.1 186.08 moveto
+2765.01 178.04 lineto
+2754.6 180.02 lineto
+closepath stroke
+grestore
+% P2/director/lcmobjectcollection.py->P3/uuid.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2549.57 226.26 moveto
+2429.3 218.28 2259.4 203.06 2239 180 curveto
+2228.4 168.02 2228.12 155.73 2239 144 curveto
+2275.14 105.03 2663.69 117.41 2716 108 curveto
+2720.43 107.2 2725 106.21 2729.55 105.1 curveto
+stroke
+0 0 0 edgecolor
+newpath 2730.61 108.44 moveto
+2739.4 102.53 lineto
+2728.84 101.67 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2730.61 108.44 moveto
+2739.4 102.53 lineto
+2728.84 101.67 lineto
+closepath stroke
+grestore
+% P2/director/lcmobjectcollection.py->P3/json
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2669.29 215.95 moveto
+2669.45 195.49 2673.16 161.74 2694 144 curveto
+2753.38 93.47 2967.06 125.65 3043 108 curveto
+3045.97 107.31 3049.01 106.48 3052.05 105.56 curveto
+stroke
+0 0 0 edgecolor
+newpath 3053.22 108.86 moveto
+3061.61 102.4 lineto
+3051.02 102.21 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3053.22 108.86 moveto
+3061.61 102.4 lineto
+3051.02 102.21 lineto
+closepath stroke
+grestore
+% P2/director/thirdparty/numpyjsoncoder.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2407 162 159.47 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2292.5 158.3 moveto 229 (P2/director/thirdparty/numpyjsoncoder.py) alignedtext
+grestore
+% P2/director/lcmobjectcollection.py->P2/director/thirdparty/numpyjsoncoder.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2612.61 217.72 moveto
+2572.37 207.01 2518.37 192.64 2475.82 181.32 curveto
+stroke
+0 0 0 edgecolor
+newpath 2476.65 177.92 moveto
+2466.09 178.73 lineto
+2474.85 184.68 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2476.65 177.92 moveto
+2466.09 178.73 lineto
+2474.85 184.68 lineto
+closepath stroke
+grestore
+% P2/director/lcmobjectcollection.py->P3/time
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2785.64 224.95 moveto
+2877.33 217.01 2996.96 202.71 3040 180 curveto
+3059.2 169.87 3054.97 156.08 3073 144 curveto
+3111.55 118.17 3130.58 130.79 3171 108 curveto
+3193.31 95.42 3191.97 80.88 3216 72 curveto
+3329.46 30.08 4183.15 40.96 4304 36 curveto
+4410.69 31.62 4535.76 25.17 4602.77 21.61 curveto
+stroke
+0 0 0 edgecolor
+newpath 4603.21 25.09 moveto
+4613.01 21.06 lineto
+4602.84 18.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4603.21 25.09 moveto
+4613.01 21.06 lineto
+4602.84 18.1 lineto
+closepath stroke
+grestore
+% P2/director/lcmobjectcollection.py->P2/director/uuidutil.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2555.14 224.82 moveto
+2438.33 215.94 2252.2 200.29 2092 180 curveto
+2082.62 178.81 2072.79 177.42 2063.06 175.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 2063.41 172.46 moveto
+2052.99 174.4 lineto
+2062.34 179.38 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2063.41 172.46 moveto
+2052.99 174.4 lineto
+2062.34 179.38 lineto
+closepath stroke
+grestore
+% P2/director/lcmobjectcollection.py->P2/director/callbacks.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2777.66 223.33 moveto
+2859.26 214.92 2973.89 200.78 3073 180 curveto
+3129.17 168.22 3140.52 154.15 3197 144 curveto
+3413.77 105.03 3672.02 94.57 3813.75 91.86 curveto
+stroke
+0 0 0 edgecolor
+newpath 3814.24 95.35 moveto
+3824.17 91.67 lineto
+3814.11 88.35 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3814.24 95.35 moveto
+3824.17 91.67 lineto
+3814.11 88.35 lineto
+closepath stroke
+grestore
+% P2/director/vieweventfilter.py->P2/director/visualization.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4314.12 360.05 moveto
+4324.12 351.2 4336.51 340.22 4347.42 330.55 curveto
+stroke
+0 0 0 edgecolor
+newpath 4349.89 333.04 moveto
+4355.05 323.79 lineto
+4345.25 327.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4349.89 333.04 moveto
+4355.05 323.79 lineto
+4345.25 327.8 lineto
+closepath stroke
+grestore
+% P2/director/thirdparty/toposort.py->P3/functools.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5282.41 223.73 moveto
+5434.01 210.41 5698.8 186.74 5743 180 curveto
+5749.79 178.96 5756.87 177.71 5763.89 176.37 curveto
+stroke
+0 0 0 edgecolor
+newpath 5764.96 179.72 moveto
+5774.09 174.33 lineto
+5763.6 172.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5764.96 179.72 moveto
+5774.09 174.33 lineto
+5763.6 172.86 lineto
+closepath stroke
+grestore
+% P2/director/thirdparty/toposort.py->P2/director/thirdparty/toposort.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5262.26 247.45 moveto
+5295.62 248.04 5323.34 243.56 5323.34 234 curveto
+5323.34 225.45 5301.16 220.96 5272.6 220.53 curveto
+stroke
+0 0 0 edgecolor
+newpath 5272.26 217.03 moveto
+5262.26 220.55 lineto
+5272.27 224.03 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5272.26 217.03 moveto
+5262.26 220.55 lineto
+5272.27 224.03 lineto
+closepath stroke
+grestore
+% P2/director/botspy.py->P3/subprocess.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5356 143.7 moveto
+5356 135.98 5356 126.71 5356 118.11 curveto
+stroke
+0 0 0 edgecolor
+newpath 5359.5 118.1 moveto
+5356 108.1 lineto
+5352.5 118.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5359.5 118.1 moveto
+5356 108.1 lineto
+5352.5 118.1 lineto
+closepath stroke
+grestore
+% P2/director/screengrabberpanel.py->P2/director/timercallback.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6262.32 290.75 moveto
+6305.53 281.37 6361.49 267.91 6410 252 curveto
+6488.74 226.17 6509 219.23 6582 180 curveto
+6618.72 160.27 6658.08 133.09 6684.38 113.98 curveto
+stroke
+0 0 0 edgecolor
+newpath 6686.77 116.56 moveto
+6692.77 107.83 lineto
+6682.64 110.92 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6686.77 116.56 moveto
+6692.77 107.83 lineto
+6682.64 110.92 lineto
+closepath stroke
+grestore
+% P2/director/screengrabberpanel.py->P3/datetime
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6067.45 299.64 moveto
+5982.88 293.5 5868.95 280.31 5772 252 curveto
+5736.12 241.52 5732.38 224.57 5696 216 curveto
+5313.93 125.99 4317.31 243.75 3930 180 curveto
+3877.57 171.37 3868.37 152.95 3816 144 curveto
+3334.28 61.65 3200.35 180.14 2717 108 curveto
+2712.02 107.26 2706.86 106.26 2701.75 105.11 curveto
+stroke
+0 0 0 edgecolor
+newpath 2702.56 101.71 moveto
+2692.01 102.77 lineto
+2700.92 108.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2702.56 101.71 moveto
+2692.01 102.77 lineto
+2700.92 108.52 lineto
+closepath stroke
+grestore
+% P2/director/screengrabberpanel.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6279.01 292.58 moveto
+6326.27 283.91 6377.71 270.55 6392 252 curveto
+6401.77 239.33 6400.12 229.78 6392 216 curveto
+6375.23 187.55 6344.87 207.77 6327 180 curveto
+6315.31 161.83 6314.27 137.05 6315.76 118.26 curveto
+stroke
+0 0 0 edgecolor
+newpath 6319.25 118.56 moveto
+6316.83 108.24 lineto
+6312.29 117.82 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6319.25 118.56 moveto
+6316.83 108.24 lineto
+6312.29 117.82 lineto
+closepath stroke
+grestore
+% P2/director/screengrabberpanel.py->P2/director/applogic.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6073.96 297.63 moveto
+5950.02 289.19 5748.79 273.67 5576 252 curveto
+5567.38 250.92 5558.37 249.65 5549.43 248.29 curveto
+stroke
+0 0 0 edgecolor
+newpath 5549.8 244.81 moveto
+5539.38 246.73 lineto
+5548.72 251.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5549.8 244.81 moveto
+5539.38 246.73 lineto
+5548.72 251.72 lineto
+closepath stroke
+grestore
+% P2/director/screengrabberpanel.py->P2/director/ioUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6063.01 301.53 moveto
+5611.95 289.3 4102.14 248.35 3705.9 237.6 curveto
+stroke
+0 0 0 edgecolor
+newpath 3705.72 234.09 moveto
+3695.63 237.32 lineto
+3705.53 241.09 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3705.72 234.09 moveto
+3695.63 237.32 lineto
+3705.53 241.09 lineto
+closepath stroke
+grestore
+% P2/director/screengrabberpanel.py->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6097.05 293.29 moveto
+6065.5 285.63 6031.81 272.96 6006 252 curveto
+5963.87 217.78 5995.06 172.71 5949 144 curveto
+5891.79 108.34 4803.37 110.46 4736 108 curveto
+4613.77 103.54 4470.16 96.97 4395.29 93.45 curveto
+stroke
+0 0 0 edgecolor
+newpath 4395.35 89.95 moveto
+4385.19 92.97 lineto
+4395.02 96.94 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4395.35 89.95 moveto
+4385.19 92.97 lineto
+4395.02 96.94 lineto
+closepath stroke
+grestore
+% P2/director/screengrabberpanel.py->P3/itertools
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6089.4 294.46 moveto
+5997.67 284.62 5859.09 268.94 5739 252 curveto
+5723.32 249.79 5706.35 247.11 5690.79 244.53 curveto
+stroke
+0 0 0 edgecolor
+newpath 5691.24 241.06 moveto
+5680.8 242.86 lineto
+5690.09 247.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5691.24 241.06 moveto
+5680.8 242.86 lineto
+5690.09 247.96 lineto
+closepath stroke
+grestore
+% P3/glob.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+6334 234 49.29 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6304 230.3 moveto 60 (P3/glob.py) alignedtext
+grestore
+% P2/director/screengrabberpanel.py->P3/glob.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6224.53 288.59 moveto
+6246.05 278.05 6274.05 264.35 6296.34 253.44 curveto
+stroke
+0 0 0 edgecolor
+newpath 6298.06 256.49 moveto
+6305.51 248.95 lineto
+6294.99 250.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6298.06 256.49 moveto
+6305.51 248.95 lineto
+6294.99 250.2 lineto
+closepath stroke
+grestore
+% P2/director/simpletimer.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+6122 234 106.68 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6048 230.3 moveto 148 (P2/director/simpletimer.py) alignedtext
+grestore
+% P2/director/screengrabberpanel.py->P2/director/simpletimer.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6174.3 288.05 moveto
+6165.74 279.37 6155.16 268.64 6145.77 259.11 curveto
+stroke
+0 0 0 edgecolor
+newpath 6148.06 256.45 moveto
+6138.55 251.79 lineto
+6143.08 261.37 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6148.06 256.45 moveto
+6138.55 251.79 lineto
+6143.08 261.37 lineto
+closepath stroke
+grestore
+% P2/director/screengrabberpanel.py->P3/time
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6210.85 288.12 moveto
+6229.85 269.85 6253.5 240.1 6238 216 curveto
+6142.54 67.59 6041.58 103.73 5868 72 curveto
+5637.46 29.87 5047.8 52.17 4814 36 curveto
+4774.68 33.28 4730.2 28.53 4697.64 24.74 curveto
+stroke
+0 0 0 edgecolor
+newpath 4697.85 21.24 moveto
+4687.51 23.54 lineto
+4697.04 28.19 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4697.85 21.24 moveto
+4687.51 23.54 lineto
+4697.04 28.19 lineto
+closepath stroke
+grestore
+% P3/ctypes
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2292 90 44.69 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2265.5 86.3 moveto 53 (P3/ctypes) alignedtext
+grestore
+% P2/director/drcargs.py->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5894.44 216.69 moveto
+5919.8 197.86 5952.92 166.59 5931 144 curveto
+5907.87 120.17 4769.19 109.22 4736 108 curveto
+4613.77 103.51 4470.16 96.95 4395.29 93.44 curveto
+stroke
+0 0 0 edgecolor
+newpath 4395.35 89.94 moveto
+4385.19 92.97 lineto
+4395.02 96.93 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4395.35 89.94 moveto
+4385.19 92.97 lineto
+4395.02 96.93 lineto
+closepath stroke
+grestore
+% P2/director/drcargs.py->P3/json
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5884.16 215.9 moveto
+5898.86 196.03 5917.22 163.49 5898 144 curveto
+5872.16 117.81 3285.73 110.2 3249 108 curveto
+3210.13 105.68 3166.14 100.84 3134.14 96.92 curveto
+stroke
+0 0 0 edgecolor
+newpath 3134.55 93.44 moveto
+3124.19 95.68 lineto
+3133.69 100.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3134.55 93.44 moveto
+3124.19 95.68 lineto
+3133.69 100.39 lineto
+closepath stroke
+grestore
+% P3/argparse.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+6509 162 63.89 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+6468 158.3 moveto 82 (P3/argparse.py) alignedtext
+grestore
+% P2/director/drcargs.py->P3/argparse.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5942.65 223.49 moveto
+5963.12 220.92 5985.42 218.24 6006 216 curveto
+6177.73 197.28 6221.48 200.53 6393 180 curveto
+6409.74 178 6427.78 175.51 6444.54 173.06 curveto
+stroke
+0 0 0 edgecolor
+newpath 6445.41 176.47 moveto
+6454.79 171.55 lineto
+6444.38 169.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6445.41 176.47 moveto
+6454.79 171.55 lineto
+6444.38 169.55 lineto
+closepath stroke
+grestore
+% P2/director/drcargs.py->P2/director
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5805.85 221.47 moveto
+5793.01 219.43 5779.6 217.48 5767 216 curveto
+5542.65 189.58 5482.42 219.49 5260 180 curveto
+5255.63 179.22 5251.12 178.25 5246.64 177.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 5247.47 173.77 moveto
+5236.91 174.64 lineto
+5245.71 180.54 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5247.47 173.77 moveto
+5236.91 174.64 lineto
+5245.71 180.54 lineto
+closepath stroke
+grestore
+% P2/director/drcargs.py->P3/sys
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5934.6 221.46 moveto
+6037.5 202.36 6244.41 160.95 6415 108 curveto
+6417.57 107.2 6420.21 106.32 6422.84 105.39 curveto
+stroke
+0 0 0 edgecolor
+newpath 6424.14 108.65 moveto
+6432.3 101.89 lineto
+6421.71 102.08 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6424.14 108.65 moveto
+6432.3 101.89 lineto
+6421.71 102.08 lineto
+closepath stroke
+grestore
+% P3/random.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1336 90 61.19 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1297 86.3 moveto 78 (P3/random.py) alignedtext
+grestore
+% P4/pygments/formatters
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+7219 450 96.38 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+7153 446.3 moveto 132 (P4/pygments/formatters) alignedtext
+grestore
+% P2/director/geometryencoder.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1663 234 124.58 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1575 230.3 moveto 176 (P2/director/geometryencoder.py) alignedtext
+grestore
+% P2/director/geometryencoder.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1644.45 216.14 moveto
+1633.85 206.1 1620.6 192.85 1610 180 curveto
+1573.13 135.31 1586.39 102.29 1537 72 curveto
+1476.64 34.97 1270.85 23.71 1169.44 20.36 curveto
+stroke
+0 0 0 edgecolor
+newpath 1169.47 16.86 moveto
+1159.37 20.05 lineto
+1169.25 23.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1169.47 16.86 moveto
+1159.37 20.05 lineto
+1169.25 23.86 lineto
+closepath stroke
+grestore
+% P2/director/geometryencoder.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1786.04 230.74 moveto
+2182.86 223.29 3408.06 198.86 3491 180 curveto
+3529.41 171.26 3533.54 152.55 3572 144 curveto
+3572 144 5741.07 102.17 6225.03 92.83 curveto
+stroke
+0 0 0 edgecolor
+newpath 6225.19 96.33 moveto
+6235.12 92.64 lineto
+6225.06 89.33 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6225.19 96.33 moveto
+6235.12 92.64 lineto
+6225.06 89.33 lineto
+closepath stroke
+grestore
+% P2/director/geometryencoder.py->P2/director/shallowCopy.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1552.82 225.54 moveto
+1365.72 212.72 1003.37 187.21 976 180 curveto
+946.18 172.15 872.68 135.74 826.33 111.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 827.65 108.74 moveto
+817.16 107.28 lineto
+824.45 114.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 827.65 108.74 moveto
+817.16 107.28 lineto
+824.45 114.96 lineto
+closepath stroke
+grestore
+% P2/director/geometryencoder.py->P2/director/vtkNumpy.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1553.13 225.38 moveto
+1510.06 222.41 1460.21 219.01 1415 216 curveto
+1157.5 198.85 854.45 179.47 698.81 169.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 698.98 166.08 moveto
+688.78 168.94 lineto
+698.54 173.07 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 698.98 166.08 moveto
+688.78 168.94 lineto
+698.54 173.07 lineto
+closepath stroke
+grestore
+% P3/doctest.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1198 90 58.49 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1161 86.3 moveto 74 (P3/doctest.py) alignedtext
+grestore
+% P2/director/thirdparty/numpyjsoncoder.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2522.44 149.56 moveto
+2656.52 135.99 2860.28 114.41 2866 108 curveto
+2876.65 96.06 2877.14 83.48 2866 72 curveto
+2835.78 40.85 1469.02 23.16 1169.58 19.65 curveto
+stroke
+0 0 0 edgecolor
+newpath 1169.42 16.15 moveto
+1159.38 19.53 lineto
+1169.34 23.15 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1169.42 16.15 moveto
+1159.38 19.53 lineto
+1169.34 23.15 lineto
+closepath stroke
+grestore
+% P2/director/thirdparty/numpyjsoncoder.py->P3/json
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2521.43 149.42 moveto
+2540.97 147.54 2561.06 145.67 2580 144 curveto
+2785.6 125.91 2841.39 152.2 3043 108 curveto
+3045.98 107.35 3049.03 106.54 3052.07 105.64 curveto
+stroke
+0 0 0 edgecolor
+newpath 3053.22 108.95 moveto
+3061.64 102.51 lineto
+3051.05 102.29 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3053.22 108.95 moveto
+3061.64 102.51 lineto
+3051.05 102.29 lineto
+closepath stroke
+grestore
+% P3/base64.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2976 90 57.69 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2939.5 86.3 moveto 73 (P3/base64.py) alignedtext
+grestore
+% P2/director/thirdparty/numpyjsoncoder.py->P3/base64.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2522.01 149.5 moveto
+2657.05 135.89 2867.35 114.25 2904 108 curveto
+2910.15 106.95 2916.55 105.69 2922.9 104.33 curveto
+stroke
+0 0 0 edgecolor
+newpath 2923.77 107.72 moveto
+2932.78 102.14 lineto
+2922.26 100.89 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2923.77 107.72 moveto
+2932.78 102.14 lineto
+2922.26 100.89 lineto
+closepath stroke
+grestore
+% P2/director/simpletimer.py->P3/time
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 6112.6 215.86 moveto
+6100.13 194.98 6076.04 160.47 6045 144 curveto
+5802.41 15.32 5087.71 58.17 4814 36 curveto
+4774.85 32.83 4730.52 28.13 4697.98 24.48 curveto
+stroke
+0 0 0 edgecolor
+newpath 4698.19 20.98 moveto
+4687.85 23.33 lineto
+4697.4 27.94 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4698.19 20.98 moveto
+4687.85 23.33 lineto
+4697.4 27.94 lineto
+closepath stroke
+grestore
+% P2/director/uuidutil.py->P3/uuid.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2060.77 151.42 moveto
+2082.99 148.75 2107.47 146.03 2130 144 curveto
+2389.88 120.59 2458.87 152.39 2716 108 curveto
+2720.43 107.23 2725.01 106.26 2729.56 105.16 curveto
+stroke
+0 0 0 edgecolor
+newpath 2730.61 108.51 moveto
+2739.41 102.61 lineto
+2728.85 101.73 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2730.61 108.51 moveto
+2739.41 102.61 lineto
+2728.85 101.73 lineto
+closepath stroke
+grestore
+% P2/director/uuidutil.py->P3/ctypes
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2051.36 149.19 moveto
+2102.31 139.42 2175.1 124.5 2238 108 curveto
+2241.54 107.07 2245.18 106.06 2248.84 105 curveto
+stroke
+0 0 0 edgecolor
+newpath 2249.87 108.34 moveto
+2258.44 102.12 lineto
+2247.86 101.63 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2249.87 108.34 moveto
+2258.44 102.12 lineto
+2247.86 101.63 lineto
+closepath stroke
+grestore
+% P3/platform.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+2419 90 64.19 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+2377.5 86.3 moveto 83 (P3/platform.py) alignedtext
+grestore
+% P2/director/uuidutil.py->P3/platform.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2054.47 149.88 moveto
+2066.94 147.88 2079.86 145.84 2092 144 curveto
+2204.73 126.89 2233.92 128.95 2346 108 curveto
+2351.36 107 2356.91 105.87 2362.46 104.68 curveto
+stroke
+0 0 0 edgecolor
+newpath 2363.38 108.06 moveto
+2372.4 102.5 lineto
+2361.88 101.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2363.38 108.06 moveto
+2372.4 102.5 lineto
+2361.88 101.23 lineto
+closepath stroke
+grestore
+% P2/director/consoleapp.py->P2/director/timercallback.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5838.22 517.85 moveto
+6031.54 511.28 6449.34 494.45 6591 468 curveto
+6695.04 448.57 6724.8 446.15 6818 396 curveto
+6938.52 331.14 7082.32 249.4 6995 144 curveto
+6973.57 118.13 6896.06 104.79 6828.01 97.97 curveto
+stroke
+0 0 0 edgecolor
+newpath 6828.34 94.48 moveto
+6818.05 97.01 lineto
+6827.67 101.45 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6828.34 94.48 moveto
+6818.05 97.01 lineto
+6827.67 101.45 lineto
+closepath stroke
+grestore
+% P2/director/consoleapp.py->P2/director/viewbehaviors.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5640.05 516.47 moveto
+5372.69 504.12 4631.06 469.85 4341.23 456.46 curveto
+stroke
+0 0 0 edgecolor
+newpath 4341.26 452.96 moveto
+4331.11 456 lineto
+4340.94 459.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4341.26 452.96 moveto
+4331.11 456 lineto
+4340.94 459.95 lineto
+closepath stroke
+grestore
+% P2/director/consoleapp.py->P2/director/applogic.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5726.83 504.08 moveto
+5711.52 480.48 5683.69 436.06 5664 396 curveto
+5641.22 349.63 5658.17 323.89 5621 288 curveto
+5601.76 269.42 5575.56 257.3 5550.56 249.42 curveto
+stroke
+0 0 0 edgecolor
+newpath 5551.26 245.98 moveto
+5540.68 246.5 lineto
+5549.28 252.69 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5551.26 245.98 moveto
+5540.68 246.5 lineto
+5549.28 252.69 lineto
+closepath stroke
+grestore
+% P2/director/consoleapp.py->P2/director/visualization.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5635.05 521.76 moveto
+5460.71 521.7 5115.54 515.34 5005 468 curveto
+4939.34 439.89 4951.21 389.13 4886 360 curveto
+4850.1 343.97 4621.64 324.93 4482.3 314.6 curveto
+stroke
+0 0 0 edgecolor
+newpath 4482.24 311.09 moveto
+4472.01 313.84 lineto
+4481.73 318.07 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4482.24 311.09 moveto
+4472.01 313.84 lineto
+4481.73 318.07 lineto
+closepath stroke
+grestore
+% P2/director/consoleapp.py->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5635.49 520.79 moveto
+5493.75 516.6 5233.33 494.62 5038 396 curveto
+4975.7 364.54 4977.23 333.15 4924 288 curveto
+4883.6 253.73 4876.51 239.44 4829 216 curveto
+4720.7 162.57 4683.98 173.97 4567 144 curveto
+4505.9 128.35 4434.96 111.76 4389.8 101.39 curveto
+stroke
+0 0 0 edgecolor
+newpath 4390.54 97.97 moveto
+4380.01 99.15 lineto
+4388.98 104.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4390.54 97.97 moveto
+4380.01 99.15 lineto
+4388.98 104.8 lineto
+closepath stroke
+grestore
+% P2/director/consoleapp.py->P2/director/drcargs.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5750.04 503.85 moveto
+5766.17 480.35 5794.94 436.43 5814 396 curveto
+5835.41 350.59 5853.03 294.66 5862.49 262.1 curveto
+stroke
+0 0 0 edgecolor
+newpath 5865.88 262.97 moveto
+5865.27 252.39 lineto
+5859.15 261.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5865.88 262.97 moveto
+5865.27 252.39 lineto
+5859.15 261.04 lineto
+closepath stroke
+grestore
+% P2/director/consoleapp.py->P3/traceback.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5839.64 519.39 moveto
+6049.26 515.39 6523.15 502.71 6681 468 curveto
+6765.96 449.32 6785.6 435.71 6863 396 curveto
+6950.2 351.26 6998.6 344.84 7030 252 curveto
+7038.12 227.99 7020.86 145.83 7020 144 curveto
+7000.27 102.19 6961.57 64.71 6934.54 41.93 curveto
+stroke
+0 0 0 edgecolor
+newpath 6936.5 39.01 moveto
+6926.56 35.35 lineto
+6932.05 44.41 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6936.5 39.01 moveto
+6926.56 35.35 lineto
+6932.05 44.41 lineto
+closepath stroke
+grestore
+% P2/director/consoleapp.py->P3/argparse.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5818.91 510.86 moveto
+5999.8 486.68 6429.36 420.35 6535 324 curveto
+6571.4 290.8 6578.42 261.7 6560 216 curveto
+6555.42 204.64 6547.12 194.35 6538.52 185.93 curveto
+stroke
+0 0 0 edgecolor
+newpath 6540.71 183.2 moveto
+6530.97 179.03 lineto
+6535.99 188.36 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6540.71 183.2 moveto
+6530.97 179.03 lineto
+6535.99 188.36 lineto
+closepath stroke
+grestore
+% P2/director/consoleapp.py->P2/director/objectmodel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5636.36 519.31 moveto
+5327.1 513.92 4400.4 495.82 4100 468 curveto
+3815.3 441.64 3701.7 495.61 3473 324 curveto
+3456.11 311.33 3457.92 301.87 3442 288 curveto
+3428.77 276.47 3412.83 265.6 3398.54 256.74 curveto
+stroke
+0 0 0 edgecolor
+newpath 3400.26 253.69 moveto
+3389.89 251.5 lineto
+3396.63 259.67 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3400.26 253.69 moveto
+3389.89 251.5 lineto
+3396.63 259.67 lineto
+closepath stroke
+grestore
+% P2/director/consoleapp.py->P3/sys
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5840.05 519.74 moveto
+6095.37 514.17 6750.71 484.24 6881 324 curveto
+6931.47 261.93 6933.94 203.98 6881 144 curveto
+6881 144 6608.02 109.8 6500.65 96.34 curveto
+stroke
+0 0 0 edgecolor
+newpath 6500.85 92.84 moveto
+6490.49 95.07 lineto
+6499.98 99.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6500.85 92.84 moveto
+6490.49 95.07 lineto
+6499.98 99.79 lineto
+closepath stroke
+grestore
+% P2/director/lcmgl.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3232.51 297.98 moveto
+3338.37 288.07 3536.91 269.27 3706 252 curveto
+3854.53 236.83 3891.31 229.51 4040 216 curveto
+4256.15 196.37 4310.83 199.36 4527 180 curveto
+4679.23 166.36 4716.54 154.8 4869 144 curveto
+5379.09 107.88 5991.89 95.72 6224.33 92.23 curveto
+stroke
+0 0 0 edgecolor
+newpath 6224.49 95.73 moveto
+6234.44 92.08 lineto
+6224.39 88.73 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6224.49 95.73 moveto
+6234.44 92.08 lineto
+6224.39 88.73 lineto
+closepath stroke
+grestore
+% P2/director/lcmgl.py->P2/director/lcmUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3081.34 298.22 moveto
+3042.16 294.85 2993.53 290.9 2950 288 curveto
+2636.51 267.14 2555.89 289.93 2244 252 curveto
+2102.49 234.79 1939.16 199.44 1850.2 178.84 curveto
+stroke
+0 0 0 edgecolor
+newpath 1850.78 175.39 moveto
+1840.25 176.53 lineto
+1849.2 182.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1850.78 175.39 moveto
+1840.25 176.53 lineto
+1849.2 182.2 lineto
+closepath stroke
+grestore
+% P2/director/lcmgl.py->P2/director/objectmodel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3199.56 290.33 moveto
+3230.45 279.67 3272.5 265.17 3305.81 253.69 curveto
+stroke
+0 0 0 edgecolor
+newpath 3307.08 256.95 moveto
+3315.39 250.38 lineto
+3304.8 250.33 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3307.08 256.95 moveto
+3315.39 250.38 lineto
+3304.8 250.33 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrol.py->P2/director/timercallback.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4101.81 289.43 moveto
+4165.11 268.28 4284.74 231.33 4390 216 curveto
+4672.03 174.93 5394.85 246.42 5672 180 curveto
+5708.35 171.29 5711.74 153.07 5748 144 curveto
+5910.52 103.35 6333.81 118.63 6501 108 curveto
+6536.12 105.77 6574.45 102.87 6608.84 100.1 curveto
+stroke
+0 0 0 edgecolor
+newpath 6609.22 103.58 moveto
+6618.9 99.28 lineto
+6608.65 96.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6609.22 103.58 moveto
+6618.9 99.28 lineto
+6608.65 96.6 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrol.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3944.74 302.47 moveto
+3615.49 294.85 2666.75 271.47 2528 252 curveto
+2396.91 233.61 2320.5 284.3 2239 180 curveto
+2229.15 167.39 2228.03 155.65 2239 144 curveto
+2329.64 47.7 2742.36 204.3 2833 108 curveto
+2843.97 96.35 2844.14 83.49 2833 72 curveto
+2803.39 41.46 1465.21 23.32 1169.46 19.68 curveto
+stroke
+0 0 0 edgecolor
+newpath 1169.42 16.18 moveto
+1159.38 19.56 lineto
+1169.33 23.18 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1169.42 16.18 moveto
+1159.38 19.56 lineto
+1169.33 23.18 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrol.py->P2/director/propertyset.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4038.83 288.22 moveto
+4029.79 278.61 4019.79 265.75 4015 252 curveto
+4007.74 231.16 4015.93 207.2 4025.14 189.39 curveto
+stroke
+0 0 0 edgecolor
+newpath 4028.46 190.63 moveto
+4030.27 180.19 lineto
+4022.35 187.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4028.46 190.63 moveto
+4030.27 180.19 lineto
+4022.35 187.22 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrol.py->P3/collections.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4038.82 288.01 moveto
+4000.88 253.71 3909.04 176.72 3816 144 curveto
+3643.02 83.17 3586.2 136.08 3405 108 curveto
+3399.66 107.17 3394.13 106.19 3388.6 105.12 curveto
+stroke
+0 0 0 edgecolor
+newpath 3389.19 101.66 moveto
+3378.7 103.11 lineto
+3387.8 108.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3389.19 101.66 moveto
+3378.7 103.11 lineto
+3387.8 108.53 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrol.py->P3/time
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4049.91 287.92 moveto
+4042.93 268.06 4035.63 235.53 4053 216 curveto
+4098.65 164.68 4294.61 201.02 4360 180 curveto
+4463.71 146.66 4572.61 75.01 4622.72 39.63 curveto
+stroke
+0 0 0 edgecolor
+newpath 4624.98 42.32 moveto
+4631.1 33.67 lineto
+4620.92 36.62 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4624.98 42.32 moveto
+4631.1 33.67 lineto
+4620.92 36.62 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrol.py->P4/vtk
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4081.85 288.37 moveto
+4113.19 268.18 4169.35 234.54 4222 216 curveto
+4305.13 186.72 4331.98 203.22 4417 180 curveto
+4571.7 137.74 4749.08 65.09 4822.46 33.91 curveto
+stroke
+0 0 0 edgecolor
+newpath 4823.88 37.11 moveto
+4831.7 29.97 lineto
+4821.13 30.68 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4823.88 37.11 moveto
+4831.7 29.97 lineto
+4821.13 30.68 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrol.py->P2/director/transformUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3944.4 302.62 moveto
+3788.42 299.33 3497.81 293.2 3250 288 curveto
+2485.11 271.94 2293.24 287.27 1529 252 curveto
+1486.85 250.05 1440.56 246.97 1400.09 243.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 1400.17 240.45 moveto
+1389.94 243.19 lineto
+1399.65 247.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1400.17 240.45 moveto
+1389.94 243.19 lineto
+1399.65 247.43 lineto
+closepath stroke
+grestore
+% P2/director/opendatahandler.py->P2/director/visualization.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3935.99 365.4 moveto
+4031.54 352.66 4184.35 332.29 4281.89 319.28 curveto
+stroke
+0 0 0 edgecolor
+newpath 4282.58 322.72 moveto
+4292.03 317.93 lineto
+4281.66 315.78 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4282.58 322.72 moveto
+4292.03 317.93 lineto
+4281.66 315.78 lineto
+closepath stroke
+grestore
+% P2/director/opendatahandler.py->P2/director/ioUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3855.87 359.85 moveto
+3862.48 340.24 3869.3 308.24 3853 288 curveto
+3833.66 263.99 3760.29 250.27 3699.18 242.84 curveto
+stroke
+0 0 0 edgecolor
+newpath 3699.44 239.35 moveto
+3689.1 241.66 lineto
+3698.62 246.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3699.44 239.35 moveto
+3689.1 241.66 lineto
+3698.62 246.3 lineto
+closepath stroke
+grestore
+% P2/director/opendatahandler.py->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3860.23 359.89 moveto
+3883.99 325.37 3943.11 247.99 4015 216 curveto
+4081.19 186.55 4289.19 232.6 4339 180 curveto
+4354.33 163.81 4353.99 137.64 4350.76 117.87 curveto
+stroke
+0 0 0 edgecolor
+newpath 4354.17 117.06 moveto
+4348.81 107.92 lineto
+4347.3 118.4 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4354.17 117.06 moveto
+4348.81 107.92 lineto
+4347.3 118.4 lineto
+closepath stroke
+grestore
+% P2/director/opendatahandler.py->P2/director/objectmodel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3833.76 359.98 moveto
+3814.09 339.22 3777.76 304.83 3739 288 curveto
+3713.6 276.97 3560.58 257.83 3456.91 245.82 curveto
+stroke
+0 0 0 edgecolor
+newpath 3457.06 242.32 moveto
+3446.72 244.65 lineto
+3456.25 249.27 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3457.06 242.32 moveto
+3446.72 244.65 lineto
+3456.25 249.27 lineto
+closepath stroke
+grestore
+% P2/director/objectmodel.py->P2/director/propertyset.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3446.32 223.32 moveto
+3468.38 220.89 3492.06 218.31 3514 216 curveto
+3664.22 200.17 3838.61 182.88 3944.58 172.49 curveto
+stroke
+0 0 0 edgecolor
+newpath 3945.01 175.96 moveto
+3954.62 171.5 lineto
+3944.33 169 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3945.01 175.96 moveto
+3954.62 171.5 lineto
+3944.33 169 lineto
+closepath stroke
+grestore
+% P2/director/objectmodel.py->P3/collections.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3316.68 217.5 moveto
+3299.93 209.13 3282.53 196.96 3273 180 curveto
+3265.16 166.05 3266.67 158.7 3273 144 curveto
+3278.04 132.28 3287.09 121.94 3296.47 113.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 3298.89 116.12 moveto
+3304.34 107.03 lineto
+3294.41 110.74 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3298.89 116.12 moveto
+3304.34 107.03 lineto
+3294.41 110.74 lineto
+closepath stroke
+grestore
+% P2/director/objectmodel.py->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3390.17 216.57 moveto
+3430.34 195.59 3504.23 160.08 3572 144 curveto
+3607.09 135.67 4126.58 104.02 4293.07 94.04 curveto
+stroke
+0 0 0 edgecolor
+newpath 4293.28 97.53 moveto
+4303.05 93.44 lineto
+4292.86 90.54 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4293.28 97.53 moveto
+4303.05 93.44 lineto
+4292.86 90.54 lineto
+closepath stroke
+grestore
+% P2/director/objectmodel.py->P2/director/callbacks.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3367.2 215.85 moveto
+3376.95 194.97 3396.5 160.45 3425 144 curveto
+3489.14 106.99 3689.2 95.78 3814.48 92.41 curveto
+stroke
+0 0 0 edgecolor
+newpath 3814.59 95.91 moveto
+3824.49 92.16 lineto
+3814.41 88.91 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3814.59 95.91 moveto
+3824.49 92.16 lineto
+3814.41 88.91 lineto
+closepath stroke
+grestore
+% P2/director/objectmodel.py->P3/re.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3255.42 229.95 moveto
+2980.34 221.69 2256.42 198.26 2239 180 curveto
+2174.38 112.25 2209.85 175.42 2492 108 curveto
+2495.4 107.19 2498.9 106.24 2502.39 105.21 curveto
+stroke
+0 0 0 edgecolor
+newpath 2503.63 108.5 moveto
+2512.12 102.17 lineto
+2501.54 101.81 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2503.63 108.5 moveto
+2512.12 102.17 lineto
+2501.54 101.81 lineto
+closepath stroke
+grestore
+% P2/director/filterUtils.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 789.51 232.92 moveto
+606.44 229.67 240.49 206.74 366 72 curveto
+412.59 21.98 887.35 18.39 1054.31 18.69 curveto
+stroke
+0 0 0 edgecolor
+newpath 1054.38 22.19 moveto
+1064.38 18.71 lineto
+1054.39 15.19 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1054.38 22.19 moveto
+1064.38 18.71 lineto
+1054.39 15.19 lineto
+closepath stroke
+grestore
+% P2/director/filterUtils.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 976.17 226.64 moveto
+1031.15 222.96 1103.13 218.55 1167 216 curveto
+1998.93 182.76 2209.41 237.84 3040 180 curveto
+3173.53 170.7 3205.47 153.16 3339 144 curveto
+4269.4 80.18 4504.57 124.98 5437 108 curveto
+5723.7 102.78 6062.76 96.11 6224.66 92.9 curveto
+stroke
+0 0 0 edgecolor
+newpath 6225.14 96.39 moveto
+6235.07 92.69 lineto
+6225 89.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6225.14 96.39 moveto
+6235.07 92.69 lineto
+6225 89.39 lineto
+closepath stroke
+grestore
+% P2/director/filterUtils.py->P2/director/shallowCopy.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 862.13 216.39 moveto
+849.42 206.91 834.46 194.13 824 180 curveto
+810.08 161.2 800.06 136.53 793.82 117.93 curveto
+stroke
+0 0 0 edgecolor
+newpath 797.12 116.76 moveto
+790.74 108.3 lineto
+790.45 118.89 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 797.12 116.76 moveto
+790.74 108.3 lineto
+790.45 118.89 lineto
+closepath stroke
+grestore
+% P2/director/filterUtils.py->P2/director/vtkNumpy.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 830.01 219.34 moveto
+782.08 207.85 713.47 191.4 662.74 179.24 curveto
+stroke
+0 0 0 edgecolor
+newpath 663.39 175.8 moveto
+652.85 176.87 lineto
+661.76 182.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 663.39 175.8 moveto
+652.85 176.87 lineto
+661.76 182.6 lineto
+closepath stroke
+grestore
+% P2/director/transformUtils.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1202.9 222.38 moveto
+1155.33 214.57 1096.4 201.46 1047 180 curveto
+995.43 157.61 969.09 157.8 943 108 curveto
+935.57 93.83 933.53 84.9 943 72 curveto
+968.4 37.42 1016.31 24.79 1054.66 20.46 curveto
+stroke
+0 0 0 edgecolor
+newpath 1055.07 23.93 moveto
+1064.69 19.48 lineto
+1054.39 16.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1055.07 23.93 moveto
+1064.69 19.48 lineto
+1054.39 16.96 lineto
+closepath stroke
+grestore
+% P2/director/transformUtils.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1389.94 224.79 moveto
+1432.68 221.54 1483.27 218.09 1529 216 curveto
+1930.88 197.66 2939.9 230.64 3339 180 curveto
+3407.87 171.26 3422.12 152.69 3491 144 curveto
+3920.12 89.85 5004.56 116.16 5437 108 curveto
+5723.7 102.59 6062.76 96.01 6224.66 92.86 curveto
+stroke
+0 0 0 edgecolor
+newpath 6225.14 96.35 moveto
+6235.07 92.66 lineto
+6225 89.35 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6225.14 96.35 moveto
+6235.07 92.66 lineto
+6225 89.35 lineto
+closepath stroke
+grestore
+% P2/director/thirdparty/transformations.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1212 162 155.97 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1100 158.3 moveto 224 (P2/director/thirdparty/transformations.py) alignedtext
+grestore
+% P2/director/transformUtils.py->P2/director/thirdparty/transformations.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1271.88 216.05 moveto
+1261.95 207.26 1249.67 196.38 1238.82 186.76 curveto
+stroke
+0 0 0 edgecolor
+newpath 1241.03 184.04 moveto
+1231.22 180.03 lineto
+1236.38 189.28 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1241.03 184.04 moveto
+1231.22 180.03 lineto
+1236.38 189.28 lineto
+closepath stroke
+grestore
+% P2/director/transformUtils.py->P3/math
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1322.77 216.46 moveto
+1339.69 206.91 1360.39 194.04 1377 180 curveto
+1399.86 160.68 1421.96 134.52 1436.77 115.57 curveto
+stroke
+0 0 0 edgecolor
+newpath 1439.71 117.48 moveto
+1443.03 107.42 lineto
+1434.16 113.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1439.71 117.48 moveto
+1443.03 107.42 lineto
+1434.16 113.22 lineto
+closepath stroke
+grestore
+% P2/director/thirdparty/transformations.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1174.46 144.53 moveto
+1158.78 135.83 1141.74 123.66 1131 108 curveto
+1118.55 89.83 1114.02 65.06 1112.48 46.26 curveto
+stroke
+0 0 0 edgecolor
+newpath 1115.98 46.02 moveto
+1111.9 36.24 lineto
+1108.99 46.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1115.98 46.02 moveto
+1111.9 36.24 lineto
+1108.99 46.43 lineto
+closepath stroke
+grestore
+% P2/director/thirdparty/transformations.py->P3/importlib
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1074.13 153.57 moveto
+908.5 144.35 622.26 127.43 377 108 curveto
+338.36 104.94 295.1 100.85 260.79 97.45 curveto
+stroke
+0 0 0 edgecolor
+newpath 260.74 93.93 moveto
+250.44 96.42 lineto
+260.04 100.89 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 260.74 93.93 moveto
+250.44 96.42 lineto
+260.04 100.89 lineto
+closepath stroke
+grestore
+% P2/director/thirdparty/transformations.py->P3/random.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1241.7 144.23 moveto
+1259.31 134.29 1281.74 121.63 1300.31 111.15 curveto
+stroke
+0 0 0 edgecolor
+newpath 1302.09 114.16 moveto
+1309.08 106.2 lineto
+1298.65 108.07 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1302.09 114.16 moveto
+1309.08 106.2 lineto
+1298.65 108.07 lineto
+closepath stroke
+grestore
+% P2/director/thirdparty/transformations.py->P3/doctest.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1208.54 143.7 moveto
+1207 135.98 1205.14 126.71 1203.42 118.11 curveto
+stroke
+0 0 0 edgecolor
+newpath 1206.81 117.22 moveto
+1201.42 108.1 lineto
+1199.95 118.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1206.81 117.22 moveto
+1201.42 108.1 lineto
+1199.95 118.6 lineto
+closepath stroke
+grestore
+% P2/director/thirdparty/transformations.py->P3/warnings.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1167 144.76 moveto
+1136.7 133.83 1096.79 119.43 1065.9 108.28 curveto
+stroke
+0 0 0 edgecolor
+newpath 1066.81 104.89 moveto
+1056.21 104.79 lineto
+1064.43 111.47 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1066.81 104.89 moveto
+1056.21 104.79 lineto
+1064.43 111.47 lineto
+closepath stroke
+grestore
+% P2/director/thirdparty/transformations.py->P3/math
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 1273.47 145.34 moveto
+1311.77 135.3 1361.98 121.63 1406 108 curveto
+1408.92 107.1 1411.92 106.13 1414.94 105.15 curveto
+stroke
+0 0 0 edgecolor
+newpath 1416.16 108.43 moveto
+1424.52 101.93 lineto
+1413.93 101.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1416.16 108.43 moveto
+1424.52 101.93 lineto
+1413.93 101.79 lineto
+closepath stroke
+grestore
+% P2/director->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5153.42 156.23 moveto
+5117.58 152.69 5067.23 147.84 5023 144 curveto
+4788.54 123.65 4508.21 102.91 4395.07 94.68 curveto
+stroke
+0 0 0 edgecolor
+newpath 4395.2 91.18 moveto
+4384.97 93.95 lineto
+4394.69 98.16 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4395.2 91.18 moveto
+4384.97 93.95 lineto
+4394.69 98.16 lineto
+closepath stroke
+grestore
+% P2/director->P3/sys
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5236.56 149.21 moveto
+5244.21 147.11 5252.31 145.21 5260 144 curveto
+5513.68 104.14 6163.52 159.98 6415 108 curveto
+6417.87 107.41 6420.8 106.63 6423.72 105.75 curveto
+stroke
+0 0 0 edgecolor
+newpath 6425.13 108.96 moveto
+6433.44 102.39 lineto
+6422.84 102.35 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6425.13 108.96 moveto
+6433.44 102.39 lineto
+6422.84 102.35 lineto
+closepath stroke
+grestore
+% P2/director/meshmanager.py->P2/director/ioUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2577.21 296.27 moveto
+2611.2 293.36 2649.8 290.27 2685 288 curveto
+3036.19 265.31 3125.38 282.17 3476 252 curveto
+3493.58 250.49 3512.4 248.4 3530.21 246.2 curveto
+stroke
+0 0 0 edgecolor
+newpath 3531.08 249.61 moveto
+3540.57 244.89 lineto
+3530.21 242.67 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3531.08 249.61 moveto
+3540.57 244.89 lineto
+3530.21 242.67 lineto
+closepath stroke
+grestore
+% P2/director/meshmanager.py->P3/os.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2564.98 293.7 moveto
+2579.64 291.76 2594.76 289.79 2609 288 curveto
+2744.43 270.94 2779.72 276.49 2914 252 curveto
+3109.97 216.25 3151.98 173.43 3349 144 curveto
+3646.57 99.55 3724.56 124.01 4025 108 curveto
+4119.56 102.96 4229.89 97.08 4292.89 93.72 curveto
+stroke
+0 0 0 edgecolor
+newpath 4293.16 97.22 moveto
+4302.96 93.19 lineto
+4292.79 90.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4293.16 97.22 moveto
+4302.96 93.19 lineto
+4292.79 90.22 lineto
+closepath stroke
+grestore
+% P2/director/meshmanager.py->P2/director/lcmobjectcollection.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2524.19 289.29 moveto
+2551.62 279.08 2587.61 265.68 2616.97 254.75 curveto
+stroke
+0 0 0 edgecolor
+newpath 2618.5 257.91 moveto
+2626.65 251.14 lineto
+2616.05 251.35 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2618.5 257.91 moveto
+2626.65 251.14 lineto
+2616.05 251.35 lineto
+closepath stroke
+grestore
+% P2/director/meshmanager.py->P2/director/geometryencoder.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2384.83 296.7 moveto
+2232.83 283.7 1939.46 258.63 1777.45 244.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 1777.71 241.29 moveto
+1767.45 243.93 lineto
+1777.12 248.27 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1777.71 241.29 moveto
+1767.45 243.93 lineto
+1777.12 248.27 lineto
+closepath stroke
+grestore
+% P2/director/meshmanager.py->P2/director/uuidutil.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 2412.74 291.75 moveto
+2364.97 282.09 2300.2 267.93 2244 252 curveto
+2170.6 231.19 2087.47 201.19 2036.13 181.9 curveto
+stroke
+0 0 0 edgecolor
+newpath 2037.21 178.56 moveto
+2026.61 178.3 lineto
+2034.73 185.11 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2037.21 178.56 moveto
+2026.61 178.3 lineto
+2034.73 185.11 lineto
+closepath stroke
+grestore
+% P1/core/grid.py
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+5739 378 65.79 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+5696.5 374.3 moveto 85 (P1/core/grid.py) alignedtext
+grestore
+% P1/core/grid.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5799.95 371.3 moveto
+5840.01 367.69 5893.59 363.13 5941 360 curveto
+6024.25 354.5 6620.61 368.78 6691 324 curveto
+6758.5 281.06 6756.69 189.66 6691 144 curveto
+6640.21 108.7 6476.13 117.45 6415 108 curveto
+6407.57 106.85 6399.83 105.58 6392.12 104.27 curveto
+stroke
+0 0 0 edgecolor
+newpath 6392.47 100.78 moveto
+6382.02 102.53 lineto
+6391.28 107.68 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6392.47 100.78 moveto
+6382.02 102.53 lineto
+6391.28 107.68 lineto
+closepath stroke
+grestore
+% P1/core/grid.py->P2/director/applogic.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5728.12 359.95 moveto
+5714.41 339.81 5688.96 306.7 5659 288 curveto
+5627.63 268.42 5588.83 255.87 5554.8 247.94 curveto
+stroke
+0 0 0 edgecolor
+newpath 5555.39 244.49 moveto
+5544.87 245.72 lineto
+5553.87 251.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5555.39 244.49 moveto
+5544.87 245.72 lineto
+5553.87 251.32 lineto
+closepath stroke
+grestore
+% P1/core/grid.py->P2/director/visualization.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5678.63 370.81 moveto
+5641.55 367.19 5593.07 362.81 5550 360 curveto
+5154.96 334.26 5055.39 343.75 4660 324 curveto
+4601.66 321.09 4536.66 317.27 4483.39 313.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 4483.44 310.49 moveto
+4473.24 313.36 lineto
+4483.01 317.47 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4483.44 310.49 moveto
+4473.24 313.36 lineto
+4483.01 317.47 lineto
+closepath stroke
+grestore
+% P1/core/grid.py->P2/director/fieldcontainer.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 5737.21 359.89 moveto
+5734.82 327.39 5734.57 256.39 5772 216 curveto
+5811.59 173.28 5862.93 226.5 5898 180 curveto
+5907.64 167.23 5909.02 155.6 5898 144 curveto
+5890.12 135.71 5245.57 107.47 4974.76 95.95 curveto
+stroke
+0 0 0 edgecolor
+newpath 4974.64 92.44 moveto
+4964.5 95.51 lineto
+4974.34 99.43 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4974.64 92.44 moveto
+4964.5 95.51 lineto
+4974.34 99.43 lineto
+closepath stroke
+grestore
+% P2/director/callbacks.py->P3/new.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3920 71.7 moveto
+3920 63.98 3920 54.71 3920 46.11 curveto
+stroke
+0 0 0 edgecolor
+newpath 3923.5 46.1 moveto
+3920 36.1 lineto
+3916.5 46.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3923.5 46.1 moveto
+3920 36.1 lineto
+3916.5 46.1 lineto
+closepath stroke
+grestore
+% P2/director/callbacks.py->P3/weakref.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3979.24 75.75 moveto
+4035.47 63.18 4119.44 44.4 4175.19 31.93 curveto
+stroke
+0 0 0 edgecolor
+newpath 4176.27 35.27 moveto
+4185.26 29.68 lineto
+4174.74 28.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4176.27 35.27 moveto
+4185.26 29.68 lineto
+4174.74 28.44 lineto
+closepath stroke
+grestore
+% P2/director/fieldcontainer.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4762.54 80.18 moveto
+4725.32 77.05 4682.18 73.85 4643 72 curveto
+3926.33 38.19 1568.66 21.9 1169.62 19.36 curveto
+stroke
+0 0 0 edgecolor
+newpath 1169.49 15.86 moveto
+1159.47 19.29 lineto
+1169.45 22.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1169.49 15.86 moveto
+1159.47 19.29 lineto
+1169.45 22.86 lineto
+closepath stroke
+grestore
+% P2/director/fieldcontainer.py->P4/vtk
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4857 71.7 moveto
+4857 63.98 4857 54.71 4857 46.11 curveto
+stroke
+0 0 0 edgecolor
+newpath 4860.5 46.1 moveto
+4857 36.1 lineto
+4853.5 46.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4860.5 46.1 moveto
+4857 36.1 lineto
+4853.5 46.1 lineto
+closepath stroke
+grestore
+% P2/director/frameupdater.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4685.14 215.73 moveto
+4677.83 196.3 4663.71 164.75 4643 144 curveto
+4595.51 96.43 4575.03 89.01 4510 72 curveto
+4341.82 28 1602.62 20.09 1169.48 19.12 curveto
+stroke
+0 0 0 edgecolor
+newpath 1169.39 15.62 moveto
+1159.39 19.09 lineto
+1169.38 22.62 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1169.39 15.62 moveto
+1159.39 19.09 lineto
+1169.38 22.62 lineto
+closepath stroke
+grestore
+% P2/director/frameupdater.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 4737.09 217.64 moveto
+4802.18 196.73 4925.14 160.07 5033 144 curveto
+5262.73 109.78 5967.02 96.2 6224.47 92.29 curveto
+stroke
+0 0 0 edgecolor
+newpath 6224.6 95.79 moveto
+6234.55 92.14 lineto
+6224.5 88.79 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6224.6 95.79 moveto
+6234.55 92.14 lineto
+6224.5 88.79 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrolpanel.py->P2/director/pointpicker.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3608.35 505.2 moveto
+3574.64 494.48 3529.98 480.27 3494.85 469.09 curveto
+stroke
+0 0 0 edgecolor
+newpath 3495.79 465.72 moveto
+3485.2 466.02 lineto
+3493.67 472.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3495.79 465.72 moveto
+3485.2 466.02 lineto
+3493.67 472.39 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrolpanel.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3565.14 509.07 moveto
+3482.95 497.98 3369.49 481.23 3326 468 curveto
+3289.47 456.89 3285.18 440.7 3248 432 curveto
+3104.27 398.38 2049.59 466.67 1920 396 curveto
+1877.47 372.81 1836.32 244.3 1797 216 curveto
+1749.38 181.73 1720.09 210.54 1670 180 curveto
+1613.89 145.79 1627.68 101.6 1569 72 curveto
+1500.33 37.36 1276.34 24.84 1169.59 20.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 1169.45 17.26 moveto
+1159.33 20.39 lineto
+1169.19 24.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1169.45 17.26 moveto
+1159.33 20.39 lineto
+1169.19 24.26 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrolpanel.py->P2/director/propertyset.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3660.58 503.87 moveto
+3666.09 472.28 3681.61 404.03 3718 360 curveto
+3792.1 270.34 3918.25 210.6 3989.31 182.19 curveto
+stroke
+0 0 0 edgecolor
+newpath 3990.94 185.31 moveto
+3998.96 178.39 lineto
+3988.37 178.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3990.94 185.31 moveto
+3998.96 178.39 lineto
+3988.37 178.8 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrolpanel.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3787.98 517.94 moveto
+4372.99 503.55 6738.01 438.42 6843 324 curveto
+6897.09 265.05 6897.15 202.89 6843 144 curveto
+6810.7 108.87 6462.32 114.21 6415 108 curveto
+6407.09 106.96 6398.83 105.72 6390.63 104.39 curveto
+stroke
+0 0 0 edgecolor
+newpath 6391.12 100.92 moveto
+6380.68 102.73 lineto
+6389.97 107.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6391.12 100.92 moveto
+6380.68 102.73 lineto
+6389.97 107.83 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrolpanel.py->P2/director/visualization.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3790.6 519.86 moveto
+3961.44 516.83 4248.08 506.03 4346 468 curveto
+4394.4 449.2 4415.26 442.68 4438 396 curveto
+4445.01 381.62 4444.81 374.48 4438 360 curveto
+4432.33 347.95 4422.43 337.7 4412.08 329.51 curveto
+stroke
+0 0 0 edgecolor
+newpath 4413.89 326.5 moveto
+4403.76 323.4 lineto
+4409.75 332.14 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4413.89 326.5 moveto
+4403.76 323.4 lineto
+4409.75 332.14 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrolpanel.py->P2/director/cameracontrol.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3721.72 506.12 moveto
+3790.07 488.02 3899.61 452.66 3980 396 curveto
+4004.59 378.67 4026.36 351.84 4040.42 332.17 curveto
+stroke
+0 0 0 edgecolor
+newpath 4043.3 334.16 moveto
+4046.14 323.96 lineto
+4037.56 330.16 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 4043.3 334.16 moveto
+4046.14 323.96 lineto
+4037.56 330.16 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrolpanel.py->P2/director/objectmodel.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3638.83 503.99 moveto
+3601.06 470.33 3514.65 392.54 3445 324 curveto
+3423.47 302.82 3399.81 277.89 3382.92 259.82 curveto
+stroke
+0 0 0 edgecolor
+newpath 3385.05 256.97 moveto
+3375.67 252.03 lineto
+3379.93 261.74 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3385.05 256.97 moveto
+3375.67 252.03 lineto
+3379.93 261.74 lineto
+closepath stroke
+grestore
+% P2/director/cameracontrolpanel.py->P2/director/transformUtils.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 3563.61 509.25 moveto
+3446.73 494.6 3262.05 471.1 3255 468 curveto
+3232.18 457.98 3235.32 440.8 3212 432 curveto
+3061.85 375.32 1927.7 411.92 1768 396 curveto
+1583.9 377.64 1515.76 420.65 1358 324 curveto
+1333.55 309.02 1314.94 281.53 1303.61 261.05 curveto
+stroke
+0 0 0 edgecolor
+newpath 1306.7 259.4 moveto
+1298.93 252.21 lineto
+1300.52 262.68 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1306.7 259.4 moveto
+1298.93 252.21 lineto
+1300.52 262.68 lineto
+closepath stroke
+grestore
+% P2/director/vtkNumpy.py->P4/vtk/util/numpy_support.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 573.2 144.41 moveto
+561.25 135.32 546.27 123.92 533.21 113.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 535.04 110.98 moveto
+524.97 107.71 lineto
+530.8 116.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 535.04 110.98 moveto
+524.97 107.71 lineto
+530.8 116.55 lineto
+closepath stroke
+grestore
+% P2/director/vtkNumpy.py->P4/numpy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 526.36 148.69 moveto
+466.05 137.18 386.43 120 377 108 curveto
+367.11 95.42 366.1 83.71 377 72 curveto
+422.78 22.8 888.64 18.66 1054.09 18.76 curveto
+stroke
+0 0 0 edgecolor
+newpath 1054.54 22.26 moveto
+1064.54 18.77 lineto
+1054.55 15.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1054.54 22.26 moveto
+1064.54 18.77 lineto
+1054.55 15.26 lineto
+closepath stroke
+grestore
+% P2/director/vtkNumpy.py->P2/director/vtkAll.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 691.96 156.53 moveto
+783.47 152.5 924.53 146.8 1047 144 curveto
+2997.67 99.33 3486.01 134.78 5437 108 curveto
+5723.72 104.06 6062.77 96.81 6224.67 93.18 curveto
+stroke
+0 0 0 edgecolor
+newpath 6225.16 96.67 moveto
+6235.07 92.95 lineto
+6225 89.67 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 6225.16 96.67 moveto
+6235.07 92.95 lineto
+6225 89.67 lineto
+closepath stroke
+grestore
+% P2/director/vtkNumpy.py->P2/director/shallowCopy.py
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 637.39 145.46 moveto
+665.85 135.03 703.54 121.22 733.84 110.12 curveto
+stroke
+0 0 0 edgecolor
+newpath 735.21 113.34 moveto
+743.4 106.61 lineto
+732.81 106.77 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 735.21 113.34 moveto
+743.4 106.61 lineto
+732.81 106.77 lineto
+closepath stroke
+grestore
+% P2/director/outputconsole.py->P4/pygments
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 7330.88 504.05 moveto
+7340.9 495.07 7353.35 483.9 7364.23 474.12 curveto
+stroke
+0 0 0 edgecolor
+newpath 7366.72 476.59 moveto
+7371.83 467.31 lineto
+7362.05 471.38 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 7366.72 476.59 moveto
+7371.83 467.31 lineto
+7362.05 471.38 lineto
+closepath stroke
+grestore
+% P2/director/outputconsole.py->P4/pygments/lexers
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 7362.49 505.9 moveto
+7399.86 494.72 7450.78 479.48 7489.51 467.9 curveto
+stroke
+0 0 0 edgecolor
+newpath 7491 471.11 moveto
+7499.58 464.89 lineto
+7488.99 464.4 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 7491 471.11 moveto
+7499.58 464.89 lineto
+7488.99 464.4 lineto
+closepath stroke
+grestore
+% P2/director/outputconsole.py->P4/pygments/formatters
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 7289.49 504.05 moveto
+7277.4 494.96 7262.35 483.63 7249.25 473.77 curveto
+stroke
+0 0 0 edgecolor
+newpath 7251.08 470.76 moveto
+7240.98 467.55 lineto
+7246.87 476.36 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 7251.08 470.76 moveto
+7240.98 467.55 lineto
+7246.87 476.36 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 36 36 7671 656
+end
+restore
+%%EOF
