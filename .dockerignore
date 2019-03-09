@@ -1,1 +1,10 @@
-*
+# Ignore everything
+**
+
+# Allow files and directories
+!/src
+!/distro/superbuild
+!/docs
+!/cmake
+!CMakeLists.txt
+!LICENSE.txt
