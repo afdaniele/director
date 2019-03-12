@@ -1,4 +1,4 @@
-FROM ripl/libbot2-ros-pcl:latest
+FROM ripl/libbot2-pcl-ros:latest
 
 # set working directory
 ENV WORKDIR "/code"
