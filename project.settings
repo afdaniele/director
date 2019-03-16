@@ -1,0 +1,11 @@
+#name of the project
+PROJECT_NAME=director-devel
+
+#full name of the Docker image to run
+DOCKER_IMAGE=afdaniele/director:latest
+
+#path inside the container to the CFG file loaded by the sheriff
+PROCMAN_CONFIG=/config.cfg
+
+#custom setup file
+CUSTOM_SETUP_FILE=/code/examples/plugins/setup.sh

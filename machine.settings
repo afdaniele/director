@@ -1,0 +1,5 @@
+#resolvable hostname of the machine running ROS Core
+ROS_MASTER_HOST=localhost
+
+#role of the machine the code is running on. Common roles are `base`, `laptop`
+MACHINE_ROLE=laptop
