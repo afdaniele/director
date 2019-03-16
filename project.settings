@@ -2,7 +2,7 @@
 PROJECT_NAME=director-devel
 
 #full name of the Docker image to run
-DOCKER_IMAGE=afdaniele/director:latest
+DOCKER_IMAGE=ripl/director:latest
 
 #path inside the container to the CFG file loaded by the sheriff
 PROCMAN_CONFIG=/config.cfg
