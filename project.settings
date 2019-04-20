@@ -9,3 +9,6 @@ PROCMAN_CONFIG=/config.cfg
 
 #custom setup file
 CUSTOM_SETUP_FILE=/code/examples/plugins/setup.sh
+
+# command to run inside docker
+PROJECT_CMD="directorPython -m director.mainwindowapp"
