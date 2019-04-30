@@ -1,5 +1,6 @@
 import os
 import uuid
+import director
 from director.componentgraph import ComponentFactory
 from director import consoleapp
 import director.objectmodel as om
@@ -148,32 +149,43 @@ class MainWindowApp(object):
     self.applicationInstance().connect('aboutToQuit()', self._saveCustomWindowState)
 
 
-
 class PluginManagerFactory(object):
 
   def __init__(self):
     pm = PluginManager()
     self._plugins = pm.load_plugins()
+    self.init()
+
+  def init(self):
     # create initXYZ for each plugin
     for plugin in self._plugins:
       init_fcn_name = str('init%s' % plugin.name())
-
-      init_fcn = lambda f: PluginManagerFactory.initExternalPlugin(f, plugin)
+      init_fcn = functools.partial(PluginManagerFactory.initPlugin, plugin)
       setattr(self, init_fcn_name, init_fcn)
 
   @classmethod
-  def initExternalPlugin(cls, fields, plugin):
+  def initPlugin(cls, plugin, fields):
     # initialize instance of plugin
     app = fields.app if hasattr(fields, 'app') else None
     view = fields.view if hasattr(fields, 'view') else None
     plugin_instance = plugin(app, view)
-    return plugin_instance.init()
+    return plugin_instance.init(fields)
 
   def getComponents(self):
     components = dict()
     for plugin in self._plugins:
       components[plugin.name()] = plugin.dependencies()
     return components, []
+
+
+class BuiltInPluginManagerFactory(PluginManagerFactory):
+
+  def __init__(self):
+    director_path = os.path.abspath(os.path.dirname(director.__file__))
+    builtin_plugins_path = os.path.join(director_path, 'builtin', 'plugins')
+    pm = PluginManager(plugins_path=builtin_plugins_path)
+    self._plugins = pm.load_plugins()
+    self.init()
 
 
 class MainWindowAppFactory(object):
@@ -185,10 +197,9 @@ class MainWindowAppFactory(object):
       'GlobalModules' : ['Globals'],
       'ObjectModel' : [],
       'ViewOptions' : ['View', 'ObjectModel'],
-      # 'MainToolBar' : ['View', 'Grid', 'ViewOptions', 'MainWindow'],
+      'MainToolBar' : ['View', 'ViewOptions', 'MainWindow'],
       'ViewBehaviors' : ['View'],
       'MainWindow' : ['View', 'ObjectModel'],
-
       'AdjustedClippingRange' : ['View'],
       'ScriptLoader' : ['MainWindow', 'Globals']
     }
@@ -230,9 +241,9 @@ class MainWindowAppFactory(object):
 
   def initMainWindow(self, fields):
 
-    organizationName = 'RobotLocomotion'
+    organizationName = 'RIPL'
     applicationName = 'DirectorMainWindow'
-    windowTitle = 'Director Apps'
+    windowTitle = 'Director Viewer App'
 
     if hasattr(fields, 'organizationName'):
       organizationName = fields.organizationName
@@ -276,18 +287,12 @@ class MainWindowAppFactory(object):
 
 
   def initMainToolBar(self, fields):
-
-    from director import viewcolors
-
     app = fields.app
     toolBar = app.addToolBar('Main Toolbar')
     app.addToolBarAction(toolBar, 'Python Console', ':/images/python_logo.png', callback=app.showPythonConsole)
     toolBar.addSeparator()
 
-    terrainModeAction = fields.app.addToolBarAction(toolBar, 'Camera Free Rotate', ':/images/camera_mode.png')
-
-    lightAction = fields.app.addToolBarAction(toolBar, 'Background Light', ':/images/light_bulb_icon.png')
-
+    terrainModeAction = app.addToolBarAction(toolBar, 'Camera Free Rotate', ':/images/camera_mode.png')
 
     app.addToolBarAction(toolBar, 'Reset Camera', ':/images/reset_camera.png', callback=applogic.resetCamera)
 
@@ -299,13 +304,9 @@ class MainWindowAppFactory(object):
 
     terrainToggle = applogic.ActionToggleHelper(terrainModeAction, getFreeCameraMode, setFreeCameraMode)
 
-    viewBackgroundLightHandler = viewcolors.ViewBackgroundLightHandler(fields.viewOptions, fields.gridObj,
-                            lightAction)
-
-    return FieldContainer(viewBackgroundLightHandler=viewBackgroundLightHandler, terrainToggle=terrainToggle)
+    return FieldContainer(mainToolBar=toolBar, terrainToggle=terrainToggle)
 
   def initGlobalModules(self, fields):
-
     from PythonQt import QtCore, QtGui
     from director import objectmodel as om
     from director import visualization as vis
@@ -363,25 +364,15 @@ class MainWindowPanelFactory(object):
   def getComponents(self):
 
     components = {
-      'OpenDataHandler' : ['MainWindow'],
-      'ScreenGrabberPanel' : ['MainWindow'],
-      'CameraBookmarksPanel' : ['MainWindow'],
-      'CameraControlPanel' : ['MainWindow'],
-      'MeasurementPanel' : ['MainWindow'],
-      'OutputConsole' : ['MainWindow'],
-      'UndoRedo' : ['MainWindow'],
-      'DrakeVisualizer' : ['MainWindow'],
-      'TreeViewer' : ['MainWindow'],
-      'LCMGLRenderer' : ['MainWindow']
+      # 'OpenDataHandler' : ['MainWindow'],
+      # 'ScreenGrabberPanel' : ['MainWindow'],
+      # 'CameraBookmarksPanel' : ['MainWindow'],
+      # 'CameraControlPanel' : ['MainWindow'],
+      # 'MeasurementPanel' : ['MainWindow'],
+      # 'OutputConsole' : ['MainWindow'],
+      # 'UndoRedo' : ['MainWindow']
     }
-
-    # these components depend on lcm and lcmgl
-    # so they are disabled by default
-    disabledComponents = [
-      'DrakeVisualizer',
-      'TreeViewer',
-      'LCMGLRenderer'
-    ]
+    disabledComponents = []
 
     return components, disabledComponents
 
@@ -437,17 +428,6 @@ class MainWindowPanelFactory(object):
       cameraBookmarksDock=cameraBookmarksDock
     )
 
-  def initCameraControlPanel(self, fields):
-
-    from director import cameracontrolpanel
-    cameraControlPanel = cameracontrolpanel.CameraControlPanel(fields.view)
-    cameraControlDock = fields.app.addWidgetToDock(cameraControlPanel.widget, QtCore.Qt.RightDockWidgetArea, visible=False)
-
-    return FieldContainer(
-      cameraControlPanel=cameraControlPanel,
-      cameraControlDock=cameraControlDock
-    )
-
   def initUndoRedo(self, fields):
 
     undoStack = QtGui.QUndoStack()
@@ -472,49 +452,15 @@ class MainWindowPanelFactory(object):
       redoAction=redoAction
     )
 
-  def initDrakeVisualizer(self, fields):
-
-    from director import drakevisualizer
-    drakeVisualizer = drakevisualizer.DrakeVisualizer(fields.view)
-
-    applogic.MenuActionToggleHelper('Tools', drakeVisualizer.name, drakeVisualizer.isEnabled, drakeVisualizer.setEnabled)
-
-    return FieldContainer(
-      drakeVisualizer=drakeVisualizer
-    )
-
-  def initTreeViewer(self, fields):
-
-    from director import treeviewer
-    treeViewer = treeviewer.TreeViewer(fields.view)
-
-    applogic.MenuActionToggleHelper('Tools', treeViewer.name, treeViewer.isEnabled, treeViewer.setEnabled)
-
-    return FieldContainer(
-      treeViewer=treeViewer
-    )
-
-  def initLCMGLRenderer(self, fields):
-
-    from director import lcmgl
-    if lcmgl.LCMGL_AVAILABLE:
-      lcmglManager = lcmgl.LCMGLManager(fields.view)
-      applogic.MenuActionToggleHelper('Tools', 'LCMGL Renderer', lcmglManager.isEnabled, lcmglManager.setEnabled)
-    else:
-      lcmglManager = None
-
-    return FieldContainer(
-      lcmglManager=lcmglManager
-    )
 
 
 def construct(globalsDict=None):
   fact = ComponentFactory()
   fact.register(MainWindowAppFactory)
   fact.register(MainWindowPanelFactory)
-  fact.register(PluginManagerFactory)
+  fact.register(BuiltInPluginManagerFactory)
+  # fact.register(PluginManagerFactory)
   return fact.construct(globalsDict=globalsDict)
-
 
 def main(globalsDict=None):
   app = construct(globalsDict)
