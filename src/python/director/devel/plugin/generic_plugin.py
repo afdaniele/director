@@ -28,9 +28,9 @@ class GenericPlugin(object):
   def view(self):
     return self._view
 
-  def init(self):
+  def init(self, fields):
     raise NotImplementedError("Every plugin is required to ovveride the method init()")
 
-  def shutdown(self):
+  def shutdown(self, fields):
     # by default, this method does not do anything
     return
