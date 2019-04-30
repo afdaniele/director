@@ -20,7 +20,6 @@ set(python_files
   director/callbacks.py
   director/camerabookmarks.py
   director/cameracontrol.py
-  director/cameracontrolpanel.py
   director/cameraview.py
   director/colorize.py
   director/componentgraph.py
@@ -33,8 +32,6 @@ set(python_files
   director/depthimageprovider.py
   director/depthscanner.py
   director/doordemo.py
-  director/drakevisualizer.py
-  director/drakevisualizerapp.py
   director/drcargs.py
   director/drilldemo.py
   director/drivingplanner.py
@@ -62,15 +59,6 @@ set(python_files
   director/jointcontrol.py
   director/jointpropagator.py
   director/korgnano.py
-  director/lcmframe.py
-  director/lcmloggerwidget.py
-  director/lcmlogplayer.py
-  director/lcmgl.py
-  director/lcmobjectcollection.py
-  director/lcmoctomap.py
-  director/lcmcollections.py  
-  director/lcmspy.py
-  director/lcmUtils.py
   director/mainwindowapp.py
   director/mapsregistrar.py
   director/maptileviewer.py
@@ -121,7 +109,6 @@ set(python_files
   director/skybox.py
   director/splinewidget.py
   director/spreadsheet.py
-  director/startup.py
   director/statelistener.py
   director/surprisetask.py
   director/switchplanner.py
@@ -136,7 +123,6 @@ set(python_files
   director/timercallback.py
   director/transformUtils.py
   director/trackers.py
-  director/treeviewer.py
   director/uipanel.py
   director/undoredo.py
   director/utime.py

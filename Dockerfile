@@ -15,24 +15,24 @@ ENV DIRECTOR_INSTALL_DIR "/usr/local"
 
 # install dependencies
 RUN apt update \
-    && apt install -y \
-        git \
-        lsb-core \
-        build-essential \
-        cmake \
-        libglib2.0-dev \
-        libqt4-dev \
-        libx11-dev \
-        libxext-dev \
-        libxt-dev \
-        libboost-all-dev \
-        libeigen3-dev \
-        python3-dev \
-        python3-lxml \
-        python3-numpy \
-        python3-scipy \
-        python3-yaml \
-    && rm -rf /var/lib/apt/lists/*
+  && apt install -y \
+    git \
+    lsb-core \
+    build-essential \
+    cmake \
+    libglib2.0-dev \
+    libqt4-dev \
+    libx11-dev \
+    libxext-dev \
+    libxt-dev \
+    libboost-all-dev \
+    libeigen3-dev \
+    python3-dev \
+    python3-lxml \
+    python3-numpy \
+    python3-scipy \
+    python3-yaml \
+  && rm -rf /var/lib/apt/lists/*
 
 # copy source code
 RUN mkdir -p $DIRECTOR_SOURCE_DIR

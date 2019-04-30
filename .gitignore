@@ -3,3 +3,4 @@
 pod-build
 /build
 .idea
+*.so
