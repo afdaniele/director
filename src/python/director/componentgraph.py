@@ -157,7 +157,6 @@ class ComponentFactory(object):
                 print('  ', name)
 
     def initComponent(self, name, defaultFields):
-
         initFunction = self.initFunctions[name]
         dependencies = self.componentGraph.getComponentDependencies(name)
         inputFields = self._joinFields([defaultFields] + [self.componentFields[dep] for dep in dependencies])
