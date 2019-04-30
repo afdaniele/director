@@ -6,7 +6,6 @@ from director.debugVis import DebugData
 import director.vtkAll as vtk
 from director import callbacks
 import numpy as np
-from director.affordanceitems import AffordanceItem
 
 
 class PointPicker(object):
