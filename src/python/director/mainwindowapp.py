@@ -146,7 +146,7 @@ class PluginManagerFactory(object):
 
   def __init__(self):
     pm = PluginManager()
-    self._plugins = pm.load_plugins(suppressErrors=False)
+    self._plugins = pm.load_plugins(suppressErrors=True)
     self.init()
 
   def init(self):
@@ -323,7 +323,7 @@ def construct(globalsDict=None):
   fact = ComponentFactory()
   fact.register(MainWindowAppFactory)
   fact.register(BuiltInPluginManagerFactory)
-  # fact.register(PluginManagerFactory)
+  fact.register(PluginManagerFactory)
   return fact.construct(globalsDict=globalsDict)
 
 
