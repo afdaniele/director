@@ -1,0 +1,5 @@
+#!/usr/bin/env directorPython
+
+from director.mainwindowapp import main
+
+main(globals())
