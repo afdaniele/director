@@ -93,6 +93,12 @@ set(python_files
 	director/builtin/plugins/terrain_mode/__init__.py
 	director/builtin/plugins/terrain_mode/plugin.py
 
+  # built-in plugins: xyz_pointcloud_loader
+  director/builtin/plugins/xyz_pointcloud_loader/__init__.py
+  director/builtin/plugins/xyz_pointcloud_loader/plugin.py
+  director/builtin/plugins/xyz_pointcloud_loader/lib/__init__.py
+  director/builtin/plugins/xyz_pointcloud_loader/lib/xyz_data_handler.py
+
 	# tasks
   director/tasks/__init__.py
   director/tasks/robottasks.py
