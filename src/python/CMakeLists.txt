@@ -1,7 +1,5 @@
-
 set(python_files
   director/__init__.py
-  director/affordanceitems.py
   director/applogic.py
   director/appsettings.py
   director/botspy.py
@@ -22,6 +20,7 @@ set(python_files
   director/pointpicker.py
   director/propertyset.py
   director/shallowCopy.py
+  director/simpletimer.py
   director/timercallback.py
   director/transformUtils.py
   director/uuidutil.py
@@ -32,6 +31,69 @@ set(python_files
   director/vtkAll.py
   director/vtkNumpy.py
 
+	# director devel
+	director/devel/__init__.py
+	director/devel/plugin/__init__.py
+	director/devel/plugin/generic_plugin.py
+	director/devel/plugin/plugin_manager.py
+
+	# director plugins (placeholder package)
+	director/plugins/__init__.py
+
+	# built-in plugins: camera_bookmarks
+	director/builtin/plugins/camera_bookmarks/__init__.py
+	director/builtin/plugins/camera_bookmarks/plugin.py
+	director/builtin/plugins/camera_bookmarks/lib/__init__.py
+	director/builtin/plugins/camera_bookmarks/lib/camerabookmarks.py
+
+	# built-in plugins: camera_control_panel
+	director/builtin/plugins/camera_control_panel/__init__.py
+	director/builtin/plugins/camera_control_panel/plugin.py
+	director/builtin/plugins/camera_control_panel/lib/__init__.py
+	director/builtin/plugins/camera_control_panel/lib/cameracontrolpanel.py
+
+	# built-in plugins: grid
+	director/builtin/plugins/grid/__init__.py
+	director/builtin/plugins/grid/plugin.py
+
+	# built-in plugins: history_manager
+	director/builtin/plugins/history_manager/__init__.py
+	director/builtin/plugins/history_manager/plugin.py
+
+	# built-in plugins: measurement_tool
+	director/builtin/plugins/measurement_tool/__init__.py
+	director/builtin/plugins/measurement_tool/plugin.py
+	director/builtin/plugins/measurement_tool/lib/__init__.py
+	director/builtin/plugins/measurement_tool/lib/measurementpanel.py
+	director/builtin/plugins/measurement_tool/lib/uipanel.py
+
+	# built-in plugins: mesh_loader
+	director/builtin/plugins/mesh_loader/__init__.py
+	director/builtin/plugins/mesh_loader/plugin.py
+	director/builtin/plugins/mesh_loader/lib/__init__.py
+	director/builtin/plugins/mesh_loader/lib/opendatahandler.py
+
+	# built-in plugins: output_console
+	director/builtin/plugins/output_console/__init__.py
+	director/builtin/plugins/output_console/plugin.py
+	director/builtin/plugins/output_console/lib/__init__.py
+	director/builtin/plugins/output_console/lib/outputconsole.py
+
+	# built-in plugins: screen_grabber
+	director/builtin/plugins/screen_grabber/__init__.py
+	director/builtin/plugins/screen_grabber/plugin.py
+	director/builtin/plugins/screen_grabber/lib/__init__.py
+	director/builtin/plugins/screen_grabber/lib/screengrabberpanel.py
+
+	# built-in plugins: script_loader
+	director/builtin/plugins/script_loader/__init__.py
+	director/builtin/plugins/script_loader/plugin.py
+
+	# built-in plugins: terrain_mode
+	director/builtin/plugins/terrain_mode/__init__.py
+	director/builtin/plugins/terrain_mode/plugin.py
+
+	# tasks
   director/tasks/__init__.py
   director/tasks/robottasks.py
   director/tasks/taskmanagerwidget.py
@@ -59,7 +121,7 @@ set(python_files
   urdf_parser_py/xml_reflection/__init__.py
   urdf_parser_py/xml_reflection/basics.py
   urdf_parser_py/xml_reflection/core.py
-  )
+)
 
 
 set(python_module_dir "${CMAKE_BINARY_DIR}/${DD_INSTALL_PYTHON_DIR}")
@@ -103,7 +165,7 @@ add_custom_command(
   ARGS  "${compile_all_script}"
   DEPENDS ${copied_python_files}  ${compile_all_script}
   OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/compile_complete"
-  )
+)
 
 add_custom_target(python_byte_compile ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/compile_complete")
 
