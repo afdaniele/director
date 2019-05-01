@@ -22,5 +22,5 @@ class Plugin(GenericPlugin):
     # ---
     self.app.registerStartupCallback(loadData)
     return FieldContainer(
-      openDataHandler=openDataHandler
+      meshDataHandler=openDataHandler
     )
