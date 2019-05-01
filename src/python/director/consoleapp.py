@@ -4,7 +4,7 @@ import traceback
 import argparse
 
 from director import applogic
-from director import drcargs
+from director import args_parser
 from director import objectmodel as om
 from director import viewbehaviors
 from director import visualization as vis
@@ -15,7 +15,7 @@ from PythonQt import QtCore, QtGui
 
 
 def _consoleAppExceptionHook(exc_type, exc_value, exc_traceback):
-    msg =  ''.join(traceback.format_exception(exc_type, exc_value, exc_traceback))
+    msg = ''.join(traceback.format_exception(exc_type, exc_value, exc_traceback))
     sys.stderr.write(msg)
     ConsoleApp.exit(1)
 
@@ -162,7 +162,7 @@ class ConsoleApp(object):
     @staticmethod
     def getTestingArgs(dataDirRequired=False, outputDirRequired=False):
 
-      parser = drcargs.DRCArgParser().getParser()
+      parser = args_parser.DRCArgParser().getParser()
       parser.add_argument('--testing', action='store_true', help='enable testing mode')
       parser.add_argument('--data-dir', type=str, help='testing data directory', required=dataDirRequired)
       parser.add_argument('--output-dir', type=str, help='output directory for writing test output', required=outputDirRequired)

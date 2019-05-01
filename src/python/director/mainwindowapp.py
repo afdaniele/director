@@ -1,6 +1,9 @@
 import os
-import uuid
+import functools
+import PythonQt
+from PythonQt import QtCore, QtGui
 import director
+
 from director.componentgraph import ComponentFactory
 from director import consoleapp
 import director.objectmodel as om
@@ -8,18 +11,9 @@ import director.visualization as vis
 from director.fieldcontainer import FieldContainer
 from director import applogic
 from director import appsettings
-from director import drcargs
-
-import functools
-import PythonQt
-from PythonQt import QtCore, QtGui
-
-import importlib
+from director import args_parser
 from director.devel import PluginManager
 
-
-def make_id():
-  return str(uuid.uuid4())
 
 
 class MainWindowApp(object):
@@ -93,7 +87,6 @@ class MainWindowApp(object):
     w.setWidget(widget)
     w.setWidgetResizable(True)
     w.setWindowTitle(widget.windowTitle)
-    #w.setSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
     return w
 
   def addWidgetToViewMenu(self, widget):
@@ -153,7 +146,7 @@ class PluginManagerFactory(object):
 
   def __init__(self):
     pm = PluginManager()
-    self._plugins = pm.load_plugins()
+    self._plugins = pm.load_plugins(suppressErrors=False)
     self.init()
 
   def init(self):
@@ -194,14 +187,13 @@ class MainWindowAppFactory(object):
     components = {
       'View' : [],
       'Globals' : [],
-      'GlobalModules' : ['Globals'],
       'ObjectModel' : [],
-      'ViewOptions' : ['View', 'ObjectModel'],
-      'MainToolBar' : ['View', 'ViewOptions', 'MainWindow'],
+      'GlobalModules' : ['Globals'],
       'ViewBehaviors' : ['View'],
-      'MainWindow' : ['View', 'ObjectModel'],
       'AdjustedClippingRange' : ['View'],
-      'ScriptLoader' : ['MainWindow', 'Globals']
+      'ViewOptions' : ['View', 'ObjectModel'],
+      'MainWindow' : ['View', 'ObjectModel'],
+      'MainToolBar' : ['MainWindow']
     }
     disabledComponents = []
     return components, disabledComponents
@@ -213,98 +205,21 @@ class MainWindowAppFactory(object):
     applogic.resetCamera(viewDirection=[-1, -1, -0.3], view=view)
     return FieldContainer(view=view)
 
+  def initGlobals(self, fields):
+    try:
+      globalsDict = fields.globalsDict
+    except AttributeError:
+      globalsDict = dict()
+    if globalsDict is None:
+      globalsDict = dict()
+    return FieldContainer(globalsDict=globalsDict)
+
   def initObjectModel(self, fields):
     om.init()
     objectModel = om.getDefaultObjectModel()
     objectModel.getTreeWidget().setWindowTitle('Scene Browser')
     objectModel.getPropertiesPanel().setWindowTitle('Properties Panel')
     return FieldContainer(objectModel=objectModel)
-
-  def initViewBehaviors(self, fields):
-    from director import viewbehaviors
-    viewBehaviors = viewbehaviors.ViewBehaviors(fields.view)
-    return FieldContainer(viewBehaviors=viewBehaviors)
-
-  def initViewOptions(self, fields):
-    viewOptions = vis.ViewOptionsItem(fields.view)
-    fields.objectModel.addToObjectModel(viewOptions, parentObj=fields.objectModel.findObjectByName('scene'))
-    viewOptions.setProperty('Background color', [0.3, 0.3, 0.35])
-    viewOptions.setProperty('Background color 2', [0.95,0.95,1])
-    return FieldContainer(viewOptions=viewOptions)
-
-  def initAdjustedClippingRange(self, fields):
-    '''This setting improves the near plane clipping resolution.
-    Drake often draws a very large ground plane which is detrimental to
-    the near clipping for up close objects.  The trade-off is Z buffer
-    resolution but in practice things look good with this setting.'''
-    fields.view.renderer().SetNearClippingPlaneTolerance(0.0005)
-
-  def initMainWindow(self, fields):
-
-    organizationName = 'RIPL'
-    applicationName = 'DirectorMainWindow'
-    windowTitle = 'Director Viewer App'
-
-    if hasattr(fields, 'organizationName'):
-      organizationName = fields.organizationName
-    if hasattr(fields, 'applicationName'):
-      applicationName = fields.applicationName
-    if hasattr(fields, 'windowTitle'):
-      windowTitle = fields.windowTitle
-
-    MainWindowApp.applicationInstance().setOrganizationName(organizationName)
-    MainWindowApp.applicationInstance().setApplicationName(applicationName)
-
-
-    app = MainWindowApp()
-
-    app.mainWindow.setCentralWidget(fields.view)
-    app.mainWindow.setWindowTitle(windowTitle)
-    app.mainWindow.setWindowIcon(QtGui.QIcon(':/images/drake_logo.png'))
-
-    sceneBrowserDock = app.addWidgetToDock(fields.objectModel.getTreeWidget(),
-                          QtCore.Qt.LeftDockWidgetArea, visible=True)
-    propertiesDock = app.addWidgetToDock(app.wrapScrollArea(fields.objectModel.getPropertiesPanel()),
-                          QtCore.Qt.LeftDockWidgetArea, visible=True)
-
-    app.addViewMenuSeparator()
-
-    def toggleObjectModelDock():
-      newState = not sceneBrowserDock.visible
-      sceneBrowserDock.setVisible(newState)
-      propertiesDock.setVisible(newState)
-
-    applogic.addShortcut(app.mainWindow, 'F1', toggleObjectModelDock)
-
-    return FieldContainer(
-      app=app,
-      mainWindow=app.mainWindow,
-      sceneBrowserDock=sceneBrowserDock,
-      propertiesDock=propertiesDock,
-      toggleObjectModelDock=toggleObjectModelDock,
-      commandLineArgs=drcargs.args()
-    )
-
-
-  def initMainToolBar(self, fields):
-    app = fields.app
-    toolBar = app.addToolBar('Main Toolbar')
-    app.addToolBarAction(toolBar, 'Python Console', ':/images/python_logo.png', callback=app.showPythonConsole)
-    toolBar.addSeparator()
-
-    terrainModeAction = app.addToolBarAction(toolBar, 'Camera Free Rotate', ':/images/camera_mode.png')
-
-    app.addToolBarAction(toolBar, 'Reset Camera', ':/images/reset_camera.png', callback=applogic.resetCamera)
-
-    def getFreeCameraMode():
-      return not applogic.getCameraTerrainModeEnabled(fields.view)
-
-    def setFreeCameraMode(enabled):
-      applogic.setCameraTerrainModeEnabled(fields.view, not enabled)
-
-    terrainToggle = applogic.ActionToggleHelper(terrainModeAction, getFreeCameraMode, setFreeCameraMode)
-
-    return FieldContainer(mainToolBar=toolBar, terrainToggle=terrainToggle)
 
   def initGlobalModules(self, fields):
     from PythonQt import QtCore, QtGui
@@ -320,161 +235,106 @@ class MainWindowAppFactory(object):
     from director.timercallback import TimerCallback
     from director.fieldcontainer import FieldContainer
     import numpy as np
-
+    # create dictionary of modules
     modules = dict(locals())
     del modules['fields']
     del modules['self']
     fields.globalsDict.update(modules)
 
-  def initGlobals(self, fields):
-    try:
-      globalsDict = fields.globalsDict
-    except AttributeError:
-      globalsDict = dict()
-    if globalsDict is None:
-      globalsDict = dict()
-    return FieldContainer(globalsDict=globalsDict)
+  def initViewBehaviors(self, fields):
+    from director import viewbehaviors
+    viewBehaviors = viewbehaviors.ViewBehaviors(fields.view)
+    return FieldContainer(viewBehaviors=viewBehaviors)
 
-  def initScriptLoader(self, fields):
-    def loadScripts():
-      for scriptArgs in fields.commandLineArgs.scripts:
-        filename = scriptArgs[0]
-        globalsDict = fields.globalsDict
-        args = dict(__file__=filename,
-                    _argv=scriptArgs,
-                    _fields=fields)
-        prev_args = {}
-        for k, v in args.items():
-          if k in globalsDict:
-            prev_args[k] = globalsDict[k]
-          globalsDict[k] = v
-        try:
-          execfile(filename, globalsDict)
-        finally:
-          for k in args.keys():
-            del globalsDict[k]
-          for k, v in prev_args.items():
-            globalsDict[k] = v
+  def initAdjustedClippingRange(self, fields):
+    '''This setting improves the near plane clipping resolution.
+    Drake often draws a very large ground plane which is detrimental to
+    the near clipping for up close objects.  The trade-off is Z buffer
+    resolution but in practice things look good with this setting.'''
+    fields.view.renderer().SetNearClippingPlaneTolerance(0.0005)
 
-    fields.app.registerStartupCallback(loadScripts)
+  def initViewOptions(self, fields):
+    viewOptions = vis.ViewOptionsItem(fields.view)
+    fields.objectModel.addToObjectModel(viewOptions, parentObj=fields.objectModel.findObjectByName('scene'))
+    viewOptions.setProperty('Background color', [0.3, 0.3, 0.35])
+    viewOptions.setProperty('Background color 2', [0.95,0.95,1])
+    return FieldContainer(viewOptions=viewOptions)
 
-
-class MainWindowPanelFactory(object):
-
-  def getComponents(self):
-
-    components = {
-      # 'OpenDataHandler' : ['MainWindow'],
-      # 'ScreenGrabberPanel' : ['MainWindow'],
-      # 'CameraBookmarksPanel' : ['MainWindow'],
-      # 'CameraControlPanel' : ['MainWindow'],
-      # 'MeasurementPanel' : ['MainWindow'],
-      # 'OutputConsole' : ['MainWindow'],
-      # 'UndoRedo' : ['MainWindow']
-    }
-    disabledComponents = []
-
-    return components, disabledComponents
-
-
-  def initOpenDataHandler(self, fields):
-    from director import opendatahandler
-    openDataHandler = opendatahandler.OpenDataHandler(fields.app)
-
-    def loadData():
-      for filename in drcargs.args().data_files:
-        openDataHandler.openGeometry(filename)
-    fields.app.registerStartupCallback(loadData)
-
-    return FieldContainer(openDataHandler=openDataHandler)
-
-  def initOutputConsole(self, fields):
-    from director import outputconsole
-    outputConsole = outputconsole.OutputConsole()
-    outputConsole.addToAppWindow(fields.app, visible=False)
-
-    return FieldContainer(outputConsole=outputConsole)
-
-  def initMeasurementPanel(self, fields):
-    from director import measurementpanel
-    measurementPanel = measurementpanel.MeasurementPanel(fields.app, fields.view)
-    measurementDock = fields.app.addWidgetToDock(measurementPanel.widget, QtCore.Qt.RightDockWidgetArea, visible=False)
-
+  def initMainWindow(self, fields):
+    organizationName = 'RIPL'
+    applicationName = 'DirectorMainWindow'
+    windowTitle = 'Director Viewer App'
+    # use custom params (if passed)
+    if hasattr(fields, 'organizationName'):
+      organizationName = fields.organizationName
+    if hasattr(fields, 'applicationName'):
+      applicationName = fields.applicationName
+    if hasattr(fields, 'windowTitle'):
+      windowTitle = fields.windowTitle
+    # set app info
+    MainWindowApp.applicationInstance().setOrganizationName(organizationName)
+    MainWindowApp.applicationInstance().setApplicationName(applicationName)
+    # create main window
+    app = MainWindowApp()
+    app.mainWindow.setCentralWidget(fields.view)
+    app.mainWindow.setWindowTitle(windowTitle)
+    app.mainWindow.setWindowIcon(QtGui.QIcon(':/images/drake_logo.png'))
+    # browser dock
+    sceneBrowserDock = app.addWidgetToDock(
+      fields.objectModel.getTreeWidget(),
+      QtCore.Qt.LeftDockWidgetArea,
+      visible=True
+    )
+    # properties dock
+    propertiesDock = app.addWidgetToDock(
+      app.wrapScrollArea(fields.objectModel.getPropertiesPanel()),
+      QtCore.Qt.LeftDockWidgetArea,
+      visible=True
+    )
+    # separator
+    app.addViewMenuSeparator()
+    # ---
+    def toggleObjectModelDock():
+      newState = not sceneBrowserDock.visible
+      sceneBrowserDock.setVisible(newState)
+      propertiesDock.setVisible(newState)
+    # ---
+    applogic.addShortcut(app.mainWindow, 'F1', toggleObjectModelDock)
+    # pack everything in a FieldContainer
     return FieldContainer(
-      measurementPanel=measurementPanel,
-      measurementDock=measurementDock
+      app=app,
+      mainWindow=app.mainWindow,
+      sceneBrowserDock=sceneBrowserDock,
+      propertiesDock=propertiesDock,
+      toggleObjectModelDock=toggleObjectModelDock,
+      commandLineArgs=args_parser.args()
     )
 
-  def initScreenGrabberPanel(self, fields):
-
-    from director.screengrabberpanel import ScreenGrabberPanel
-    screenGrabberPanel = ScreenGrabberPanel(fields.view)
-    screenGrabberDock = fields.app.addWidgetToDock(screenGrabberPanel.widget, QtCore.Qt.RightDockWidgetArea, visible=False)
-
-    return FieldContainer(
-      screenGrabberPanel=screenGrabberPanel,
-      screenGrabberDock=screenGrabberDock
-    )
-
-  def initCameraBookmarksPanel(self, fields):
-
-    from director import camerabookmarks
-
-    cameraBookmarksPanel = camerabookmarks.CameraBookmarkWidget(fields.view)
-    cameraBookmarksDock = fields.app.addWidgetToDock(cameraBookmarksPanel.widget, QtCore.Qt.RightDockWidgetArea, visible=False)
-
-    return FieldContainer(
-      cameraBookmarksPanel=cameraBookmarksPanel,
-      cameraBookmarksDock=cameraBookmarksDock
-    )
-
-  def initUndoRedo(self, fields):
-
-    undoStack = QtGui.QUndoStack()
-    undoView = QtGui.QUndoView(undoStack)
-    undoView.setEmptyLabel('Start')
-    undoView.setWindowTitle('History')
-    undoDock = fields.app.addWidgetToDock(undoView, QtCore.Qt.LeftDockWidgetArea, visible=False)
-
-    undoAction = undoStack.createUndoAction(undoStack)
-    redoAction = undoStack.createRedoAction(undoStack)
-    undoAction.setShortcut(QtGui.QKeySequence('Ctrl+Z'))
-    redoAction.setShortcut(QtGui.QKeySequence('Ctrl+Shift+Z'))
-
-    fields.app.editMenu.addAction(undoAction)
-    fields.app.editMenu.addAction(redoAction)
-
-    return FieldContainer(
-      undoDock=undoDock,
-      undoStack=undoStack,
-      undoView=undoView,
-      undoAction=undoAction,
-      redoAction=redoAction
-    )
-
+  def initMainToolBar(self, fields):
+    app = fields.app
+    toolBar = app.addToolBar('Main Toolbar')
+    app.addToolBarAction(toolBar, 'Python Console', ':/images/python_logo.png', callback=app.showPythonConsole)
+    toolBar.addSeparator()
+    app.addToolBarAction(toolBar, 'Reset Camera', ':/images/reset_camera.png', callback=applogic.resetCamera)
+    return FieldContainer(mainToolBar=toolBar)
 
 
 def construct(globalsDict=None):
   fact = ComponentFactory()
   fact.register(MainWindowAppFactory)
-  fact.register(MainWindowPanelFactory)
   fact.register(BuiltInPluginManagerFactory)
   # fact.register(PluginManagerFactory)
   return fact.construct(globalsDict=globalsDict)
 
+
 def main(globalsDict=None):
   app = construct(globalsDict)
-
+  # ---
   if globalsDict is not None:
     globalsDict.update(**dict(app))
-
+  # launch app
   app.app.start()
 
 
 if __name__ == '__main__':
-  # it should be possible to remove these once we release the plugin interface as part of director
-  import sys
-  sys.path.append('/code/director_devel/')
-  sys.path.append('/code/components/')
-
   main(globals())

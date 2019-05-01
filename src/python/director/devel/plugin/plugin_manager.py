@@ -100,14 +100,19 @@ class PluginManager(object):
     # return loaded plugin
     return plugin.Plugin
 
-  def load_plugins(self):
+  def load_plugins(self, suppressErrors=True):
     plugins = []
     for plugin_id in self.list_plugins():
-      try:
+      p = None
+      if suppressErrors:
+        try:
+          p = self.load_plugin(plugin_id)
+        except PluginLoadException as e:
+          print('PluginManager :: An error occurred while loading the plugin with ID "%s". The plugin will be disabled.' % (plugin_id))
+          continue
+      else:
         p = self.load_plugin(plugin_id)
-      except PluginLoadException as e:
-        print('PluginManager :: An error occurred while loading the plugin with ID "%s". The plugin will be disabled.' % (plugin_id))
-        continue
-      plugins.append(p)
+      if p is not None:
+        plugins.append(p)
     # return loaded plugins
     return plugins

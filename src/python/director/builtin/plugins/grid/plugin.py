@@ -10,7 +10,7 @@ class Plugin(GenericPlugin):
 
   ID = 'grid'
   NAME = 'Grid'
-  DEPENDENCIES = ['View', 'ObjectModel', 'MainToolBar']
+  DEPENDENCIES = ['View', 'ViewOptions', 'ObjectModel', 'MainToolBar']
 
   def __init__(self, app, view, cellSize=0.5, numberOfCells=25, name='grid', parent='scene', color=[1,1,1], alpha=0.05, gridTransform=None, viewBoundsFunction=None):
     super(Plugin, self).__init__(app, view)

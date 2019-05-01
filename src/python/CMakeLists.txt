@@ -1,144 +1,36 @@
 
 set(python_files
   director/__init__.py
-  director/actionhandlers.py
-  director/affordanceupdater.py
   director/affordanceitems.py
-  director/affordancemanager.py
-  director/affordancepanel.py
-  director/affordanceurdf.py
-  director/affordanceviewbehaviors.py
   director/applogic.py
   director/appsettings.py
-  director/assimp2vtk.py
-  director/asynctaskqueue.py
-  director/atlasdriver.py
-  director/atlasdriverpanel.py
-  director/bihandeddemo.py
-  director/blackoutmonitor.py
   director/botspy.py
   director/callbacks.py
-  director/camerabookmarks.py
   director/cameracontrol.py
-  director/cameraview.py
-  director/colorize.py
   director/componentgraph.py
   director/consoleapp.py
-  director/continuouswalkingdemo.py
-  director/copmonitor.py
-  director/coursemodel.py
-  director/debrisdemo.py
   director/debugVis.py
-  director/depthimageprovider.py
-  director/depthscanner.py
-  director/doordemo.py
-  director/drcargs.py
-  director/drilldemo.py
-  director/drivingplanner.py
-  director/egressplanner.py
-  director/frameupdater.py
+  director/args_parser.py
   director/fieldcontainer.py
   director/filterUtils.py
-  director/footstepsdriver.py
-  director/footstepsdriverpanel.py
-  director/framevisualization.py
-  director/gamepad.py
+  director/frameupdater.py
   director/geometryencoder.py
-  director/handcontrolpanel.py
-  director/handdriver.py
-  director/takktilevis.py
-  director/ikconstraintencoder.py
-  director/ikconstraints.py
-  director/ikparameters.py
-  director/ikplanner.py
-  director/imageview.py
-  director/imageviewapp.py
   director/ioUtils.py
-  director/irisUtils.py
-  director/irisdriver.py
-  director/jointcontrol.py
-  director/jointpropagator.py
-  director/korgnano.py
   director/mainwindowapp.py
-  director/mapsregistrar.py
-  director/maptileviewer.py
-  director/matlab.py
-  director/matlabik.py
-  director/measurementpanel.py
-  director/meshmanager.py
-  director/midi.py
-  director/multisensepanel.py
-  director/navigationpanel.py
   director/objectmodel.py
-  director/opendatahandler.py
   director/openscope.py
-  director/optitrackvisualizer.py
-  director/otdfmodel.py
-  director/outputconsole.py
-  director/packagepath.py
-  director/perception.py
-  director/planningutils.py
-  director/planplayback.py
-  director/playbackpanel.py
   director/pointpicker.py
-  director/pointselector.py
-  director/polarisplatformplanner.py
-  director/profiler.py
-  director/propertyanimation.py
   director/propertyset.py
-  director/pydrakeik.py
-  director/qtutils.py
-  director/raycastdriver.py
-  director/robotlinkselector.py
-  director/robotstate.py
-  director/robotplanlistener.py
-  director/robotposegui.py
-  director/robotsystem.py
-  director/roboturdf.py
-  director/robotviewbehaviors.py
-  director/sceneloader.py
-  director/screengrabberpanel.py
-  director/segmentation.py
-  director/segmentationpanel.py
-  director/segmentationroutines.py
-  director/sensordatarequestpanel.py
   director/shallowCopy.py
-  director/simpletimer.py
-  director/sitstandplanner.py
-  director/skybox.py
-  director/splinewidget.py
-  director/spreadsheet.py
-  director/statelistener.py
-  director/surprisetask.py
-  director/switchplanner.py
-  director/tasklaunchpanel.py
-  director/taskrunner.py
-  director/tdx.py
-  director/teleoppanel.py
-  director/motionplanningpanel.py
-  director/terrain.py
-  director/terrainitem.py
-  director/terraintask.py
   director/timercallback.py
   director/transformUtils.py
-  director/trackers.py
-  director/uipanel.py
-  director/undoredo.py
-  director/utime.py
   director/uuidutil.py
-  director/valvedemo.py
-  director/version.py.in
-  director/viconvisualizer.py
   director/viewbehaviors.py
   director/viewcolors.py
-  director/viewerclient.py
   director/vieweventfilter.py
   director/visualization.py
   director/vtkAll.py
   director/vtkNumpy.py
-  director/walkingtestdemo.py
-  director/wristforcetorquevisualizer.py
-  director/plannerPublisher.py
 
   director/tasks/__init__.py
   director/tasks/robottasks.py
