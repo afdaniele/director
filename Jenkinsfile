@@ -12,7 +12,7 @@ pipeline {
     }
     stage('Build Image') {
       steps {
-        sh 'docker build -t $BUILD_IMAGE -f Dockerfile ./'
+        sh 'docker build -t $BUILD_IMAGE -f ./docker/Dockerfile ./'
       }
     }
     stage('Push Image') {
