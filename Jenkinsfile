@@ -12,7 +12,7 @@ pipeline {
     }
     stage('Build Image') {
       steps {
-        sh 'docker build -t $BUILD_IMAGE -f ./docker/Dockerfile ./'
+        sh 'docker build -t $BUILD_IMAGE -f ./docker/Dockerfile --no-cache ./'
       }
     }
     stage('Push Image') {
