@@ -80,7 +80,6 @@ set(python_files
   director/planningutils.py
   director/planplayback.py
   director/playbackpanel.py
-  director/pointcloudlcm.py
   director/pointpicker.py
   director/pointselector.py
   director/polarisplatformplanner.py
@@ -139,7 +138,6 @@ set(python_files
   director/vtkNumpy.py
   director/walkingtestdemo.py
   director/wristforcetorquevisualizer.py
-  director/kinectlcm.py
   director/plannerPublisher.py
 
   director/tasks/__init__.py
